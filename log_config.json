@@ -1,0 +1,40 @@
+{
+    "version": 1,
+    "disable_existing_loggers": true,
+    "loggers": {
+        "Flask": {
+            "level": "DEBUG",
+            "handlers": [
+                "streamhandler",
+                "Flask"
+            ],
+            "propagate": 0
+        }
+    },
+    "formatters": {
+        "stream": {
+            "level": "DEBUG",
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        },
+        "file": {
+            "level": "DEBUG",
+            "format": "%(asctime)s - %(name)s.%(lineno)d.%(funcName)s - %(levelname)s - %(message)s\n"
+        }
+    },
+    "handlers": {
+        "streamhandler": {
+            "class": "logging.StreamHandler",
+            "level": "INFO",
+            "formatter": "stream",
+            "stream": "ext://sys.stdout"
+        },
+        "Medex": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "logs/Medex.log",
+            "formatter": "file",
+            "level": "DEBUG",
+            "when":"midnight",
+            "backupCount":3
+        }
+    }
+}
