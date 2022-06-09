@@ -1,0 +1,56 @@
+{
+    "version": 1,
+    "disable_existing_loggers": true,
+    "formatters": {
+        "stream": {
+            "level": "INFO",
+            "format": "%(asctime)s - %(name)s - %(levelname)s :: %(message)s"
+        },
+        "file": {
+            "level": "DEBUG",
+            "format": "%(asctime)s - %(name)s - %(levelname)s @ %(funcName)s:%(lineno)d :: %(message)s\n"
+        }
+    },
+    "handlers": {
+        "streamhandler": {
+            "class": "logging.StreamHandler",
+            "level": "INFO",
+            "formatter": "stream",
+            "stream": "ext://sys.stdout"
+        },
+        "MAINfilehandler": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "logs/Medex.log",
+            "formatter": "file",
+            "level": "DEBUG",
+            "when":"midnight",
+            "backupCount":3
+        },
+        "quote_creator_filehandler": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "logs/quote_creator.log",
+            "formatter": "file",
+            "level": "DEBUG",
+            "when":"midnight",
+            "backupCount":3
+        }
+    },
+    "loggers": {
+        "MEDEX": {
+            "level": "DEBUG",
+            "handlers": [
+                "streamhandler",
+                "MAINfilehandler"
+            ],
+            "propagate": 0
+        },
+        "quote_creator": {
+            "level": "DEBUG",
+            "handlers": [
+                "streamhandler",
+                "quote_creator_filehandler"
+            ],
+            "propagate": 0
+        }
+    }
+}

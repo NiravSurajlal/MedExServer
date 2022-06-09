@@ -3,8 +3,8 @@
 import os
 import sys
 import logging
-
-logger = logging.getLogger('Medex')
+import json
+from logging.config import dictConfig
 
 def main():
     """Run administrative tasks."""
@@ -21,5 +21,9 @@ def main():
 
 
 if __name__ == '__main__':
-    logger.warning("\n\nStarting server. \n\n")
+    with open("log_config.json", 'r') as f:
+        log_config_data = json.load(f)
+    dictConfig(log_config_data)
+    managepy_log = logging.getLogger("MEDEX")
+    managepy_log.info('Logger Started.')
     main()
