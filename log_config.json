@@ -20,7 +20,7 @@
         },
         "MAINfilehandler": {
             "class": "logging.handlers.TimedRotatingFileHandler",
-            "filename": "logs/Medex.log",
+            "filename": "medex/logs/Medex.log",
             "formatter": "file",
             "level": "DEBUG",
             "when":"midnight",
@@ -28,7 +28,7 @@
         },
         "quote_creator_filehandler": {
             "class": "logging.handlers.TimedRotatingFileHandler",
-            "filename": "logs/quote_creator.log",
+            "filename": "medex/logs/quote_creator.log",
             "formatter": "file",
             "level": "DEBUG",
             "when":"midnight",
@@ -36,7 +36,7 @@
         },
         "taskhandler_filehandler": {
             "class": "logging.handlers.TimedRotatingFileHandler",
-            "filename": "logs/taskhandler.log",
+            "filename": "medex/logs/taskhandler.log",
             "formatter": "file",
             "level": "DEBUG",
             "when":"midnight",

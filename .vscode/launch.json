@@ -8,9 +8,19 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "manage.py",
+            "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        {
+            "name": "Django MGMT Command",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\medex\\manage.py",
+            "console": "integratedTerminal",
+            "args": [
+                "runserver"
+            ]
         }
     ]
 }

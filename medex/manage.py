@@ -2,6 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+
 import logging
 import json
 from logging.config import dictConfig
@@ -23,7 +24,7 @@ def main():
 if __name__ == '__main__':
     with open("log_config.json", 'r') as f:
         log_config_data = json.load(f)
-    dictConfig(log_config_data)
-    managepy_log = logging.getLogger("MEDEX")
-    managepy_log.info('Logger Started.')
+        dictConfig(log_config_data)
+        medex_log = logging.getLogger("MEDEX")
+        medex_log.info('Logger Started.')
     main()

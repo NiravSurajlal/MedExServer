@@ -1,17 +1,17 @@
 import os
-from re import template
-from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.template import loader
 from django.contrib.auth import authenticate, login, logout
-from psycopg2 import IntegrityError
 
 from .forms import CreateNewUser
 from django.contrib.auth.forms import AuthenticationForm 
 from django.contrib import messages
 import logging
+from medex.celery import medex_Celery
+from .creation import CreateQuote
 
 __LOGGER = logging.getLogger("quote_creator")
+_medex_queue_inspector = medex_Celery.control.inspect()
 # Create your views here.
 
 # def login_required(view):
@@ -92,5 +92,14 @@ def create_quote(request):
     __LOGGER.debug("Loading create_quote view.")
     if (request.user is None) or (str(request.user) == "AnonymousUser"):
         return redirect('login')
+    
+    creation = CreateQuote("Loaded File", str(request.user))
+    creation.send_email()
+    # updates celery tasks to include a new one
+    # medex_Celery.conf.update(task_routes = {'medex.quote_creator.tasks.add': {'queue': 'hipri'},},)
+    # medex_Celery.apply_async((2, 2), queue='hipri')
+    # username = str(request.user).split("@")[0]
+    # add.apply_async((username, ))
     template_name = os.path.join('quote_creator', 'create_quote.html')
     return render(request=request, template_name=template_name)
+    

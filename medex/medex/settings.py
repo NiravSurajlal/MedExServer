@@ -11,10 +11,21 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from os.path import join  
+import os
+import socket
+import keyring
+import json
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+with open(os.path.abspath('./credentials.json'), 'r') as f:
+    __CREDENTIALS__ = json.load(f)
+    __CREDENTIALS__ = __CREDENTIALS__['MedexMailer-User']
+
+hostname = socket.gethostname()
+ip_addr = socket.gethostbyname(hostname)
+# to allow Celery fork to work
+# os.environ['FORKED_BY_MULTIPROCESSING'] = '1'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -31,13 +42,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'quote_creator.apps.QuoteCreatorConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # custom apps
+    # 'quote_creator.apps.QuoteCreatorConfig',
+    "quote_creator",
 ]
 
 MIDDLEWARE = [
@@ -55,7 +68,7 @@ ROOT_URLCONF = 'medex.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,6 +92,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'djongo',      
+    #     'NAME': 'medex_db',   
+    # }
 }
 
 # DATABASES = {
@@ -122,16 +139,35 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# FOR CELERY
+BROKER_URL = f'amqp://niravs:UuVZad3eEYPeXtFWRgwA@{ip_addr}:5672'
+# BROKER_URL = f'amqp://localhost:5672'
+CELERY_RESULT_BACKEND = f'db+sqlite:///results.db'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Africa/Nairobi'
+
+# FOR EMAILS
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_HOST_USER  = __CREDENTIALS__['username']
+DEFAULT_FROM_EMAIL = __CREDENTIALS__['username']
+# EMAIL_HOST_PASSWORD = 'gqlnjnhcsrvfmcbg'
+EMAIL_HOST_PASSWORD = keyring.get_password(__CREDENTIALS__['service_name'], __CREDENTIALS__['username']) 
+EMAIL_PORT = 587
+

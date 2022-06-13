@@ -1,0 +1,5 @@
+Hello {{name|safe}},
+
+Thank you for your request. The quote estimate comes to: {{result|safe}}.
+
+Kind Regards,

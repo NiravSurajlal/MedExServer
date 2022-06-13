@@ -1,0 +1,8 @@
+Celery requires RabbitMQ (messaging service) which requires Erlang.
+To start up RabbitMQ, use:   
+    >> C:\Program Files\RabbitMQ Server\rabbitmq_server-3.10.5\sbin\rabbitmq-server
+To start Celery use in \medex:
+    >> celery -A medex worker -l info 
+    >> celery -A myapp.celeryapp worker --loglevel=info -P eventlet
+
+    Celery has issues on windows, so needed to install eventlet
