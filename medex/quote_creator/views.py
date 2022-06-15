@@ -3,14 +3,16 @@ from django.shortcuts import redirect, render
 from django.template import loader
 from django.contrib.auth import authenticate, login, logout
 
-from .forms import CreateNewUser
+from .forms import CreateNewUser, UploadExcelFileForm
 from django.contrib.auth.forms import AuthenticationForm 
 from django.contrib import messages
 import logging
 from medex.celery import medex_Celery
 from .creation import CreateQuote
+from .tasks import add_task
+from pandas import ExcelFile
 
-__LOGGER = logging.getLogger("quote_creator")
+__qc_LOGGER = logging.getLogger("quote_creator")
 _medex_queue_inspector = medex_Celery.control.inspect()
 # Create your views here.
 
@@ -28,7 +30,7 @@ def home(request):
     return redirect("login")
 
 def register_user(request):
-    __LOGGER.debug("Loading register_user view.")
+    __qc_LOGGER.debug("Loading register_user view.")
     display_error = ''
     print(request.user)
 
@@ -36,16 +38,16 @@ def register_user(request):
         form = CreateNewUser(request.POST)
 
         if form.is_valid():
-            __LOGGER.debug("Attempting to register user.")
+            __qc_LOGGER.debug("Attempting to register user.")
             (user, error) = form.save()
             if error is not None:
                 display_error = "Registration unsuccessful. Please try another tecex (@tecex.com) email address. "
-                __LOGGER.debug(f"Unable to save user because of ERROR: {error}")
+                __qc_LOGGER.debug(f"Unable to save user because of ERROR: {error}")
                 form = CreateNewUser()
                 template_name = os.path.join('quote_creator', 'register.html')
                 return render(request=request, template_name=template_name, context={"register_form":form, "error": display_error})
             else:
-                __LOGGER.debug(f"Registration of {user.username} successful.")
+                __qc_LOGGER.debug(f"Registration of {user.username} successful.")
                 messages.success(request, "Registration successful." )
                 login(request, user)
                 return redirect("create_quote")
@@ -57,19 +59,19 @@ def register_user(request):
     return render(request=request, template_name=template_name, context={"register_form":form, "error": display_error})
 
 def login_view(request):
-    __LOGGER.debug("Loading login view.")
+    __qc_LOGGER.debug("Loading login view.")
     error = ''
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
-            __LOGGER.debug(f"Attempting to login user: {username}.")
+            __qc_LOGGER.debug(f"Attempting to login user: {username}.")
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}.")
-                __LOGGER.info(f"You are now logged in as {username}.")
+                __qc_LOGGER.info(f"You are now logged in as {username}.")
                 return redirect("create_quote")
             else:
                 error = "Invalid username or password. "
@@ -83,23 +85,37 @@ def login_view(request):
     return render(request=request, template_name=template_name, context={"login_form":form, "error":error})
 
 def logout_view(request):
-    __LOGGER.info(f"Logging out {request.user}.")
+    __qc_LOGGER.info(f"Logging out {request.user}.")
     logout(request)
     return redirect('register')
 
 
 def create_quote(request):
-    __LOGGER.debug("Loading create_quote view.")
+    __qc_LOGGER.debug("Loading create_quote view.")
     if (request.user is None) or (str(request.user) == "AnonymousUser"):
         return redirect('login')
     
-    creation = CreateQuote("Loaded File", str(request.user))
-    creation.send_email()
-    # updates celery tasks to include a new one
-    # medex_Celery.conf.update(task_routes = {'medex.quote_creator.tasks.add': {'queue': 'hipri'},},)
-    # medex_Celery.apply_async((2, 2), queue='hipri')
-    # username = str(request.user).split("@")[0]
-    # add.apply_async((username, ))
+    __qc_LOGGER.info(f"Attempting to create quote for {str(request.user)}")
+    if request.method == "POST":
+        form = UploadExcelFileForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            excel_doc_path = form.save_data_and_get_path(request.user)
+            messages.success(request, "File uploaded.") 
+            # add_task.delay(str(request.user), excel_doc_path)
+            add_task(str(request.user), excel_doc_path)
+            form = UploadExcelFileForm()
+            template_name = os.path.join('quote_creator', 'create_quote.html')
+            return render(request=request, template_name=template_name, context={'excel_upload_form': form})
+        else:
+            messages.error(request, "Unable to upload file. ")
+            form = UploadExcelFileForm()
+            template_name = os.path.join('quote_creator', 'create_quote.html')
+            return render(request=request, template_name=template_name, context={'excel_upload_form': form})
+
+    form = UploadExcelFileForm()
     template_name = os.path.join('quote_creator', 'create_quote.html')
-    return render(request=request, template_name=template_name)
+    return render(request=request, template_name=template_name, context={'excel_upload_form': form})
+
+    # add_task.delay(str(request.user))
     

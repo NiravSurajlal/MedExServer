@@ -16,7 +16,8 @@
             "name": "Django MGMT Command",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}\\medex\\manage.py",
+            // "program": "${workspaceFolder}\\medex\\manage.py",
+            "program": "medex\\manage.py",
             "console": "integratedTerminal",
             "args": [
                 "runserver"

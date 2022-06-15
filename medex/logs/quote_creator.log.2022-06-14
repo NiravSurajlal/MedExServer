@@ -1,0 +1,500 @@
+2022-06-14 13:32:12,423 - quote_creator - DEBUG @ login_view:60 :: Loading login view.
+
+2022-06-14 13:32:29,942 - quote_creator - DEBUG @ login_view:60 :: Loading login view.
+
+2022-06-14 13:32:30,199 - quote_creator - DEBUG @ login_view:67 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-14 13:32:30,477 - quote_creator - INFO @ login_view:72 :: You are now logged in as niravs@tecex.com.
+
+2022-06-14 13:32:30,496 - quote_creator - DEBUG @ create_quote:92 :: Loading create_quote view.
+
+2022-06-14 13:32:30,498 - quote_creator - INFO @ create_quote:96 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 16:22:47,241 - quote_creator - DEBUG @ create_quote:92 :: Loading create_quote view.
+
+2022-06-14 16:22:47,245 - quote_creator - INFO @ create_quote:96 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 16:27:23,079 - quote_creator - DEBUG @ create_quote:92 :: Loading create_quote view.
+
+2022-06-14 16:27:23,088 - quote_creator - INFO @ create_quote:96 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 16:30:17,230 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 16:30:19,892 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 16:32:14,503 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 16:32:16,948 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 16:33:31,066 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 16:34:00,208 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 16:34:02,083 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 16:36:51,495 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 16:36:54,739 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 18:57:08,512 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 18:58:50,558 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:19:34,651 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:19:38,026 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:20:32,621 - quote_creator - DEBUG @ read_spreadsheet:11 :: Reading SOSetup. 
+
+2022-06-14 19:20:32,650 - quote_creator - DEBUG @ read_spreadsheet:18 :: Reading SODetails. 
+
+2022-06-14 19:20:32,662 - quote_creator - DEBUG @ read_spreadsheet:23 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:20:32,675 - quote_creator - DEBUG @ read_spreadsheet:29 :: Reading Test Outcomes. 
+
+2022-06-14 19:20:32,789 - quote_creator - DEBUG @ read_spreadsheet:37 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:20:32,803 - quote_creator - DEBUG @ read_spreadsheet:42 :: Reading the expected results sheet
+
+2022-06-14 19:20:33,315 - quote_creator - DEBUG @ read_spreadsheet:46 :: Closing up and keep clean
+
+2022-06-14 19:22:21,203 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:22:24,232 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:22:31,914 - quote_creator - DEBUG @ read_spreadsheet:11 :: Reading SOSetup. 
+
+2022-06-14 19:22:31,941 - quote_creator - DEBUG @ read_spreadsheet:18 :: Reading SODetails. 
+
+2022-06-14 19:22:31,952 - quote_creator - DEBUG @ read_spreadsheet:23 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:22:31,961 - quote_creator - DEBUG @ read_spreadsheet:29 :: Reading Test Outcomes. 
+
+2022-06-14 19:22:32,078 - quote_creator - DEBUG @ read_spreadsheet:37 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:22:32,094 - quote_creator - DEBUG @ read_spreadsheet:42 :: Reading the expected results sheet
+
+2022-06-14 19:22:32,712 - quote_creator - DEBUG @ read_spreadsheet:46 :: Closing up and keep clean
+
+2022-06-14 19:24:56,381 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:25:05,679 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:25:09,534 - quote_creator - DEBUG @ read_spreadsheet:11 :: Reading SOSetup. 
+
+2022-06-14 19:25:09,575 - quote_creator - DEBUG @ read_spreadsheet:18 :: Reading SODetails. 
+
+2022-06-14 19:25:09,594 - quote_creator - DEBUG @ read_spreadsheet:23 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:25:09,613 - quote_creator - DEBUG @ read_spreadsheet:29 :: Reading Test Outcomes. 
+
+2022-06-14 19:25:09,698 - quote_creator - DEBUG @ read_spreadsheet:37 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:25:09,706 - quote_creator - DEBUG @ read_spreadsheet:42 :: Reading the expected results sheet
+
+2022-06-14 19:25:10,104 - quote_creator - DEBUG @ read_spreadsheet:46 :: Closing up and keep clean
+
+2022-06-14 19:48:16,577 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:48:21,417 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:48:26,833 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 19:48:26,860 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 19:48:26,872 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:48:26,884 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 19:48:27,015 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:48:27,028 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 19:48:27,626 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 19:52:53,399 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:52:58,075 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:53:05,922 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 19:53:05,951 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 19:53:05,964 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:53:05,977 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 19:53:06,128 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:53:06,152 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 19:53:06,763 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 19:57:41,726 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:57:42,463 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:57:44,407 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:57:44,408 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:57:49,826 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 19:57:49,873 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 19:57:49,897 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:57:49,922 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 19:57:49,936 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 19:57:50,059 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 19:57:50,066 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:57:50,083 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:57:50,088 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 19:57:50,098 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 19:57:50,373 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:57:50,476 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 19:57:51,294 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 19:57:52,915 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 19:58:19,169 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:58:22,099 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:58:22,275 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 19:58:22,290 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 19:58:22,304 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:58:22,314 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 19:58:22,417 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:58:22,429 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 19:58:22,950 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 19:58:52,671 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 19:58:53,768 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 19:58:53,961 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 19:58:53,978 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 19:58:53,990 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 19:58:54,000 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 19:58:54,116 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 19:58:54,129 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 19:58:54,663 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 20:00:59,272 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 20:01:01,974 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 20:01:02,217 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 20:01:02,239 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 20:01:02,250 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 20:01:02,261 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 20:01:02,377 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 20:01:02,394 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 20:01:02,875 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 20:09:35,392 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 20:09:38,958 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 20:09:39,178 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 20:09:39,197 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 20:09:39,207 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 20:09:39,216 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 20:09:39,323 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 20:09:39,334 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 20:09:39,784 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 20:13:12,458 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 20:13:13,333 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 20:13:15,321 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 20:13:15,337 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 20:13:16,578 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 20:13:16,648 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 20:13:16,665 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 20:13:16,676 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 20:13:16,687 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 20:13:16,696 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 20:13:16,705 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 20:13:16,714 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 20:13:16,841 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 20:13:17,009 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 20:13:17,011 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 20:13:17,020 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 20:13:17,781 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 20:13:20,280 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:04:16,801 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:04:19,608 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:04:20,746 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:04:20,758 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:04:20,767 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:04:20,776 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:04:20,865 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:04:20,877 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:04:21,384 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:07:08,192 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:07:10,779 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:07:10,962 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:07:10,978 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:07:10,990 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:07:10,999 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:07:11,110 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:07:11,124 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:07:11,625 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:17:03,921 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:17:06,406 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:17:06,673 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:17:06,699 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:17:06,711 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:17:06,724 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:17:06,842 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:17:06,855 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:17:07,409 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:18:57,525 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:18:59,593 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:18:59,833 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:18:59,853 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:18:59,864 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:18:59,872 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:18:59,966 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:18:59,979 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:19:00,419 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:20:14,011 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:20:18,509 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:20:18,770 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:20:18,791 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:20:18,802 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:20:18,816 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:20:18,922 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:20:18,933 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:20:19,382 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:21:46,947 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:21:46,959 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:21:47,262 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:21:47,298 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:21:47,311 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:21:47,322 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:21:47,427 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:21:47,442 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:21:47,895 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:22:43,656 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:22:43,667 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:22:43,955 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:22:43,978 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:22:43,995 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:22:44,006 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:22:44,124 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:22:44,136 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:22:44,655 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:29:35,045 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:29:35,059 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:29:35,285 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:29:35,306 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:29:35,317 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:29:35,328 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:29:35,419 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:29:35,432 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:29:35,933 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:29:45,015 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:29:45,021 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:29:45,178 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:29:45,190 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:29:45,202 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:29:45,227 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:29:45,326 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:29:45,336 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:29:45,778 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:31:59,566 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:31:59,575 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:31:59,834 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:31:59,854 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:31:59,865 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:31:59,876 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:31:59,969 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:31:59,983 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:32:00,485 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:34:05,082 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:34:05,092 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:34:05,332 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:34:05,355 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:34:05,373 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:34:05,387 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:34:05,479 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:34:05,492 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:34:05,954 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:35:04,051 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:35:04,062 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:35:04,130 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-14 21:35:04,135 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-14 21:35:04,139 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-14 21:35:04,145 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-14 21:35:04,165 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-14 21:35:04,169 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-14 21:35:04,265 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-14 21:36:58,246 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:36:58,258 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-14 21:37:35,293 - quote_creator - DEBUG @ create_quote:93 :: Loading create_quote view.
+
+2022-06-14 21:37:35,301 - quote_creator - INFO @ create_quote:97 :: Attempting to create quote for niravs@tecex.com
+

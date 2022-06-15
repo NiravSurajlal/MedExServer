@@ -8,6 +8,10 @@ class CreateQuote():
     
     def create_yaml(self):
         """ Convert the uploaded excel to a YAML file. """
+        # converts to json
+
+        # converts to yaml
+        
         pass
 
     def create(self):

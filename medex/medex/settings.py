@@ -15,6 +15,7 @@ import os
 import socket
 import keyring
 import json
+from . import __USERDATCACHEPATH__
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -49,8 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # custom apps
-    # 'quote_creator.apps.QuoteCreatorConfig',
-    "quote_creator",
+    'quote_creator.apps.QuoteCreatorConfig',
+    # "quote_creator",
 ]
 
 MIDDLEWARE = [
@@ -111,6 +112,8 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+MEDIA_ROOT = __USERDATCACHEPATH__
+MEDIA_URL = '/media/'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -171,3 +174,8 @@ DEFAULT_FROM_EMAIL = __CREDENTIALS__['username']
 EMAIL_HOST_PASSWORD = keyring.get_password(__CREDENTIALS__['service_name'], __CREDENTIALS__['username']) 
 EMAIL_PORT = 587
 
+# FILE-HANDLING
+FILE_UPLOAD_HANDLERS = ['django.core.files.uploadhandler.MemoryFileUploadHandler',
+                        'django.core.files.uploadhandler.TemporaryFileUploadHandler',]
+
+FILE_UPLOAD_MAX_MEMORY_SIZE = 2.5*1024*1024

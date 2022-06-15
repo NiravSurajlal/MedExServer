@@ -5,7 +5,7 @@
 <!--Upload File--> 
 <div class="container py-5">
 	<h1>Create Quote</h1>
-	<form method="POST", enctype="multipart/form-data">
+	<form method="POST">
 		{% csrf_token %}
 		{{ excel_upload_form }}                    
 		<button class="btn btn-primary" type="submit">Upload</button>

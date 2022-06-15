@@ -11,18 +11,10 @@ def send_feedback_email(email, message):
     context = {'name': name, 'email': email, 'result': message}
     mail_subject = "Your Quote"
     cwd = os.getcwd()
-    text_body_dir = os.path.join(cwd, "templates", "emails", "result_email.txt")
+    text_body_dir = os.path.join(cwd, "medex", "templates", "emails", "result_email.txt")
     mail_body = render_to_string(text_body_dir, context=context)
 
-    # mail = EmailMessage(subject=mail_subject, 
-    #                       body=mail_body, 
-    #                       to=[email,]).send(fail_silently=False)
-    # mail = EmailMessage(mail_subject, 
-    #                     mail_body, 
-    #                     to=email) 
     with mail.get_connection() as connection:
         mail.EmailMessage(subject=mail_subject, 
                           body=mail_body, 
                           to=[email,]).send(fail_silently=False)
-    # return mail.send()
-    # return send_mail(mail)
