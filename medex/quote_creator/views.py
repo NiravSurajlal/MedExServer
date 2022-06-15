@@ -102,8 +102,8 @@ def create_quote(request):
         if form.is_valid():
             excel_doc_path = form.save_data_and_get_path(request.user)
             messages.success(request, "File uploaded.") 
-            # add_task.delay(str(request.user), excel_doc_path)
-            add_task(str(request.user), excel_doc_path)
+            add_task.delay(str(request.user), excel_doc_path)
+            # add_task(str(request.user), excel_doc_path)
             form = UploadExcelFileForm()
             template_name = os.path.join('quote_creator', 'create_quote.html')
             return render(request=request, template_name=template_name, context={'excel_upload_form': form})

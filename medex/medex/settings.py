@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 with open(os.path.abspath('./credentials.json'), 'r') as f:
     __CREDENTIALS__ = json.load(f)
-    __CREDENTIALS__ = __CREDENTIALS__['MedexMailer-User']
+    # __CREDENTIALS__ = __CREDENTIALS__['MedexMailer-User']
 
 hostname = socket.gethostname()
 ip_addr = socket.gethostbyname(hostname)
@@ -33,6 +33,8 @@ ip_addr = socket.gethostbyname(hostname)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-^(8p_ho5j2z9=$p+p(wd!z$sp6^^exc+7w7o&dgq7d7#5z22@9'
+secret_user = __CREDENTIALS__["medex_django_secret_key"]
+SECRET_KEY = keyring.get_password(secret_user['service_name'], secret_user['username']) 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -168,10 +170,12 @@ CELERY_TIMEZONE = 'Africa/Nairobi'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp-mail.outlook.com'
-EMAIL_HOST_USER  = __CREDENTIALS__['username']
-DEFAULT_FROM_EMAIL = __CREDENTIALS__['username']
+email_user =__CREDENTIALS__['MedexMailer-User']
+# email_user =__CREDENTIALS__
+EMAIL_HOST_USER  = email_user['username']
+DEFAULT_FROM_EMAIL = email_user['username']
 # EMAIL_HOST_PASSWORD = 'gqlnjnhcsrvfmcbg'
-EMAIL_HOST_PASSWORD = keyring.get_password(__CREDENTIALS__['service_name'], __CREDENTIALS__['username']) 
+EMAIL_HOST_PASSWORD = keyring.get_password(email_user['service_name'], email_user['username']) 
 EMAIL_PORT = 587
 
 # FILE-HANDLING

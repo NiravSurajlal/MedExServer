@@ -6,28 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <ul>
-      <li><a href="/quote_creator/logout">Log Out</a>
-  </head>
+      <a href="/quote_creator/logout" class = "button">Log Out</a>
+    </head>
  <body>
-
     {% block content %}
-
-    {% endblock %} 
-      
+    {% endblock %}
   </body>
 </html>
-
 <style>
 html {
-
-  background-color: rgb(255, 153, 0);
-  
+  background-color: rgb(245, 234, 215);
+  background-image: url("https://static.tecex.com/img/app-login-tecex-background.svg");
 }
-
 button {
-  background-color:  rgb(146, 175, 255);
-  outline-color:  rgb(255, 51, 0);
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
 }
-
-
+.button{
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
 </style>

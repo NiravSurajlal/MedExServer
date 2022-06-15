@@ -47,19 +47,4 @@ class UploadExcelFileForm(forms.Form):
         excel_doc = self.cleaned_data['excel_file']
         excel_file = opxyl.load_workbook(excel_doc)
         excel_file.save(path)
-        # excel_doc = pd.ExcelFile(excel_doc, engine='pyxlsb')
-        # excel_doc = pd.read_excel(excel_doc)
-        # json_excel_spreadsheet = excel_doc.to_json()
-        return path
-
-# class UploadExcelFileForm(models.Model):
-#     excel_file = models.FileField()
-
-#     def get_excel(self):
-#         error = None
-#         excel_doc = self.cleaned_data['excel_file']
-#         excel_doc = pd.ExcelFile(excel_doc, engine='pyxlsb')
-#         excel_doc = pd.read_excel(excel_doc)
-#         json_excel_spreadsheet = excel_doc.to_json()
-#         return json_excel_spreadsheet
-        
+        return path        
