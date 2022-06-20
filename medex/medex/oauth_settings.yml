@@ -1,0 +1,8 @@
+app_client_id: "974fec35-853d-47ec-b10e-f71db70cd486" 
+app_secret_key_value: "B168Q~Hq9BH0gAatInz1A7mLJ8D5p82L2o1nua_w" 
+redirect: "http://localhost:8000/quote_creator/callback" 
+scopes:   
+    - user.read   
+    - mailboxsettings.read   
+    - calendars.readwrite 
+authority: "https://login.microsoftonline.com/4167dd15-4d14-4264-85e4-e113f2f76e9f"

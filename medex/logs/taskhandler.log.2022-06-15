@@ -1,0 +1,312 @@
+2022-06-15 09:09:30,105 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 09:09:33,396 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 09:13:37,484 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 09:13:40,364 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 09:20:21,280 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 09:20:23,909 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:03:39,344 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:03:42,090 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:07:26,862 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:09:46,962 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:09:49,592 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:19:37,487 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:19:40,104 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:23:07,253 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:23:09,660 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:24:14,656 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:24:17,146 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:41:49,172 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:41:51,649 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:51:09,684 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:51:12,002 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:52:27,908 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:52:30,463 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:54:00,921 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 10:54:03,761 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:04:36,129 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:04:39,021 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:10:46,580 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:10:49,423 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:13:02,769 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:13:03,933 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:15:45,763 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:15:46,529 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:15:49,546 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:17:10,767 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:17:26,919 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:17:30,013 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:30:05,044 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:30:07,936 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:37:09,762 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:37:12,481 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:39:15,639 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:39:18,220 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:41:43,723 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:41:46,244 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:53:02,176 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 11:53:04,635 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:09:08,632 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:09:11,193 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:26:04,858 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:26:07,919 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:34:56,356 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:34:58,649 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:35:18,445 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:35:21,013 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:35:48,380 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:35:50,893 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:39:31,891 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:39:34,360 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:40:48,356 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:40:50,876 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:51:54,608 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 13:51:57,290 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:09:16,729 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:09:19,511 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:09:34,034 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:09:38,209 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:10:04,535 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:10:07,026 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:10:38,386 - taskhandler - INFO @ add_task:35 :: Generating json_data for niravs. 
+
+2022-06-15 14:10:39,833 - taskhandler - INFO @ add_task:38 :: Generating YAML for niravs. 
+
+2022-06-15 14:10:42,829 - taskhandler - INFO @ add_task:43 :: Running niravs bot. 
+
+2022-06-15 14:12:37,206 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:12:38,495 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:14:10,578 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:14:13,156 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:14:57,272 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:14:59,838 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:20:22,247 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:20:24,541 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:23:28,106 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:23:30,721 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:26:15,898 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:26:18,225 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:29:28,208 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:29:30,799 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:36:19,834 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:37:06,366 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:37:08,729 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:40:19,515 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:40:20,521 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:41:09,226 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:43:09,502 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:43:12,180 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:44:37,592 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:44:40,170 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:50:15,048 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:50:17,597 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:52:57,321 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:52:59,953 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:53:35,397 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:53:37,895 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:53:48,953 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:53:51,543 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:54:43,317 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:54:45,669 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:56:37,355 - taskhandler - INFO @ add_task:34 :: Generating raw_data for niravs. 
+
+2022-06-15 14:57:22,032 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 14:57:24,555 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 15:01:09,722 - taskhandler - INFO @ add_task:34 :: Generating raw_data for niravs. 
+
+2022-06-15 15:01:25,174 - taskhandler - INFO @ add_task:36 :: Generating json_data for niravs. 
+
+2022-06-15 15:01:25,181 - taskhandler - INFO @ add_task:39 :: Generating YAML for niravs. 
+
+2022-06-15 15:01:25,199 - taskhandler - INFO @ add_task:44 :: Running niravs bot. 
+
+2022-06-15 15:01:28,783 - taskhandler - INFO @ add_task:55 :: Sending email to niravs@tecex.com. 
+
+2022-06-15 15:02:39,061 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 15:02:41,480 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 15:03:08,701 - taskhandler - INFO @ add_task:34 :: Generating raw_data for niravs. 
+
+2022-06-15 15:03:11,485 - taskhandler - INFO @ add_task:36 :: Generating json_data for niravs. 
+
+2022-06-15 15:03:11,492 - taskhandler - INFO @ add_task:39 :: Generating YAML for niravs. 
+
+2022-06-15 15:03:11,509 - taskhandler - INFO @ add_task:44 :: Running niravs bot. 
+
+2022-06-15 15:03:12,811 - taskhandler - INFO @ add_task:55 :: Sending email to niravs@tecex.com. 
+
+2022-06-15 15:03:24,787 - taskhandler - INFO @ add_task:58 :: Email sent to niravs@tecex.com, and process complete. 
+
+2022-06-15 15:06:42,507 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 15:06:43,430 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 15:07:16,939 - taskhandler - INFO @ add_task:34 :: Generating raw_data for niravs. 
+
+2022-06-15 15:07:17,202 - taskhandler - INFO @ add_task:36 :: Generating json_data for niravs. 
+
+2022-06-15 15:07:17,210 - taskhandler - INFO @ add_task:39 :: Generating YAML for niravs. 
+
+2022-06-15 15:07:17,216 - taskhandler - INFO @ add_task:44 :: Running niravs bot. 
+
+2022-06-15 15:07:17,220 - taskhandler - INFO @ add_task:55 :: Sending email to niravs@tecex.com. 
+
+2022-06-15 15:07:55,244 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 15:08:11,731 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 15:08:29,819 - taskhandler - INFO @ add_task:34 :: Generating raw_data for niravs. 
+
+2022-06-15 15:08:30,077 - taskhandler - INFO @ add_task:36 :: Generating json_data for niravs. 
+
+2022-06-15 15:08:30,083 - taskhandler - INFO @ add_task:39 :: Generating YAML for niravs. 
+
+2022-06-15 15:08:30,091 - taskhandler - INFO @ add_task:44 :: Running niravs bot. 
+
+2022-06-15 15:08:30,094 - taskhandler - INFO @ add_task:55 :: Sending email to niravs@tecex.com. 
+
+2022-06-15 15:08:39,663 - taskhandler - INFO @ add_task:58 :: Email sent to niravs@tecex.com, and process complete. 
+
+2022-06-15 15:09:48,484 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:13:44,176 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:15:15,471 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:15:51,248 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:18:17,938 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:18:18,869 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:39:33,633 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:40:00,999 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:40:22,265 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:40:23,485 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:41:32,539 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:42:19,002 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:42:52,635 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:43:27,611 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:44:59,696 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:45:00,811 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:45:14,590 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:54:55,674 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-15 16:54:56,725 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+

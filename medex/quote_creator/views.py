@@ -1,6 +1,6 @@
 import os
+from re import template
 from django.shortcuts import redirect, render
-from django.template import loader
 from django.contrib.auth import authenticate, login, logout
 
 from .forms import CreateNewUser, UploadExcelFileForm
@@ -8,9 +8,14 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 import logging
 from medex.celery import medex_Celery
-from .creation import CreateQuote
 from .tasks import add_task
-from pandas import ExcelFile
+
+# For MS Login Views
+from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
+from medex.auth_helper import get_sign_in_flow, get_token_from_code, store_user, remove_user_and_token, get_token
+from medex.graph_helper import *
 
 __qc_LOGGER = logging.getLogger("quote_creator")
 _medex_queue_inspector = medex_Celery.control.inspect()
@@ -26,7 +31,7 @@ _medex_queue_inspector = medex_Celery.control.inspect()
         
 #     return wrapped_view
 
-def home(request):
+def old_home(request):
     return redirect("login")
 
 def register_user(request):
@@ -89,7 +94,6 @@ def logout_view(request):
     logout(request)
     return redirect('register')
 
-
 def create_quote(request):
     __qc_LOGGER.debug("Loading create_quote view.")
     if (request.user is None) or (str(request.user) == "AnonymousUser"):
@@ -118,4 +122,41 @@ def create_quote(request):
     return render(request=request, template_name=template_name, context={'excel_upload_form': form})
 
     # add_task.delay(str(request.user))
-    
+
+#_________________________ FOR MS LOGIN _________________________
+def home(request):
+    context = initialize_context(request)
+    template_name = os.path.join('quote_creator', 'ms_home.html')
+    return render(request, template_name, context)
+def initialize_context(request):
+    context = {}
+    error = request.session.pop('flash_error', None)
+    if error != None:
+        context['errors'] = []
+        context['errors'].append(error)
+    # Check for user in the session
+    context['user'] = request.session.get("user", {'is_authenticated': False})
+    # context['user'] = request.session.get('user')
+    return context
+def sign_in(request):
+    # Get the sign-in flow
+    flow = get_sign_in_flow()
+    # Save the expected flow so we can use it in the callback
+    try:
+        request.session['auth_flow'] = flow
+    except Exception as e:
+        print(e)
+    # Redirect to the Azure sign-in page
+    return HttpResponseRedirect(flow['auth_uri'])
+def sign_out(request):
+    # Clear out the user and token
+    remove_user_and_token(request)
+    return HttpResponseRedirect(reverse('home'))
+def callback(request):
+    # Make the token request
+    result = get_token_from_code(request)
+    #Get the user's profile from graph_helper.py script
+    user = get_user(result['access_token']) 
+    # Store user from auth_helper.py script
+    store_user(request, user)
+    return HttpResponseRedirect(reverse('home'))

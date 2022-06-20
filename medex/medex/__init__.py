@@ -3,6 +3,8 @@ from .celery import medex_Celery
 
 import os
 
+__ROOTPATH__ = os.path.abspath(os.path.join(os.path.split(__file__)[0]))
+
 __CACHEPATH__ = os.path.abspath(os.path.join(os.path.split(__file__)[0], 'cache'))
 if not os.path.exists(__CACHEPATH__):
     os.mkdir(__CACHEPATH__)

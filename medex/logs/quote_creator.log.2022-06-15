@@ -1,0 +1,712 @@
+2022-06-15 09:09:41,665 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 09:09:41,680 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 09:12:28,346 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 09:12:35,010 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 09:12:35,223 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 09:12:35,483 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 09:12:39,797 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 09:12:42,402 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 09:13:48,794 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 09:13:50,788 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 09:20:45,750 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 09:20:48,313 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:03:52,340 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:03:53,339 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:18:11,839 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:18:13,548 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:19:57,645 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:19:58,515 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:20:06,499 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:20:09,009 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:23:27,051 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:23:28,300 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:24:24,291 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:24:24,926 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:26:15,992 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:26:17,173 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:42:00,644 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:42:02,263 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:51:21,193 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:51:21,208 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:51:28,676 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 10:51:33,426 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 10:51:33,642 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 10:51:33,889 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 10:51:36,120 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:51:36,133 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:54:10,838 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:54:11,667 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 10:54:22,962 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 10:54:23,851 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:04:53,610 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 11:04:58,668 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 11:04:58,892 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 11:04:59,211 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 11:05:02,255 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:05:02,272 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:05:11,055 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:05:12,353 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:07:35,695 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:07:36,531 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:10:55,438 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:10:55,450 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:13:09,237 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:13:09,248 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:15:54,567 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:15:54,579 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:16:02,993 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:16:03,000 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:16:07,391 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 11:16:13,912 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 11:16:14,162 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 11:16:14,441 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 11:16:14,463 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:16:14,466 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:16:20,416 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:16:20,426 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:16:38,552 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:16:38,556 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:17:32,823 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:17:35,314 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:30:16,627 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:30:20,361 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:37:57,739 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:38:00,410 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:39:24,420 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:39:26,743 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:41:48,839 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 11:41:55,181 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 11:41:55,406 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 11:41:55,662 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 11:41:55,687 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:42:00,858 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:42:06,885 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:42:09,105 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 11:53:07,118 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 11:53:09,505 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 13:09:33,737 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 13:09:39,231 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 13:26:13,630 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 13:26:17,159 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 13:35:24,518 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 13:35:28,521 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 13:35:54,807 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 13:36:00,131 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 13:39:51,668 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 13:39:54,489 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 13:41:04,939 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 13:41:08,897 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 13:52:06,789 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 13:52:10,341 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:09:43,759 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:09:43,776 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:10:13,301 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:10:13,312 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:10:17,867 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 14:10:17,900 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 14:10:17,918 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 14:10:17,939 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 14:10:18,085 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 14:10:18,100 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 14:10:18,742 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 14:12:48,427 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:12:55,946 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:13:02,279 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:13:02,510 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 14:13:02,763 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 14:13:02,785 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:13:02,790 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:13:12,269 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:13:12,274 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:13:12,309 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 14:13:12,315 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 14:13:12,318 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 14:13:12,323 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 14:13:12,344 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 14:13:12,348 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 14:13:12,443 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 14:14:21,173 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:14:21,184 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:14:21,202 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 14:14:21,209 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 14:14:21,213 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 14:14:21,218 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 14:14:21,239 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 14:14:21,243 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 14:14:21,343 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 14:14:38,398 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:14:38,411 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:14:38,433 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 14:14:38,438 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 14:14:38,444 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 14:14:38,448 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 14:14:38,472 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 14:14:38,478 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 14:14:38,580 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 14:15:05,496 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:15:05,510 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:15:09,496 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 14:15:09,523 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 14:15:09,534 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 14:15:09,545 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 14:15:09,665 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 14:15:09,679 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 14:15:10,166 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 14:16:20,248 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:16:20,250 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:16:21,943 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 14:16:21,963 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 14:16:21,972 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 14:16:21,982 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 14:16:22,084 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 14:16:22,097 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 14:16:22,551 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 14:20:29,023 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:20:29,033 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:23:36,131 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:23:36,151 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:26:22,064 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:26:22,077 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:29:46,263 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:30:01,625 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:30:01,841 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 14:30:02,080 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 14:30:02,104 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:30:02,109 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:30:12,177 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:30:12,189 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:37:25,879 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:37:25,888 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:40:24,857 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:40:35,070 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:40:35,282 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 14:40:35,520 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 14:40:35,541 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:40:35,544 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:40:43,521 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:40:43,524 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:41:22,941 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:41:30,397 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:41:36,013 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:41:36,216 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 14:41:36,438 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 14:41:36,458 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:41:36,461 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:41:42,056 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:41:42,067 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:43:19,342 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:43:19,352 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:44:44,259 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:44:53,575 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:44:53,783 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 14:44:54,022 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 14:44:54,050 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:44:54,055 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:45:06,448 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:45:06,458 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:50:24,278 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:53:03,988 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:53:05,659 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:53:06,656 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:53:06,867 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:53:07,118 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:53:58,313 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:54:52,643 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:55:44,436 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:55:53,370 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 14:55:53,592 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 14:55:53,831 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 14:55:53,863 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:55:53,867 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:56:21,766 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 14:56:21,777 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 14:57:27,351 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:00:42,530 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:00:42,742 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 15:00:42,964 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 15:00:42,987 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:00:42,993 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:00:53,731 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:00:53,745 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:01:13,180 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 15:01:13,200 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 15:01:13,214 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 15:01:13,225 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 15:01:13,383 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 15:01:13,392 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 15:01:14,057 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 15:02:44,260 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:02:49,678 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:02:49,904 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 15:02:50,158 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 15:02:50,190 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:02:50,195 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:02:58,273 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:02:58,281 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:03:10,646 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 15:03:10,671 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 15:03:10,688 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 15:03:10,702 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 15:03:10,859 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 15:03:10,869 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 15:03:11,476 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 15:06:59,117 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:07:08,629 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:07:08,841 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 15:07:09,067 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 15:07:09,088 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:07:09,091 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:07:16,453 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:07:16,456 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:07:16,953 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 15:07:16,960 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 15:07:16,964 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 15:07:16,967 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 15:07:17,004 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 15:07:17,008 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 15:07:17,201 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 15:08:15,492 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:08:21,356 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:08:21,571 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 15:08:21,802 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 15:08:21,823 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:08:21,826 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:08:29,254 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:08:29,265 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:08:29,835 - quote_creator - DEBUG @ read_spreadsheet:12 :: Reading SOSetup. 
+
+2022-06-15 15:08:29,841 - quote_creator - DEBUG @ read_spreadsheet:19 :: Reading SODetails. 
+
+2022-06-15 15:08:29,845 - quote_creator - DEBUG @ read_spreadsheet:24 :: Reading Shipment Order Packages. 
+
+2022-06-15 15:08:29,850 - quote_creator - DEBUG @ read_spreadsheet:30 :: Reading Test Outcomes. 
+
+2022-06-15 15:08:29,917 - quote_creator - DEBUG @ read_spreadsheet:38 :: Reading the Line Items sheet -> Line Item List 1
+
+2022-06-15 15:08:29,923 - quote_creator - DEBUG @ read_spreadsheet:43 :: Reading the expected results sheet
+
+2022-06-15 15:08:30,076 - quote_creator - DEBUG @ read_spreadsheet:47 :: Closing up and keep clean
+
+2022-06-15 15:10:03,125 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:10:10,037 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:10:10,241 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 15:10:10,478 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 15:10:10,499 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:10:10,502 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:10:16,319 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:10:16,330 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:10:49,596 - quote_creator - INFO @ logout_view:88 :: Logging out niravs@tecex.com.
+
+2022-06-15 15:10:49,621 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 15:10:51,130 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:11:09,092 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 15:11:09,291 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 15:11:09,542 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 15:11:09,563 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:11:09,566 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:11:19,128 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 15:11:19,131 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 15:59:35,732 - quote_creator - INFO @ logout_view:88 :: Logging out niravs@tecex.com.
+
+2022-06-15 15:59:35,757 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 15:59:44,396 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 16:00:01,833 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 16:00:02,065 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 16:00:02,311 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 16:00:02,330 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 16:00:02,334 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 16:00:22,655 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 16:00:22,666 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 16:09:23,647 - quote_creator - INFO @ logout_view:88 :: Logging out niravs@tecex.com.
+
+2022-06-15 16:09:23,675 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 16:18:27,354 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 16:19:58,991 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 16:20:12,668 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 16:20:34,535 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 16:21:10,661 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 16:21:12,025 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 16:21:34,499 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 16:21:36,270 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 16:22:48,350 - quote_creator - INFO @ logout_view:88 :: Logging out AnonymousUser.
+
+2022-06-15 16:22:48,360 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 16:22:49,790 - quote_creator - INFO @ logout_view:88 :: Logging out AnonymousUser.
+
+2022-06-15 16:22:49,804 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 16:55:09,228 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 16:55:14,539 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 16:55:14,774 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 16:55:15,037 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 16:55:15,061 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 16:55:15,064 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 16:55:27,553 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 16:55:27,557 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 16:55:33,058 - quote_creator - INFO @ logout_view:88 :: Logging out niravs@tecex.com.
+
+2022-06-15 16:55:33,081 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 17:00:00,652 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 17:00:03,379 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 17:00:13,896 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 17:00:21,311 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 17:00:21,515 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 17:00:21,745 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 17:00:21,764 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 17:00:21,767 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 17:00:29,135 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 17:00:29,146 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 17:00:36,638 - quote_creator - INFO @ logout_view:88 :: Logging out niravs@tecex.com.
+
+2022-06-15 17:00:36,671 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+
+2022-06-15 17:13:05,440 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 17:13:15,591 - quote_creator - DEBUG @ login_view:62 :: Loading login view.
+
+2022-06-15 17:13:15,794 - quote_creator - DEBUG @ login_view:69 :: Attempting to login user: niravs@tecex.com.
+
+2022-06-15 17:13:16,020 - quote_creator - INFO @ login_view:74 :: You are now logged in as niravs@tecex.com.
+
+2022-06-15 17:13:16,039 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 17:13:16,042 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 17:14:07,987 - quote_creator - DEBUG @ create_quote:94 :: Loading create_quote view.
+
+2022-06-15 17:14:07,990 - quote_creator - INFO @ create_quote:98 :: Attempting to create quote for niravs@tecex.com
+
+2022-06-15 17:14:21,395 - quote_creator - INFO @ logout_view:88 :: Logging out niravs@tecex.com.
+
+2022-06-15 17:14:21,421 - quote_creator - DEBUG @ register_user:33 :: Loading register_user view.
+

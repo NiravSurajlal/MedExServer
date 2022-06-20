@@ -32,7 +32,7 @@ ip_addr = socket.gethostbyname(hostname)
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^(8p_ho5j2z9=$p+p(wd!z$sp6^^exc+7w7o&dgq7d7#5z22@9'
+# SECRET_KEY = 'django-insecure-^(8p_ho5j2z9=$p+p(wd!z$sp6^^exc+7w7o&dgq7d7#5z22@9'
 secret_user = __CREDENTIALS__["medex_django_secret_key"]
 SECRET_KEY = keyring.get_password(secret_user['service_name'], secret_user['username']) 
 
