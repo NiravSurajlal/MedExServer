@@ -17,7 +17,7 @@ def send_feedback_email_task(email, message="test"):
     return send_feedback_email(email, message) 
 
 @medex_Celery.task(name="add_task")
-def add_task(email, excel_doc_path=None):
+def add_task(email, excel_doc_path=None, users_name=None):
     """ Passes the task to celery. """
     __taskhandler_LOG = logging.getLogger("taskhandler")
     if excel_doc_path is None:
