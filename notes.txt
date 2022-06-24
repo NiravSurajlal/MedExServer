@@ -9,6 +9,6 @@ To start Celery use in \medex:
     >> celery -A medex worker --loglevel=info -P eventlet
 
 To start the server use in \medex:
-    >> python manage.py runserver
+    >> python manage.py runserver (--noreload)
 
     Celery has issues on windows, so needed to install eventlet

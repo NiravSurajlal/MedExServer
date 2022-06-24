@@ -6,6 +6,22 @@ import sys
 import logging
 import json
 from logging.config import dictConfig
+import subprocess
+from time import sleep
+
+def start_rabbitmq(medex_LOGGER):
+    medex_LOGGER.info("Starting up Rabbitmq.")
+    rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server" )
+    rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
+    # self.rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
+    rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
+    sleep(20)
+
+def start_celery(medex_LOGGER):
+    medex_LOGGER.info("Starting up Celery.")
+    celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-P', 'eventlet']
+    celery_process = subprocess.Popen(celery_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
+    sleep(15)
 
 def main():
     """Run administrative tasks."""
@@ -27,4 +43,18 @@ if __name__ == '__main__':
         dictConfig(log_config_data)
         medex_log = logging.getLogger("MEDEX")
         medex_log.info('Logger Started.')
+
+    start_rabbitmq(medex_log)
+    start_celery(medex_log)
+    # medex_log .info("\n Starting up Rabbitmq.")
+    # rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server" )
+    # rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
+    # subprocess.Popen(rabbitmq_cmd)
+    # sleep(15)
+    
+    # # # celery for windows
+    # medex_log .info("\n Starting up Celery.")
+    # celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-P', 'eventlet']
+    # subprocess.Popen(celery_cmd)
+    # sleep(7)
     main()

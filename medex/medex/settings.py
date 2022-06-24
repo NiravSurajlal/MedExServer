@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # custom apps
     'quote_creator.apps.QuoteCreatorConfig',
-    # "quote_creator",
 ]
 
 MIDDLEWARE = [

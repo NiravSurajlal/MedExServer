@@ -1,0 +1,60 @@
+2022-06-21 13:44:11,881 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 13:44:13,419 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 13:44:37,407 - MEDEX - DEBUG @ sign_in:138 :: Attemping to log in a user. 
+
+2022-06-21 13:45:42,986 - MEDEX - DEBUG @ sign_in:138 :: Attemping to log in a user. 
+
+2022-06-21 13:48:21,899 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 13:48:24,661 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 13:57:13,299 - MEDEX - DEBUG @ sign_in:138 :: Attemping to log in a user. 
+
+2022-06-21 13:59:16,162 - MEDEX - DEBUG @ sign_in:138 :: Attemping to log in a user. 
+
+2022-06-21 13:59:57,132 - MEDEX - DEBUG @ create_quote:93 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-21 14:55:39,699 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 14:55:40,877 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 14:55:43,256 - MEDEX - DEBUG @ sign_out:152 :: Attempting to logout Nirav Surajlal.
+
+2022-06-21 14:55:43,256 - MEDEX - DEBUG @ sign_out:158 :: Nirav Surajlal is logged out.
+
+2022-06-21 14:55:47,192 - MEDEX - DEBUG @ sign_in:138 :: Attemping to log in a user. 
+
+2022-06-21 14:55:51,086 - MEDEX - DEBUG @ create_quote:93 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-21 14:56:11,059 - MEDEX - DEBUG @ create_quote:93 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-21 15:00:39,911 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 15:00:42,359 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 15:00:46,065 - MEDEX - DEBUG @ sign_out:152 :: Attempting to logout Nirav Surajlal.
+
+2022-06-21 15:00:46,066 - MEDEX - DEBUG @ sign_out:158 :: Nirav Surajlal is logged out.
+
+2022-06-21 15:00:47,830 - MEDEX - DEBUG @ sign_in:138 :: Attemping to log in a user. 
+
+2022-06-21 15:06:01,919 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 15:06:02,943 - MEDEX - INFO @ <module>:29 :: Logger Started.
+
+2022-06-21 15:06:24,145 - MEDEX - DEBUG @ sign_in:76 :: Attemping to log in a user. 
+
+2022-06-21 15:06:28,027 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-21 15:06:34,964 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-21 15:07:46,182 - MEDEX - DEBUG @ sign_in:76 :: Attemping to log in a user. 
+
+2022-06-21 15:07:49,345 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-21 15:07:50,895 - MEDEX - DEBUG @ sign_out:90 :: Attempting to logout Nirav Surajlal.
+
+2022-06-21 15:07:50,896 - MEDEX - DEBUG @ sign_out:96 :: Nirav Surajlal is logged out.
+
