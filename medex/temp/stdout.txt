@@ -1,0 +1,5 @@
+Command executed:
+mvn test -Dcucumber.options="--tags @uid1379562945" -DenvironmentType=UserRequest -DbrowserName=Lambda
+
+Start StdOut:
+

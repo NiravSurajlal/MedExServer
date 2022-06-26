@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<ApplicationSettings>
+<URL>https://tecex--staging.my.salesforce.com</URL>
+<EnvironmentType>Staging</EnvironmentType>
+<BrowserType>Chrome</BrowserType>
+<EnableDebugLog>False</EnableDebugLog>
+<EnableScrenshotForSucess>True</EnableScrenshotForSucess>
+<EnableScrenshotForFailure>True</EnableScrenshotForFailure>
+<EnableScrenshotForAllSteps>False</EnableScrenshotForAllSteps>
+<EnableVideoCaptureForSucess>False</EnableVideoCaptureForSucess>
+<EnableSeparateFailureReport>False</EnableSeparateFailureReport>
+<QueuingForTestcases>False</QueuingForTestcases>
+<ParallelExecution>False</ParallelExecution>
+<EnableCompareImage>False</EnableCompareImage>
+<MaximumTimeInSecondsToWaitForControl>30</MaximumTimeInSecondsToWaitForControl>
+<MaximumTimeInMilliSecondsToWaitForPage>15000</MaximumTimeInMilliSecondsToWaitForPage>
+<TimeIntervalInMilliSecondsToWaitForPage>500</TimeIntervalInMilliSecondsToWaitForPage>
+<DownloadInCurrentDirectory>True</DownloadInCurrentDirectory>
+<HighLightWebElement>false</HighLightWebElement>
+<LambdaTestBuild>MedExDev</LambdaTestBuild>
+<NetworkLog>True</NetworkLog>
+</ApplicationSettings>

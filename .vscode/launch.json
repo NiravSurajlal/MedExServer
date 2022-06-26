@@ -20,7 +20,8 @@
             "program": "medex\\manage.py",
             "console": "integratedTerminal",
             "args": [
-                "runserver"
+                "runserver",
+                "--noreload",
             ]
         }
     ]

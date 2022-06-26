@@ -9,6 +9,7 @@ import yaml
 from medex import __CACHEPATH__
 from .shipment_order_bank import read_spreadsheet, make_new_cases
 import pandas as pd
+from .creation_bot import QuoteBot
 
 @medex_Celery.task(name="send_feedback_email_task")
 def send_feedback_email_task(email, message="test"):
@@ -18,7 +19,12 @@ def send_feedback_email_task(email, message="test"):
 
 @medex_Celery.task(name="add_task")
 def add_task(email, excel_doc_path=None, users_name=None):
-    """ Passes the task to celery. """
+    """ Passes the task to celery. 
+        Performs the process of generating the json then yml from the excel uploaded.
+        Stores the information in a json of the users name.
+        Runs the bot.
+        Emails the result to the user.  
+        """
     __taskhandler_LOG = logging.getLogger("taskhandler")
     if excel_doc_path is None:
         __taskhandler_LOG.debug("File not uploaded.")
@@ -42,7 +48,7 @@ def add_task(email, excel_doc_path=None, users_name=None):
         generate_yaml(json_data[case_name], yaml_path)
 
     __taskhandler_LOG.info(f"Running {task_data['username']} bot. ")
-    result = run_bot(yaml_path)
+    result = run_bot(username)
     task_data['result'] = result
     task_data['end_time'] = ctime()
 
@@ -95,10 +101,12 @@ def json_to_yaml(json_data):
 
     return data
 
-def run_bot(yaml_path):
+def run_bot(username):
     """ Runs the selnium bot to generate the quote. 
         Returns a result. """
     print("\n\n Running bot ... \n\n")
+    bot = QuoteBot(username)
+    # bot.execute()
     return "$2"
 # @shared_task
 # def add2(x, y):

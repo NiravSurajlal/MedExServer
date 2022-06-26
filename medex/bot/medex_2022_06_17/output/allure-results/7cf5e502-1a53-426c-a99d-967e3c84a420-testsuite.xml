@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1655450352133" stop="1655452298978" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>GWT file1</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1655450352187" stop="1655450870162" status="passed">
+            <name>Creating a quote using a stand alone project no clinical trial with technical equipment adding delivery address parts and line items From Canada To Mexico</name>
+            <title>Creating a quote using a stand alone project no clinical trial with technical equipment adding delivery address parts and line items From Canada To Mexico</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1655450352761" stop="1655450363103" status="passed">
+                    <name>Given I have access to TecEx Medical application</name>
+                    <title>Given I have access to TecEx Medical application</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450363110" stop="1655450369686" status="passed">
+                    <name>When I Entered Username in salesforce login as 'Username1'</name>
+                    <title>When I Entered Username in salesforce login as 'Username1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450369687" stop="1655450376894" status="passed">
+                    <name>And I Entered Password in salesforce login as 'Password1'</name>
+                    <title>And I Entered Password in salesforce login as 'Password1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450376896" stop="1655450386058" status="passed">
+                    <name>And I Selected Log In to Sandbox in salesforce login</name>
+                    <title>And I Selected Log In to Sandbox in salesforce login</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450386059" stop="1655450395095" status="passed">
+                    <name>And I Selected Shipment Orders dropdown in shipment</name>
+                    <title>And I Selected Shipment Orders dropdown in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450395098" stop="1655450402072" status="passed">
+                    <name>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</name>
+                    <title>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450402077" stop="1655450409709" status="passed">
+                    <name>And I Selected Medical Bot SO in shipment</name>
+                    <title>And I Selected Medical Bot SO in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450409711" stop="1655450417430" status="passed">
+                    <name>And I Selected SO New in shipment</name>
+                    <title>And I Selected SO New in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450417434" stop="1655450425209" status="passed">
+                    <name>And I Selected Quote in shipment</name>
+                    <title>And I Selected Quote in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450425211" stop="1655450432891" status="passed">
+                    <name>And I Entered Account in shipment as 'Account1'</name>
+                    <title>And I Entered Account in shipment as 'Account1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450432892" stop="1655450440395" status="passed">
+                    <name>And I Selected Select Account in shipment</name>
+                    <title>And I Selected Select Account in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450440396" stop="1655450447094" status="passed">
+                    <name>And I Entered Contact in shipment as 'Contact1'</name>
+                    <title>And I Entered Contact in shipment as 'Contact1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450447097" stop="1655450454382" status="passed">
+                    <name>And I Selected Select Contact in shipment</name>
+                    <title>And I Selected Select Contact in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450454383" stop="1655450461043" status="passed">
+                    <name>And I Selected Project in shipment</name>
+                    <title>And I Selected Project in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450461050" stop="1655450468539" status="passed">
+                    <name>And I Selected Select Project in shipment</name>
+                    <title>And I Selected Select Project in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450468540" stop="1655450475883" status="passed">
+                    <name>And I Selected Clinical trial in shipment</name>
+                    <title>And I Selected Clinical trial in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450475886" stop="1655450483349" status="passed">
+                    <name>And I Selected Select Clinical trial in shipment</name>
+                    <title>And I Selected Select Clinical trial in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450483350" stop="1655450490768" status="passed">
+                    <name>And I Entered Ship from country in shipment as 'Canada'</name>
+                    <title>And I Entered Ship from country in shipment as 'Canada'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450490770" stop="1655450498286" status="passed">
+                    <name>And I Selected Ship from country select in shipment</name>
+                    <title>And I Selected Ship from country select in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450498287" stop="1655450504963" status="passed">
+                    <name>And I Selected Service type in shipment</name>
+                    <title>And I Selected Service type in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450504966" stop="1655450512417" status="passed">
+                    <name>And I Selected Select Service type in shipment</name>
+                    <title>And I Selected Select Service type in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450512419" stop="1655450519848" status="passed">
+                    <name>And I Selected International Freight in shipment</name>
+                    <title>And I Selected International Freight in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450519849" stop="1655450527362" status="passed">
+                    <name>And I Selected Select International Freight in shipment</name>
+                    <title>And I Selected Select International Freight in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450527363" stop="1655450534921" status="passed">
+                    <name>And I Selected Add to table in shipment</name>
+                    <title>And I Selected Add to table in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450534925" stop="1655450542337" status="passed">
+                    <name>And I Selected Proceed in shipment</name>
+                    <title>And I Selected Proceed in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450542340" stop="1655450549498" status="passed">
+                    <name>And I Entered Ship to country TB in shipment as 'Mexico'</name>
+                    <title>And I Entered Ship to country TB in shipment as 'Mexico'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450549499" stop="1655450557521" status="passed">
+                    <name>And I Selected Ship to country in shipment</name>
+                    <title>And I Selected Ship to country in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450557522" stop="1655450565045" status="passed">
+                    <name>And I Selected Type of Product in shipment</name>
+                    <title>And I Selected Type of Product in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450565045" stop="1655450572777" status="passed">
+                    <name>And I Selected Tech equipment in shipment</name>
+                    <title>And I Selected Tech equipment in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450572778" stop="1655450580341" status="passed">
+                    <name>And I Selected Add Delivery Address Optional in shipment</name>
+                    <title>And I Selected Add Delivery Address Optional in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450580342" stop="1655450589687" status="passed">
+                    <name>And I checked Add Delivery Address Checkbox in shipment</name>
+                    <title>And I checked Add Delivery Address Checkbox in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450589688" stop="1655450597324" status="passed">
+                    <name>And I selected Add Delivery Address OK in shipment</name>
+                    <title>And I selected Add Delivery Address OK in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450597325" stop="1655450604179" status="passed">
+                    <name>And I Entered Shipment Value in shipment as '1500'</name>
+                    <title>And I Entered Shipment Value in shipment as '1500'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450604180" stop="1655450611334" status="passed">
+                    <name>And I Selected PD Add First Package in package details</name>
+                    <title>And I Selected PD Add First Package in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450611335" stop="1655450619031" status="passed">
+                    <name>And I Selected PD Add Row in package details</name>
+                    <title>And I Selected PD Add Row in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450619033" stop="1655450627800" status="passed">
+                    <name>And I ClearAndEnterText PD How many packages TB in package details as 'PDHowmanypackagesTB1'</name>
+                    <title>And I ClearAndEnterText PD How many packages TB in package details as 'PDHowmanypackagesTB1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450627801" stop="1655450634645" status="passed">
+                    <name>And I Selected PD Weight Unit in package details</name>
+                    <title>And I Selected PD Weight Unit in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450634647" stop="1655450643809" status="passed">
+                    <name>And I Selected PD Weight Unit value in package details</name>
+                    <title>And I Selected PD Weight Unit value in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450643810" stop="1655450652159" status="passed">
+                    <name>And I ClearAndEnterText PD Actual Weight in package details as 'PDActualWeight1'</name>
+                    <title>And I ClearAndEnterText PD Actual Weight in package details as 'PDActualWeight1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450652160" stop="1655450659716" status="passed">
+                    <name>And I Selected PD Dimension Unit in package details</name>
+                    <title>And I Selected PD Dimension Unit in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450659718" stop="1655450666477" status="passed">
+                    <name>And I Selected PD Dimension Unit value in package details</name>
+                    <title>And I Selected PD Dimension Unit value in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450666478" stop="1655450674114" status="passed">
+                    <name>And I ClearAndEnterText PD Length in package details as 'PDLength1'</name>
+                    <title>And I ClearAndEnterText PD Length in package details as 'PDLength1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450674115" stop="1655450681647" status="passed">
+                    <name>And I ClearAndEnterText PD Breadth in package details as 'PDBreadth1'</name>
+                    <title>And I ClearAndEnterText PD Breadth in package details as 'PDBreadth1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450681650" stop="1655450690372" status="passed">
+                    <name>And I ClearAndEnterText PD Heigth in package details as 'PDHeigth1'</name>
+                    <title>And I ClearAndEnterText PD Heigth in package details as 'PDHeigth1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450690373" stop="1655450698438" status="passed">
+                    <name>And I Selected PD Save in package details</name>
+                    <title>And I Selected PD Save in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450698439" stop="1655450706467" status="passed">
+                    <name>And I Selected PD Add Second Package in package details</name>
+                    <title>And I Selected PD Add Second Package in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450706469" stop="1655450714206" status="passed">
+                    <name>And I Selected PD Add Row in package details</name>
+                    <title>And I Selected PD Add Row in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450714207" stop="1655450722556" status="passed">
+                    <name>And I ClearAndEnterText PD How many packages TB in package details as '2'</name>
+                    <title>And I ClearAndEnterText PD How many packages TB in package details as '2'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450722557" stop="1655450730024" status="passed">
+                    <name>And I Selected PD Weight Unit in package details</name>
+                    <title>And I Selected PD Weight Unit in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450730025" stop="1655450738953" status="passed">
+                    <name>And I Selected PD Weight Unit value in package details</name>
+                    <title>And I Selected PD Weight Unit value in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450738954" stop="1655450747122" status="passed">
+                    <name>And I ClearAndEnterText PD Actual Weight in package details as '85'</name>
+                    <title>And I ClearAndEnterText PD Actual Weight in package details as '85'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450747123" stop="1655450754350" status="passed">
+                    <name>And I Selected PD Dimension Unit in package details</name>
+                    <title>And I Selected PD Dimension Unit in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450754352" stop="1655450762279" status="passed">
+                    <name>And I Selected PD Dimension Unit value in package details</name>
+                    <title>And I Selected PD Dimension Unit value in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450762280" stop="1655450770319" status="passed">
+                    <name>And I ClearAndEnterText PD Length in package details as '14'</name>
+                    <title>And I ClearAndEnterText PD Length in package details as '14'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450770321" stop="1655450778575" status="passed">
+                    <name>And I ClearAndEnterText PD Breadth in package details as '12'</name>
+                    <title>And I ClearAndEnterText PD Breadth in package details as '12'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450778576" stop="1655450786733" status="passed">
+                    <name>And I ClearAndEnterText PD Heigth in package details as '8'</name>
+                    <title>And I ClearAndEnterText PD Heigth in package details as '8'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450786734" stop="1655450795701" status="passed">
+                    <name>And I Selected PD Contains Batteries in package details</name>
+                    <title>And I Selected PD Contains Batteries in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450795703" stop="1655450803154" status="passed">
+                    <name>And I Selected PD Save in package details</name>
+                    <title>And I Selected PD Save in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450803155" stop="1655450811242" status="passed">
+                    <name>And I Selected Create Quote in shipment</name>
+                    <title>And I Selected Create Quote in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450811243" stop="1655450819410" status="passed">
+                    <name>And I Selected Shipment Orders dropdown in shipment</name>
+                    <title>And I Selected Shipment Orders dropdown in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450819411" stop="1655450825823" status="passed">
+                    <name>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</name>
+                    <title>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450825824" stop="1655450833263" status="passed">
+                    <name>And I Selected Medical Bot SO in shipment</name>
+                    <title>And I Selected Medical Bot SO in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450833267" stop="1655450848291" status="passed">
+                    <name>And I Wait in Seconds Wait in shipment as 'Wait1'</name>
+                    <title>And I Wait in Seconds Wait in shipment as 'Wait1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450848292" stop="1655450857066" status="passed">
+                    <name>And I Selected Shipment orders refresh in shipment</name>
+                    <title>And I Selected Shipment orders refresh in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450857067" stop="1655450863397" status="passed">
+                    <name>Then Verify text SO ID Copy in shipment</name>
+                    <title>Then Verify text SO ID Copy in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450863398" stop="1655450868850" status="passed">
+                    <name>And 'Page1' is displayed with 'NA'</name>
+                    <title>And 'Page1' is displayed with 'NA'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Creating a quote using a stand alone project no clinical trial with technical equipment adding delivery address parts and line items From Canada To Mexico"/>
+                <label name="feature" value="GWT file1"/>
+                <label name="host" value="DESKTOP-G41G404"/>
+                <label name="thread" value="9000@DESKTOP-G41G404.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1655450870236" stop="1655451695050" status="passed">
+            <name>Creating a quote with different combinations of countries for an Existing project with Medical devices Investigational Products and Tech Equipment</name>
+            <title>Creating a quote with different combinations of countries for an Existing project with Medical devices Investigational Products and Tech Equipment</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1655450870288" stop="1655450877684" status="passed">
+                    <name>Given I have access to TecEx Medical application</name>
+                    <title>Given I have access to TecEx Medical application</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450877685" stop="1655450884574" status="passed">
+                    <name>When I Entered Username in salesforce login as 'Username1'</name>
+                    <title>When I Entered Username in salesforce login as 'Username1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450884576" stop="1655450891306" status="passed">
+                    <name>And I Entered Password in salesforce login as 'Password1'</name>
+                    <title>And I Entered Password in salesforce login as 'Password1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450891308" stop="1655450899482" status="passed">
+                    <name>And I Selected Log In to Sandbox in salesforce login</name>
+                    <title>And I Selected Log In to Sandbox in salesforce login</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450899484" stop="1655450908272" status="passed">
+                    <name>And I Selected Shipment Orders dropdown in shipment</name>
+                    <title>And I Selected Shipment Orders dropdown in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450908273" stop="1655450915262" status="passed">
+                    <name>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</name>
+                    <title>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450915263" stop="1655450922891" status="passed">
+                    <name>And I Selected Medical Bot SO in shipment</name>
+                    <title>And I Selected Medical Bot SO in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450922892" stop="1655450929756" status="passed">
+                    <name>And I Selected SO New in shipment</name>
+                    <title>And I Selected SO New in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450929757" stop="1655450936844" status="passed">
+                    <name>And I Selected Quote in shipment</name>
+                    <title>And I Selected Quote in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450936847" stop="1655450943438" status="passed">
+                    <name>And I Entered Account in shipment as 'Account1'</name>
+                    <title>And I Entered Account in shipment as 'Account1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450943439" stop="1655450950813" status="passed">
+                    <name>And I Selected Select Account in shipment</name>
+                    <title>And I Selected Select Account in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450950814" stop="1655450957654" status="passed">
+                    <name>And I Entered Contact in shipment as 'Contact1'</name>
+                    <title>And I Entered Contact in shipment as 'Contact1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450957656" stop="1655450965005" status="passed">
+                    <name>And I Selected Select Contact in shipment</name>
+                    <title>And I Selected Select Contact in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450965006" stop="1655450972364" status="passed">
+                    <name>And I Selected Project in shipment</name>
+                    <title>And I Selected Project in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450972366" stop="1655450979756" status="passed">
+                    <name>And I selected Yes Add to existing project in shipment</name>
+                    <title>And I selected Yes Add to existing project in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450979758" stop="1655450986516" status="passed">
+                    <name>And I entered Search Project in shipment as 'SearchProject1'</name>
+                    <title>And I entered Search Project in shipment as 'SearchProject1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450986517" stop="1655450993952" status="passed">
+                    <name>And I selected Search Project select in shipment</name>
+                    <title>And I selected Search Project select in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655450993953" stop="1655451001842" status="passed">
+                    <name>And I Selected Toggle button shipment in Ship from country in shipment</name>
+                    <title>And I Selected Toggle button shipment in Ship from country in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451001843" stop="1655451009445" status="passed">
+                    <name>And I Selected Toggle button shipment in Service type in shipment</name>
+                    <title>And I Selected Toggle button shipment in Service type in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451009446" stop="1655451016274" status="passed">
+                    <name>And I Selected Toggle button shipment in International freight in shipment</name>
+                    <title>And I Selected Toggle button shipment in International freight in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451016275" stop="1655451023931" status="passed">
+                    <name>And I Selected Add to table in shipment</name>
+                    <title>And I Selected Add to table in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451023932" stop="1655451031560" status="passed">
+                    <name>And I Selected Proceed in shipment</name>
+                    <title>And I Selected Proceed in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451031561" stop="1655451039366" status="passed">
+                    <name>And I Entered NS Ship from country US in new shipment order as 'NSShipfromcountryUS1'</name>
+                    <title>And I Entered NS Ship from country US in new shipment order as 'NSShipfromcountryUS1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451039368" stop="1655451047056" status="passed">
+                    <name>And I Selected NS Ship from country US value in new shipment order</name>
+                    <title>And I Selected NS Ship from country US value in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451047057" stop="1655451054624" status="passed">
+                    <name>And I Selected NS Service type in new shipment order</name>
+                    <title>And I Selected NS Service type in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451054626" stop="1655451061522" status="passed">
+                    <name>And I Selected NS Service type Value in new shipment order</name>
+                    <title>And I Selected NS Service type Value in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451061523" stop="1655451069680" status="passed">
+                    <name>And I Entered NS Ship TO country South Africa in new shipment order as 'NSShipTOcountrySouthAfrica1'</name>
+                    <title>And I Entered NS Ship TO country South Africa in new shipment order as 'NSShipTOcountrySouthAfrica1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451069680" stop="1655451077216" status="passed">
+                    <name>And I Selected NS Ship TO country South Africa value in new shipment order</name>
+                    <title>And I Selected NS Ship TO country South Africa value in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451077217" stop="1655451084835" status="passed">
+                    <name>And I Selected NS Do you ship second hand or refurbished goods in new shipment order</name>
+                    <title>And I Selected NS Do you ship second hand or refurbished goods in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451084836" stop="1655451092433" status="passed">
+                    <name>And I Selected NS ship second hand in new shipment order</name>
+                    <title>And I Selected NS ship second hand in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451092434" stop="1655451100060" status="passed">
+                    <name>And I Selected NS Who Handles International Freight in new shipment order</name>
+                    <title>And I Selected NS Who Handles International Freight in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451100061" stop="1655451107619" status="passed">
+                    <name>And I Selected NS Tecex Handles International Freight in new shipment order</name>
+                    <title>And I Selected NS Tecex Handles International Freight in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451107619" stop="1655451115346" status="passed">
+                    <name>And I Selected NS Type of Product in new shipment order</name>
+                    <title>And I Selected NS Type of Product in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451115347" stop="1655451122228" status="passed">
+                    <name>And I Selected NS Type of Product Medical Equipment in new shipment order</name>
+                    <title>And I Selected NS Type of Product Medical Equipment in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451122229" stop="1655451128476" status="passed">
+                    <name>And I Entered Shipment Value in shipment as '1500'</name>
+                    <title>And I Entered Shipment Value in shipment as '1500'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451128477" stop="1655451136469" status="passed">
+                    <name>And I Selected PD Add First Package in package details</name>
+                    <title>And I Selected PD Add First Package in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451136470" stop="1655451143228" status="passed">
+                    <name>And I Selected PD Add Row in package details</name>
+                    <title>And I Selected PD Add Row in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451143229" stop="1655451151526" status="passed">
+                    <name>And I ClearAndEnterText PD How many packages TB in package details as 'PDHowmanypackagesTB1'</name>
+                    <title>And I ClearAndEnterText PD How many packages TB in package details as 'PDHowmanypackagesTB1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451151526" stop="1655451158967" status="passed">
+                    <name>And I Selected PD Weight Unit in package details</name>
+                    <title>And I Selected PD Weight Unit in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451158968" stop="1655451167805" status="passed">
+                    <name>And I Selected PD Weight Unit value in package details</name>
+                    <title>And I Selected PD Weight Unit value in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451167806" stop="1655451176133" status="passed">
+                    <name>And I ClearAndEnterText PD Actual Weight in package details as 'PDActualWeight1'</name>
+                    <title>And I ClearAndEnterText PD Actual Weight in package details as 'PDActualWeight1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451176134" stop="1655451183686" status="passed">
+                    <name>And I Selected PD Dimension Unit in package details</name>
+                    <title>And I Selected PD Dimension Unit in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451183687" stop="1655451191254" status="passed">
+                    <name>And I Selected PD Dimension Unit value in package details</name>
+                    <title>And I Selected PD Dimension Unit value in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451191255" stop="1655451199564" status="passed">
+                    <name>And I ClearAndEnterText PD Length in package details as 'PDLength1'</name>
+                    <title>And I ClearAndEnterText PD Length in package details as 'PDLength1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451199565" stop="1655451207887" status="passed">
+                    <name>And I ClearAndEnterText PD Breadth in package details as 'PDBreadth1'</name>
+                    <title>And I ClearAndEnterText PD Breadth in package details as 'PDBreadth1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451207888" stop="1655451215790" status="passed">
+                    <name>And I ClearAndEnterText PD Heigth in package details as 'PDHeigth1'</name>
+                    <title>And I ClearAndEnterText PD Heigth in package details as 'PDHeigth1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451215792" stop="1655451223190" status="passed">
+                    <name>And I Selected PD Save in package details</name>
+                    <title>And I Selected PD Save in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451223191" stop="1655451231923" status="passed">
+                    <name>And I Selected PD Add Second Package in package details</name>
+                    <title>And I Selected PD Add Second Package in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451231924" stop="1655451239472" status="passed">
+                    <name>And I Selected PD Add Row in package details</name>
+                    <title>And I Selected PD Add Row in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451239475" stop="1655451247821" status="passed">
+                    <name>And I ClearAndEnterText PD How many packages TB in package details as '2'</name>
+                    <title>And I ClearAndEnterText PD How many packages TB in package details as '2'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451247822" stop="1655451255183" status="passed">
+                    <name>And I Selected PD Weight Unit in package details</name>
+                    <title>And I Selected PD Weight Unit in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451255184" stop="1655451263861" status="passed">
+                    <name>And I Selected PD Weight Unit value in package details</name>
+                    <title>And I Selected PD Weight Unit value in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451263862" stop="1655451271710" status="passed">
+                    <name>And I ClearAndEnterText PD Actual Weight in package details as '85'</name>
+                    <title>And I ClearAndEnterText PD Actual Weight in package details as '85'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451271712" stop="1655451279129" status="passed">
+                    <name>And I Selected PD Dimension Unit in package details</name>
+                    <title>And I Selected PD Dimension Unit in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451279131" stop="1655451286503" status="passed">
+                    <name>And I Selected PD Dimension Unit value in package details</name>
+                    <title>And I Selected PD Dimension Unit value in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451286504" stop="1655451294729" status="passed">
+                    <name>And I ClearAndEnterText PD Length in package details as '14'</name>
+                    <title>And I ClearAndEnterText PD Length in package details as '14'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451294729" stop="1655451302969" status="passed">
+                    <name>And I ClearAndEnterText PD Breadth in package details as '12'</name>
+                    <title>And I ClearAndEnterText PD Breadth in package details as '12'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451302970" stop="1655451311100" status="passed">
+                    <name>And I ClearAndEnterText PD Heigth in package details as '8'</name>
+                    <title>And I ClearAndEnterText PD Heigth in package details as '8'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451311100" stop="1655451319804" status="passed">
+                    <name>And I Selected PD Contains Batteries in package details</name>
+                    <title>And I Selected PD Contains Batteries in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451319806" stop="1655451326644" status="passed">
+                    <name>And I Selected PD Save in package details</name>
+                    <title>And I Selected PD Save in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451326646" stop="1655451333713" status="passed">
+                    <name>And I Entered Client reference in shipment as 'test shipment'</name>
+                    <title>And I Entered Client reference in shipment as 'test shipment'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451333714" stop="1655451340993" status="passed">
+                    <name>And I Selected Add row in Table in shipment</name>
+                    <title>And I Selected Add row in Table in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451340994" stop="1655451348070" status="passed">
+                    <name>And I Entered NS Ship from country Bermuda in new shipment order as 'NSShipfromcountryBermuda1'</name>
+                    <title>And I Entered NS Ship from country Bermuda in new shipment order as 'NSShipfromcountryBermuda1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451348071" stop="1655451355408" status="passed">
+                    <name>And I Selected NS Ship from country Bermuda value in new shipment order</name>
+                    <title>And I Selected NS Ship from country Bermuda value in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451355409" stop="1655451362743" status="passed">
+                    <name>And I Selected NS Service type two in new shipment order</name>
+                    <title>And I Selected NS Service type two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451362744" stop="1655451370036" status="passed">
+                    <name>And I Selected NS Service type Value two in new shipment order</name>
+                    <title>And I Selected NS Service type Value two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451370038" stop="1655451377152" status="passed">
+                    <name>And I Entered NS Ship TO country Canada in new shipment order as 'NSShipTOcountryCanada1'</name>
+                    <title>And I Entered NS Ship TO country Canada in new shipment order as 'NSShipTOcountryCanada1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451377152" stop="1655451384492" status="passed">
+                    <name>And I Selected NS Ship TO country Canada value in new shipment order</name>
+                    <title>And I Selected NS Ship TO country Canada value in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451384494" stop="1655451393259" status="passed">
+                    <name>And I Selected NS Do you ship second hand or refurbished goods two in new shipment order</name>
+                    <title>And I Selected NS Do you ship second hand or refurbished goods two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451393262" stop="1655451401166" status="passed">
+                    <name>And I Selected NS Refurbished in new shipment order</name>
+                    <title>And I Selected NS Refurbished in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451401168" stop="1655451407991" status="passed">
+                    <name>And I Selected NS Who Handles International Freight two in new shipment order</name>
+                    <title>And I Selected NS Who Handles International Freight two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451407992" stop="1655451415503" status="passed">
+                    <name>And I Selected NS client Handles International Freight in new shipment order</name>
+                    <title>And I Selected NS client Handles International Freight in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451415504" stop="1655451422977" status="passed">
+                    <name>And I Selected NS Type of Product two in new shipment order</name>
+                    <title>And I Selected NS Type of Product two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451422979" stop="1655451430523" status="passed">
+                    <name>And I Selected NS Type of Product Investigational in new shipment order</name>
+                    <title>And I Selected NS Type of Product Investigational in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451430524" stop="1655451438029" status="passed">
+                    <name>And I Selected NS Temperature Control Requirements two in new shipment order</name>
+                    <title>And I Selected NS Temperature Control Requirements two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451438030" stop="1655451445650" status="passed">
+                    <name>And I Selected NS Temperature Control Transit two in new shipment order</name>
+                    <title>And I Selected NS Temperature Control Transit two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451445651" stop="1655451453929" status="passed">
+                    <name>And I ClearAndEnterText Shipment Value two in shipment as '1000'</name>
+                    <title>And I ClearAndEnterText Shipment Value two in shipment as '1000'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451453930" stop="1655451462605" status="passed">
+                    <name>And I ClearAndEnterText Estimated Chargeable weight two in shipment as '20'</name>
+                    <title>And I ClearAndEnterText Estimated Chargeable weight two in shipment as '20'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451462606" stop="1655451470631" status="passed">
+                    <name>And I ClearAndEnterText Client reference two in shipment as 'test shipment'</name>
+                    <title>And I ClearAndEnterText Client reference two in shipment as 'test shipment'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451470632" stop="1655451479435" status="passed">
+                    <name>And I Selected Add row in Table in shipment</name>
+                    <title>And I Selected Add row in Table in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451479436" stop="1655451488103" status="passed">
+                    <name>And I Entered NS Ship from country Algeria in new shipment order as 'NSShipfromcountryAlgeria1'</name>
+                    <title>And I Entered NS Ship from country Algeria in new shipment order as 'NSShipfromcountryAlgeria1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451488105" stop="1655451525886" status="passed">
+                    <name>And I Selected NS Ship from country Algeria value in new shipment order</name>
+                    <title>And I Selected NS Ship from country Algeria value in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451525887" stop="1655451534665" status="passed">
+                    <name>And I Selected NS Service type three in new shipment order</name>
+                    <title>And I Selected NS Service type three in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451534665" stop="1655451542011" status="passed">
+                    <name>And I Selected NS Service type Value three in new shipment order</name>
+                    <title>And I Selected NS Service type Value three in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451542013" stop="1655451549166" status="passed">
+                    <name>And I Entered NS Ship TO country Brazil in new shipment order as 'NSShipTOcountryBrazil1'</name>
+                    <title>And I Entered NS Ship TO country Brazil in new shipment order as 'NSShipTOcountryBrazil1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451549167" stop="1655451556503" status="passed">
+                    <name>And I Selected NS Ship TO country Brazil value in new shipment order</name>
+                    <title>And I Selected NS Ship TO country Brazil value in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451556505" stop="1655451565829" status="passed">
+                    <name>And I Selected NS Do you ship second hand or refurbished goods three in new shipment order</name>
+                    <title>And I Selected NS Do you ship second hand or refurbished goods three in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451565830" stop="1655451573309" status="passed">
+                    <name>And I Selected NS Neither of them in new shipment order</name>
+                    <title>And I Selected NS Neither of them in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451573310" stop="1655451580810" status="passed">
+                    <name>And I Selected NS Who Handles International Freight three in new shipment order</name>
+                    <title>And I Selected NS Who Handles International Freight three in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451580811" stop="1655451588427" status="passed">
+                    <name>And I Selected NS Tecex Handles two in new shipment order</name>
+                    <title>And I Selected NS Tecex Handles two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451588428" stop="1655451595967" status="passed">
+                    <name>And I Selected NS Type of Product three in new shipment order</name>
+                    <title>And I Selected NS Type of Product three in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451595968" stop="1655451603484" status="passed">
+                    <name>And I Selected NS Type of Product Tech Equipment two in new shipment order</name>
+                    <title>And I Selected NS Type of Product Tech Equipment two in new shipment order</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451603487" stop="1655451611747" status="passed">
+                    <name>And I ClearAndEnterText Shipment Value three in shipment as '1000'</name>
+                    <title>And I ClearAndEnterText Shipment Value three in shipment as '1000'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451611748" stop="1655451619939" status="passed">
+                    <name>And I ClearAndEnterText Estimated Chargeable weight three in shipment as '46'</name>
+                    <title>And I ClearAndEnterText Estimated Chargeable weight three in shipment as '46'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451619939" stop="1655451627620" status="passed">
+                    <name>And I ClearAndEnterText Client reference three in shipment as 'test shipment'</name>
+                    <title>And I ClearAndEnterText Client reference three in shipment as 'test shipment'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451627622" stop="1655451636999" status="passed">
+                    <name>And I Selected Create Quote in shipment</name>
+                    <title>And I Selected Create Quote in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451637001" stop="1655451667021" status="passed">
+                    <name>And I wait in seconds Wait in shipment as '30'</name>
+                    <title>And I wait in seconds Wait in shipment as '30'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451667021" stop="1655451675081" status="passed">
+                    <name>And I copied text Shipment orders one in shipment</name>
+                    <title>And I copied text Shipment orders one in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451675082" stop="1655451681566" status="passed">
+                    <name>And I copied text Shipment orders two in shipment</name>
+                    <title>And I copied text Shipment orders two in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451681567" stop="1655451687976" status="passed">
+                    <name>And I copied text Shipment orders three in shipment</name>
+                    <title>And I copied text Shipment orders three in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451687978" stop="1655451693457" status="passed">
+                    <name>Then 'Page1' is displayed with 'NA'</name>
+                    <title>Then 'Page1' is displayed with 'NA'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Creating a quote with different combinations of countries for an Existing project with Medical devices Investigational Products and Tech Equipment"/>
+                <label name="feature" value="GWT file1"/>
+                <label name="host" value="DESKTOP-G41G404"/>
+                <label name="thread" value="9000@DESKTOP-G41G404.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1655451695068" stop="1655452298976" status="passed">
+            <name>Creating a quote with different combinations of countries for a new project having a clinical trial using Investigational Products and Tech Equipment</name>
+            <title>Creating a quote with different combinations of countries for a new project having a clinical trial using Investigational Products and Tech Equipment</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1655451695125" stop="1655451703581" status="passed">
+                    <name>Given I have access to TecEx Medical application</name>
+                    <title>Given I have access to TecEx Medical application</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451703582" stop="1655451710797" status="passed">
+                    <name>When I Entered Username in salesforce login as 'Username1'</name>
+                    <title>When I Entered Username in salesforce login as 'Username1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451710799" stop="1655451717706" status="passed">
+                    <name>And I Entered Password in salesforce login as 'Password1'</name>
+                    <title>And I Entered Password in salesforce login as 'Password1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451717706" stop="1655451726172" status="passed">
+                    <name>And I Selected Log In to Sandbox in salesforce login</name>
+                    <title>And I Selected Log In to Sandbox in salesforce login</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451726173" stop="1655451735362" status="passed">
+                    <name>And I Selected Shipment Orders dropdown in shipment</name>
+                    <title>And I Selected Shipment Orders dropdown in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451735363" stop="1655451742421" status="passed">
+                    <name>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</name>
+                    <title>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451742422" stop="1655451749343" status="passed">
+                    <name>And I Selected Medical Bot SO in shipment</name>
+                    <title>And I Selected Medical Bot SO in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451749343" stop="1655451757080" status="passed">
+                    <name>And I Selected SO New in shipment</name>
+                    <title>And I Selected SO New in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451757080" stop="1655451764766" status="passed">
+                    <name>And I Selected Quote in shipment</name>
+                    <title>And I Selected Quote in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451764767" stop="1655451771547" status="passed">
+                    <name>And I Entered Account in shipment as 'Account1'</name>
+                    <title>And I Entered Account in shipment as 'Account1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451771548" stop="1655451779253" status="passed">
+                    <name>And I Selected Select Account in shipment</name>
+                    <title>And I Selected Select Account in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451779253" stop="1655451786386" status="passed">
+                    <name>And I Entered Contact in shipment as 'Contact1'</name>
+                    <title>And I Entered Contact in shipment as 'Contact1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451786387" stop="1655451794148" status="passed">
+                    <name>And I Selected Select Contact in shipment</name>
+                    <title>And I Selected Select Contact in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451794148" stop="1655451801723" status="passed">
+                    <name>And I Selected Project in shipment</name>
+                    <title>And I Selected Project in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451801724" stop="1655451809507" status="passed">
+                    <name>And I Selected Yes new project in shipment</name>
+                    <title>And I Selected Yes new project in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451809508" stop="1655451815737" status="passed">
+                    <name>And I entered Project Name in shipment as 'ProjectName1'</name>
+                    <title>And I entered Project Name in shipment as 'ProjectName1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451815738" stop="1655451823439" status="passed">
+                    <name>And I selected This a Clinical Trial in shipment</name>
+                    <title>And I selected This a Clinical Trial in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451823440" stop="1655451830205" status="passed">
+                    <name>And I selected Create New Project in shipment</name>
+                    <title>And I selected Create New Project in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451830206" stop="1655451837852" status="passed">
+                    <name>And I Entered Ship from country in shipment as 'United States'</name>
+                    <title>And I Entered Ship from country in shipment as 'United States'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451837853" stop="1655451845471" status="passed">
+                    <name>And I Selected Ship from country select in shipment</name>
+                    <title>And I Selected Ship from country select in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451845472" stop="1655451853190" status="passed">
+                    <name>And I selected Add pickup address in shipment</name>
+                    <title>And I selected Add pickup address in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451853192" stop="1655451860024" status="passed">
+                    <name>And I selected Radio button Juli test in shipment</name>
+                    <title>And I selected Radio button Juli test in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451860025" stop="1655451866903" status="passed">
+                    <name>And I selected select pickup address ok in shipment</name>
+                    <title>And I selected select pickup address ok in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451866904" stop="1655451874595" status="passed">
+                    <name>And I Selected Service type in shipment</name>
+                    <title>And I Selected Service type in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451874596" stop="1655451882266" status="passed">
+                    <name>And I Selected Select Service type in shipment</name>
+                    <title>And I Selected Select Service type in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451882267" stop="1655451889800" status="passed">
+                    <name>And I Selected Toggle button shipment in International freight in shipment</name>
+                    <title>And I Selected Toggle button shipment in International freight in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451889801" stop="1655451897380" status="passed">
+                    <name>And I Selected Units Of Measurement in shipment</name>
+                    <title>And I Selected Units Of Measurement in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451897382" stop="1655451905234" status="passed">
+                    <name>And I Selected Imperial UM in shipment</name>
+                    <title>And I Selected Imperial UM in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451905235" stop="1655451912788" status="passed">
+                    <name>And I Selected Add to table in shipment</name>
+                    <title>And I Selected Add to table in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451912789" stop="1655451920414" status="passed">
+                    <name>And I Selected Proceed in shipment</name>
+                    <title>And I Selected Proceed in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451920415" stop="1655451927966" status="passed">
+                    <name>And I entered SOT Ship to country Canada in shipment order two as 'SOTShiptocountryCanada1'</name>
+                    <title>And I entered SOT Ship to country Canada in shipment order two as 'SOTShiptocountryCanada1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451927967" stop="1655451935518" status="passed">
+                    <name>And I selected SOT Ship to country Canada value in shipment order two</name>
+                    <title>And I selected SOT Ship to country Canada value in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451935519" stop="1655451943086" status="passed">
+                    <name>And I selected SOT Do you ship second hand or refurbished goods in shipment order two</name>
+                    <title>And I selected SOT Do you ship second hand or refurbished goods in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451943087" stop="1655451950572" status="passed">
+                    <name>And I selected SOT Refurbished goods in shipment order two</name>
+                    <title>And I selected SOT Refurbished goods in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451950574" stop="1655451958107" status="passed">
+                    <name>And I selected SOT Type of Product in shipment order two</name>
+                    <title>And I selected SOT Type of Product in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451958107" stop="1655451965609" status="passed">
+                    <name>And I selected SOT client Type of Product in shipment order two</name>
+                    <title>And I selected SOT client Type of Product in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451965610" stop="1655451973479" status="passed">
+                    <name>And I selected SOT Who Handles International Freight in shipment order two</name>
+                    <title>And I selected SOT Who Handles International Freight in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451973479" stop="1655451981005" status="passed">
+                    <name>And I selected SOT Investigational Products in shipment order two</name>
+                    <title>And I selected SOT Investigational Products in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451981006" stop="1655451988507" status="passed">
+                    <name>And I selected SOT Temperature Control Requirements in shipment order two</name>
+                    <title>And I selected SOT Temperature Control Requirements in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451988507" stop="1655451995987" status="passed">
+                    <name>And I selected SOT Temperature Control Transit in shipment order two</name>
+                    <title>And I selected SOT Temperature Control Transit in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655451995988" stop="1655452002803" status="passed">
+                    <name>And I Entered Shipment Value in shipment as '1000'</name>
+                    <title>And I Entered Shipment Value in shipment as '1000'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452002806" stop="1655452012717" status="passed">
+                    <name>And I Entered Estimated Chargeable weight in shipment as '20'</name>
+                    <title>And I Entered Estimated Chargeable weight in shipment as '20'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452012718" stop="1655452019530" status="passed">
+                    <name>And I Entered Client reference in shipment as 'test shipment'</name>
+                    <title>And I Entered Client reference in shipment as 'test shipment'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452019531" stop="1655452028393" status="passed">
+                    <name>And I ClearAndEnterText Vendor Reference in shipment as 'vendor identifier'</name>
+                    <title>And I ClearAndEnterText Vendor Reference in shipment as 'vendor identifier'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452028395" stop="1655452036023" status="passed">
+                    <name>And I Selected Add row in Table in shipment</name>
+                    <title>And I Selected Add row in Table in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452036025" stop="1655452045046" status="passed">
+                    <name>And I entered SOT Ship to country United Arab Emirates in shipment order two as 'SOTShiptocountryUnitedArabEmirates1'</name>
+                    <title>And I entered SOT Ship to country United Arab Emirates in shipment order two as 'SOTShiptocountryUnitedArabEmirates1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452045048" stop="1655452052632" status="passed">
+                    <name>And I selected SOT Ship to country United Arab Emirates value in shipment order two</name>
+                    <title>And I selected SOT Ship to country United Arab Emirates value in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452052633" stop="1655452060315" status="passed">
+                    <name>And I selected SOT Type of Product two in shipment order two</name>
+                    <title>And I selected SOT Type of Product two in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452060315" stop="1655452067981" status="passed">
+                    <name>And I selected SOT client Type of Product two in shipment order two</name>
+                    <title>And I selected SOT client Type of Product two in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452067981" stop="1655452075583" status="passed">
+                    <name>And I selected SOT Who Handles International Freight two in shipment order two</name>
+                    <title>And I selected SOT Who Handles International Freight two in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452075584" stop="1655452083306" status="passed">
+                    <name>And I selected SOT Tech Equipment in shipment order two</name>
+                    <title>And I selected SOT Tech Equipment in shipment order two</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452083307" stop="1655452091689" status="passed">
+                    <name>And I ClearAndEnterText Shipment Value two in shipment as '1000'</name>
+                    <title>And I ClearAndEnterText Shipment Value two in shipment as '1000'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452091690" stop="1655452098803" status="passed">
+                    <name>And I Selected PD Add Package in second Row in package details</name>
+                    <title>And I Selected PD Add Package in second Row in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452098803" stop="1655452106360" status="passed">
+                    <name>And I Selected PD Add Row in package details</name>
+                    <title>And I Selected PD Add Row in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452106361" stop="1655452114769" status="passed">
+                    <name>And I ClearAndEnterText PD How many packages TB in package details as 'PDHowmanypackagesTB1'</name>
+                    <title>And I ClearAndEnterText PD How many packages TB in package details as 'PDHowmanypackagesTB1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452114769" stop="1655452123085" status="passed">
+                    <name>And I ClearAndEnterText PD Actual Weight in package details as 'PDActualWeight1'</name>
+                    <title>And I ClearAndEnterText PD Actual Weight in package details as 'PDActualWeight1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452123086" stop="1655452131386" status="passed">
+                    <name>And I ClearAndEnterText PD Length in package details as 'PDLength1'</name>
+                    <title>And I ClearAndEnterText PD Length in package details as 'PDLength1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452131387" stop="1655452139865" status="passed">
+                    <name>And I ClearAndEnterText PD Breadth in package details as 'PDBreadth1'</name>
+                    <title>And I ClearAndEnterText PD Breadth in package details as 'PDBreadth1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452139866" stop="1655452148147" status="passed">
+                    <name>And I ClearAndEnterText PD Heigth in package details as 'PDHeigth1'</name>
+                    <title>And I ClearAndEnterText PD Heigth in package details as 'PDHeigth1'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452148150" stop="1655452155742" status="passed">
+                    <name>And I Selected PD Save in package details</name>
+                    <title>And I Selected PD Save in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452155743" stop="1655452163093" status="passed">
+                    <name>And I Selected PD Add Second Package in package details</name>
+                    <title>And I Selected PD Add Second Package in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452163094" stop="1655452169947" status="passed">
+                    <name>And I Selected PD Add Row in package details</name>
+                    <title>And I Selected PD Add Row in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452169949" stop="1655452177672" status="passed">
+                    <name>And I ClearAndEnterText PD How many packages TB in package details as '2'</name>
+                    <title>And I ClearAndEnterText PD How many packages TB in package details as '2'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452177673" stop="1655452186098" status="passed">
+                    <name>And I ClearAndEnterText PD Actual Weight in package details as '85'</name>
+                    <title>And I ClearAndEnterText PD Actual Weight in package details as '85'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452186098" stop="1655452194433" status="passed">
+                    <name>And I ClearAndEnterText PD Length in package details as '14'</name>
+                    <title>And I ClearAndEnterText PD Length in package details as '14'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452194435" stop="1655452202891" status="passed">
+                    <name>And I ClearAndEnterText PD Breadth in package details as '12'</name>
+                    <title>And I ClearAndEnterText PD Breadth in package details as '12'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452202892" stop="1655452211319" status="passed">
+                    <name>And I ClearAndEnterText PD Heigth in package details as '8'</name>
+                    <title>And I ClearAndEnterText PD Heigth in package details as '8'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452211319" stop="1655452219677" status="passed">
+                    <name>And I Selected PD Contains Batteries in package details</name>
+                    <title>And I Selected PD Contains Batteries in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452219678" stop="1655452226885" status="passed">
+                    <name>And I Selected PD Save in package details</name>
+                    <title>And I Selected PD Save in package details</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452226885" stop="1655452235032" status="passed">
+                    <name>And I ClearAndEnterText Client reference two in shipment as 'test shipment'</name>
+                    <title>And I ClearAndEnterText Client reference two in shipment as 'test shipment'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452235034" stop="1655452243357" status="passed">
+                    <name>And I ClearAndEnterText Vendor Reference two in shipment as 'vendor identifier'</name>
+                    <title>And I ClearAndEnterText Vendor Reference two in shipment as 'vendor identifier'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452243357" stop="1655452253603" status="passed">
+                    <name>And I Selected Create Quote in shipment</name>
+                    <title>And I Selected Create Quote in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452253604" stop="1655452283615" status="passed">
+                    <name>And I wait in seconds Wait in shipment as '30'</name>
+                    <title>And I wait in seconds Wait in shipment as '30'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452283616" stop="1655452291836" status="passed">
+                    <name>And I copied text project name copy in shipment</name>
+                    <title>And I copied text project name copy in shipment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1655452291837" stop="1655452297370" status="passed">
+                    <name>Then 'Page1' is displayed with 'NA'</name>
+                    <title>Then 'Page1' is displayed with 'NA'</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Creating a quote with different combinations of countries for a new project having a clinical trial using Investigational Products and Tech Equipment"/>
+                <label name="feature" value="GWT file1"/>
+                <label name="host" value="DESKTOP-G41G404"/>
+                <label name="thread" value="9000@DESKTOP-G41G404.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="GWT file1"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

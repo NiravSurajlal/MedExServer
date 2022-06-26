@@ -1,0 +1,5 @@
+Command executed:
+mvn test -Dcucumber.options="--tags @uid1379562945" -DenvironmentType=NiravSRequest -DbrowserName=Lambda
+
+Start StdOut:
+
