@@ -9,7 +9,7 @@ from logging.config import dictConfig
 import subprocess
 from time import sleep
 
-debug = False
+debug = True
 
 def start_rabbitmq(medex_LOGGER):
     medex_LOGGER.info("Starting up Rabbitmq.")

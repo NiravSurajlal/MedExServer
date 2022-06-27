@@ -1,0 +1,168 @@
+2022-06-24 08:28:44,433 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 08:29:02,662 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 08:35:43,522 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 08:38:00,438 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 10:52:30,715 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 10:53:31,169 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 10:53:49,848 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 10:55:23,810 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 11:00:11,410 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 14:03:41,628 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 14:14:59,981 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 15:24:42,129 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 15:35:08,246 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 15:35:31,987 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 15:35:47,128 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 15:35:47,136 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 15:35:47,153 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 15:43:58,483 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 15:45:12,429 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 15:45:13,154 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 15:45:13,166 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 15:45:13,182 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 15:46:39,059 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 15:46:53,976 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 15:46:54,770 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 15:46:54,779 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 15:46:54,794 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 15:47:21,113 - taskhandler - INFO @ add_task:61 :: Sending email to NiravS@tecex.com. 
+
+2022-06-24 15:47:45,706 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 15:47:46,469 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 15:47:46,482 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 15:47:46,497 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:00:02,097 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:00:25,928 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:00:26,913 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:00:26,927 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:00:26,960 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:00:43,423 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:00:59,817 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:01:01,020 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:01:01,030 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:01:01,050 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:01:56,885 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:01:57,682 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:01:57,690 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:01:57,706 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:04:28,115 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:04:28,881 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:04:28,888 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:04:28,902 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:05:27,221 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:06:02,286 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:06:03,224 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:06:03,232 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:06:03,264 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:07:36,521 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:08:17,012 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:08:36,035 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:08:36,912 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:08:36,922 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:08:36,942 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:10:28,195 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:17:27,108 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:17:27,901 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:17:27,909 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:17:27,929 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:20:59,710 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:21:45,523 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:21:46,426 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:21:46,435 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:21:46,455 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:22:48,958 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:23:34,935 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:23:35,762 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:23:35,770 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:23:35,796 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:31:39,281 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:32:09,844 - taskhandler - INFO @ add_task:40 :: Generating raw_data for NiravS. 
+
+2022-06-24 16:32:10,816 - taskhandler - INFO @ add_task:42 :: Generating json_data for NiravS. 
+
+2022-06-24 16:32:10,830 - taskhandler - INFO @ add_task:45 :: Generating YAML for NiravS. 
+
+2022-06-24 16:32:10,851 - taskhandler - INFO @ add_task:50 :: Running NiravS bot. 
+
+2022-06-24 16:32:38,332 - taskhandler - INFO @ add_task:61 :: Sending email to NiravS@tecex.com. 
+
+2022-06-24 16:40:48,318 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+
+2022-06-24 16:41:47,803 - taskhandler - DEBUG @ <module>:8 :: Starting celery. 
+

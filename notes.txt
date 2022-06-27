@@ -12,3 +12,6 @@ To start the server use in \medex:
     >> python manage.py runserver (--noreload)
 
     Celery has issues on windows, so needed to install eventlet
+
+To run maven, use i\medex\bot\...\:
+    >> mvn test -Dcucumber.options="--tags @uid1379562945" -DenvironmentType=NiravsRequest -DbrowserName=Lambda
