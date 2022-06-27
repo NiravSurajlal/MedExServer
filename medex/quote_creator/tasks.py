@@ -106,7 +106,7 @@ def run_bot(username):
         Returns a result. """
     print("\n\n Running bot ... \n\n")
     bot = QuoteBot(username)
-    # bot.execute()
+    bot.execute()
     return "$2"
 # @shared_task
 # def add2(x, y):

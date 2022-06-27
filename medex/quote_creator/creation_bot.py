@@ -1,4 +1,3 @@
-from concurrent.futures import thread
 import keyring
 import os
 import time
@@ -25,6 +24,7 @@ class QuoteBot():
 
     @property
     def get_lambda_creds(self):
+        print(__CREDENTIALS__)
         temp_creds = __CREDENTIALS__["LambdaTest"]
         creds = {}
         creds['username'] = temp_creds['username']
@@ -38,7 +38,7 @@ class QuoteBot():
 
     @property
     def command_list(self):
-        return ['mvn', 'test', f'-Dcucumber.options="--tags @uid1379562945"', f'-DenvironmentType={self.username}Request', '-DbrowserName=Lambda']
+        return ['mvn', 'test', f'-Dcucumber.options="--tags @uid1379562945"', '-DenvironmentType=staging', '-DbrowserName=Lambda']
 
     @property
     def bot_command(self):
@@ -72,7 +72,9 @@ class QuoteBot():
         path_pattern = re.compile(r"PATH :[^\n]*Run_[0-9]{13}")
         with open(self.stdout_txt, 'w+') as f:
             f.write("Command executed:\n")
-            f.write(self.bot_command)
+            f.write(f"{self.bot_command}\n")
+            f.write("Location:\n")
+            f.write(self.bot_dir)
             f.write('\n\n')
             f.write("Start StdOut:\n\n")
         with threading.RLock():
@@ -99,8 +101,8 @@ class QuoteBot():
         time.sleep(2) # to let mvn finish up and shut down safely
         # for troubleshooting purposes the subproc is stored
         self.subproc = subproc
-        if mvn_output_loc is not None:
-            for f in os.listdir(mvn_output_loc):
-                file_to_grab = os.path.join(mvn_output_loc, f)
+        if self.mvn_output_loc is not None:
+            for f in os.listdir(self.mvn_output_loc):
+                file_to_grab = os.path.join(self.mvn_output_loc, f)
                 self.grab_diagnostic_file(file_to_grab)
         return subproc
