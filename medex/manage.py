@@ -9,7 +9,8 @@ from logging.config import dictConfig
 import subprocess
 from time import sleep
 
-debug = True
+# debug = True
+from medex.settings import __MY_DEBUG__
 
 def start_rabbitmq(medex_LOGGER):
     medex_LOGGER.info("Starting up Rabbitmq.")
@@ -46,9 +47,10 @@ if __name__ == '__main__':
         medex_log = logging.getLogger("MEDEX")
         medex_log.info('Logger Started.')
 
-    if not debug:
-        start_rabbitmq(medex_log)
+    if not __MY_DEBUG__:
+        # start_rabbitmq(medex_log)
         start_celery(medex_log)
+        print("Start alles. ")
     else:
         medex_log.info("Please start rabbitmq and celery. ")
     main()

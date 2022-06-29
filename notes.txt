@@ -1,8 +1,19 @@
+Debug server and personal debgu in setting.py
+
 Celery requires RabbitMQ (messaging service) which requires Erlang. Celery also requires
 eventlet. 
 
-To start up RabbitMQ, use:   
+To start up RabbitMQ (usually port 5672/15672 ), use:   
     >> C:\Program Files\RabbitMQ Server\rabbitmq_server-3.10.5\sbin\rabbitmq-server
+    - To stop node
+        >> rabbitmqctl stop
+    - To uninstall
+        >> https://stackoverflow.com/questions/14659335/rabbitmq-server-fails-to-start-after-hostname-has-changed-for-first-time
+    - To start
+        >> rabbitmq-plugins.bat enable rabbitmq_management
+        >> rabbitmq-service.bat install 
+        >> rabbitmq-service.bat start 
+
 
 To start Celery use in \medex:
     >> celery -A medex worker -l info 

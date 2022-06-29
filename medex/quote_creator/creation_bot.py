@@ -1,11 +1,13 @@
+import imp
 import keyring
 import os
 import time
 import subprocess
 import re 
 import threading
-
-from medex.settings import __CREDENTIALS__
+import logging
+from medex.settings import __CREDENTIALS__, __MY_DEBUG__
+from .salesforce import ComplexSF
 
 class QuoteBot():
     def __init__(self, username):
@@ -13,10 +15,16 @@ class QuoteBot():
         self.lambdacreds = self.get_lambda_creds
         self.bot_dir = self.get_bot_dir
         self.stdout_name = f"stdout{self.username}"
-        self.temp_dir = os.path.join(os.getcwd(), 'medex', 'temp')
-        if not os.path.exists(self.temp_dir):
-            os.mkdir(self.temp_dir)
+        if __MY_DEBUG__:
+            self.temp_dir = os.path.join(os.getcwd(), 'medex', 'temp')
+            if not os.path.exists(self.temp_dir):
+                os.mkdir(self.temp_dir)
+        else:
+            self.temp_dir = os.path.join(os.getcwd(), 'temp')
+            if not os.path.exists(self.temp_dir):
+                os.mkdir(self.temp_dir)
 
+        self.qc_logger = logging.getLogger("quote_creator")
         self.mvn_output_loc = None
         self.session_id = None
         self.subproc = None
@@ -24,7 +32,6 @@ class QuoteBot():
 
     @property
     def get_lambda_creds(self):
-        print(__CREDENTIALS__)
         temp_creds = __CREDENTIALS__["LambdaTest"]
         creds = {}
         creds['username'] = temp_creds['username']
@@ -34,7 +41,10 @@ class QuoteBot():
     
     @property
     def get_bot_dir(self):
-        return os.path.join(os.getcwd(), 'medex', 'bot', 'medex_2022_06_17')
+        if __MY_DEBUG__:
+            return os.path.join(os.getcwd(), 'medex', 'bot', 'medex_2022_06_17')
+        else:
+            return os.path.join(os.getcwd(), 'bot', 'medex_2022_06_17')
 
     @property
     def command_list(self):
@@ -62,7 +72,7 @@ class QuoteBot():
 
     def execute(self):
         try:
-            print('here')
+            self.qc_logger.info("Triggering bot.")
             self.trigger_bot()
         except Exception as e:
             print(e)
@@ -84,6 +94,7 @@ class QuoteBot():
                                        shell=True,
                                        cwd=self.bot_dir)
             time.sleep(1)
+        self.qc_logger.info("Started subprocess. ")
         with open(self.stdout_txt, 'a') as stdoutfile:
             while subproc.poll() is None: # poll returns None when the process is still running -> https://stackoverflow.com/questions/2995983/using-subprocess-wait-and-poll
                 line = subproc.stdout.readline()
@@ -106,3 +117,35 @@ class QuoteBot():
                 file_to_grab = os.path.join(self.mvn_output_loc, f)
                 self.grab_diagnostic_file(file_to_grab)
         return subproc
+    
+    def get_result(self, project_name, account_name, environment='production'):
+        self.qc_logger.info(f"Querying for acc_name: {account_name} on env: {environment}, with proj_name: {project_name}.")
+        sf = ComplexSF(environment='staging')
+        result = {}
+        if project_name:
+            print("Project API")
+            query_str = f"SELECT Id,Name FROM Shipment_Order__c WHERE CreatedDate >= TODAY AND RecordType.Name LIKE 'Medical%' AND CreatedBy.Name = 'AmDo Testing' AND Account__r.Name = '{account_name}' AND Project__r.Name = '{project_name}'"
+            query_result = sf.query_all(query_str)
+        else:
+            print("Standalone API")
+            query_str = f"SELECT Id,Name FROM Shipment_Order__c WHERE CreatedDate >= TODAY AND RecordType.Name LIKE 'Medical%' AND CreatedBy.Name = 'AmDo Testing' AND Account__r.Name = '{account_name}' ORDER BY CreatedDate DESC LIMIT 1"
+            query_result = sf.query_all(query_str)
+        
+        result['Project Name'] = project_name
+        result['Id'] = query_result['records'][0]['Id']
+        result['Name'] = query_result['records'][0]['Name']
+        
+
+        if project_name:
+            if environment.lower() != 'production':
+                result['Link'] = f"https://tecex--staging.lightning.force.come/lightning/r/Shipment_Order__c/{result['Id']}/view"
+            else:
+                result['Link'] = f"https://tecex.lightning.force.com/lightning/r/Shipment_Order__c/{result['Id']}/view"
+        else:
+            if environment.lower() != 'production':
+                result['Link'] = f"https://tecex--staging.lightning.force.come/lightning/r/Project__c/{result['Id']}/view"
+            else:
+                result['Link'] = f"https://tecex.lightning.force.com/lightning/r/Project__c/{result['Id']}/view"
+
+        return result
+        # return so_number

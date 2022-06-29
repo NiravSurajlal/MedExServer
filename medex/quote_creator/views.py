@@ -18,6 +18,8 @@ from django.urls import reverse
 from medex.auth_helper import get_sign_in_flow, get_token_from_code, store_user, remove_user_and_token, get_token
 from medex.graph_helper import *
 
+from medex.settings import __MY_DEBUG__
+
 __qc_LOGGER = logging.getLogger("quote_creator")
 __medex_LOGGER = logging.getLogger("MEDEX")
 _medex_queue_inspector = medex_Celery.control.inspect()
@@ -41,8 +43,10 @@ def create_quote(request):
             excel_doc_path = form.save_data_and_get_path(request.user)
             messages.success(request, "File uploaded.")
             __qc_LOGGER.info(f"Attempting to create quote for {str(users_name)}")
-            add_task.delay(email, excel_doc_path, users_name)
-            # add_task(email, excel_doc_path, users_name)
+            if __MY_DEBUG__:
+                add_task(email, excel_doc_path, users_name)
+            else:
+                add_task.delay(email, excel_doc_path, users_name)
             form = UploadExcelFileForm()
             template_name = os.path.join('quote_creator', 'create_quote.html')
             return render(request=request, template_name=template_name, context={'excel_upload_form': form})

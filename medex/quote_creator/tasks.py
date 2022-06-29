@@ -32,9 +32,10 @@ def add_task(email, excel_doc_path=None, users_name=None):
     # excel_doc = pd.ExcelFile(os.path.join(__CACHEPATH__, "Medex.xlsb"))
     excel_doc = pd.ExcelFile(excel_doc_path)
     
-    email = str(email)
-    username = email.split("@")
-    username = username[0]
+    # email = str(email)
+    # username = email.split("@")
+    # username = username[0]
+    username = users_name
     task_data = {"email": email, "username":username, "start_time": ctime(), "excel_data": excel_doc}
 
     __taskhandler_LOG.info(f"Generating raw_data for {task_data['username']}. ") 
@@ -44,11 +45,16 @@ def add_task(email, excel_doc_path=None, users_name=None):
 
     __taskhandler_LOG.info(f"Generating YAML for {task_data['username']}. ")
     for case_name in json_data.keys():
+        account_name = json_data[case_name]['SOSetup']['Account']
+        if json_data[case_name]['SOSetup']['Project Name']:
+            project_name = json_data[case_name]['SOSetup']['Project Name']
+        else:
+            project_name = None 
         yaml_path = os.path.join(__CACHEPATH__, f"{task_data['username']}_{case_name}.yaml") 
         generate_yaml(json_data[case_name], yaml_path)
 
     __taskhandler_LOG.info(f"Running {task_data['username']} bot. ")
-    result = run_bot(username)
+    result = run_bot(username, project_name, account_name)
     task_data['result'] = result
     task_data['end_time'] = ctime()
 
@@ -59,8 +65,7 @@ def add_task(email, excel_doc_path=None, users_name=None):
         json.dump(task_data, f)
 
     __taskhandler_LOG.info(f"Sending email to {task_data['email']}. ")
-    message = f"{result}"
-    send_feedback_email(email, message)
+    send_feedback_email(email, username, result)
     __taskhandler_LOG.info(f"Email sent to {task_data['email']}, and process complete. ")
 
 def generate_yaml(json_data, yaml_path):
@@ -101,13 +106,14 @@ def json_to_yaml(json_data):
 
     return data
 
-def run_bot(username):
+def run_bot(username, project_name, account_name):
     """ Runs the selnium bot to generate the quote. 
         Returns a result. """
     print("\n\n Running bot ... \n\n")
     bot = QuoteBot(username)
-    bot.execute()
-    return "$2"
+    # bot.execute()
+    result = bot.get_result(project_name, account_name)
+    return result
 # @shared_task
 # def add2(x, y):
 #     return x + y

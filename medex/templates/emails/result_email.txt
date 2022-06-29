@@ -1,5 +1,8 @@
 Hello {{name|safe}},
 
-Thank you for your request. The quote estimate comes to: {{result|safe}}.
+Thank you for your single SO request. Please find the SO name & a link to the SO below.
+
+SO Number : {{so_name|safe}}.
+SO Link   : {{so_link|safe}}.
 
 Kind Regards,
