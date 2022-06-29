@@ -1,0 +1,39 @@
+Account1: Internal Testing Medical Account
+AddLineItems1: Product Code, Description, Quantity, Unit Price, HS code, Country of
+  Origin, PowerEdge R720xd, PowerEdge R720xd, 10, 50, 8517620090, CN, finisar123,
+  finisar123, 1, 200, 8517620090, CN, ProLiant DL360 Gen9, ProLiant DL360 Gen9, 1,
+  60, 8517620090, CN, gofriend, gofriend, 3, 80, 8517620090, CN, 123 by finisar, 123
+  by finisar, 4, 50, 8517620090, CN, STO1087CEAF-C, STO1087CEAF-C, 1, 60, 8517620090,
+  CN
+AddLineItems2: Product Code, Description, Quantity, Unit Price, HS code, Country of
+  Origin, PowerEdge R720xd, PowerEdge R720xd, 10, 50, 8517620090, CN, finisar123,
+  finisar123, 1, 200, 8517620090, CN, ProLiant DL360 Gen9, ProLiant DL360 Gen9, 1,
+  60, 8517620090, CN, gofriend, gofriend, 3, 80, 8517620090, CN, 123 by finisar, 123
+  by finisar, 4, 50, 8517620090, CN, STO1087CEAF-C, STO1087CEAF-C, 1, 60, 8517620090,
+  CN
+AddLineItems3: Product Code, Description, Quantity, Unit Price, HS code, Country of
+  Origin, PowerEdge R720xd, PowerEdge R720xd, 10, 50, 8517620090, CN, finisar123,
+  finisar123, 1, 200, 8517620090, CN, ProLiant DL360 Gen9, ProLiant DL360 Gen9, 1,
+  60, 8517620090, CN, gofriend, gofriend, 3, 80, 8517620090, CN, 123 by finisar, 123
+  by finisar, 4, 50, 8517620090, CN, STO1087CEAF-C, STO1087CEAF-C, 1, 60, 8517620090,
+  CN
+Clientreference1: test shipment
+Clientreference2: test shipment
+Clientreference3: test shipment
+Contact1: Palendren Pillay
+EstimatedChargeableweight1: null
+EstimatedChargeableweight2: null
+EstimatedChargeableweight3: null
+Password1: Medex1234@!
+Shipfromcountry1: United States
+Shipfromcountry2: United States
+Shipfromcountry3: United States
+ShipmentOrdersSearch1: Medical BOT SO's
+ShipmentValue11: 1000
+ShipmentValue12: 1000
+ShipmentValue13: 1000
+Shiptocountry1: Australia
+Shiptocountry2: Australia
+Shiptocountry3: Australia
+Username1: fe_testing@tecex.com
+Wait1: '15'

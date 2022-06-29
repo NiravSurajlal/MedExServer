@@ -111,7 +111,7 @@ def run_bot(username, project_name, account_name):
         Returns a result. """
     print("\n\n Running bot ... \n\n")
     bot = QuoteBot(username)
-    # bot.execute()
+    bot.execute()
     result = bot.get_result(project_name, account_name)
     return result
 # @shared_task

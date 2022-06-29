@@ -1,0 +1,8 @@
+Hello {{name|safe}},
+
+Thank you for your project request. Please find the project name & link below. 
+
+Project Name : {{project_name|safe}}
+Project Link : {{project_link|safe}}
+
+Kind Regards,

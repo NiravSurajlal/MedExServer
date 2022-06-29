@@ -1,0 +1,198 @@
+2022-06-27 08:31:32,740 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 08:31:32,744 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 08:33:29,998 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 08:33:30,000 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 08:36:15,066 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 08:36:15,068 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 08:36:36,411 - MEDEX - DEBUG @ sign_in:76 :: Attemping to log in a user. 
+
+2022-06-27 08:36:41,386 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 08:36:47,423 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:22:43,893 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 15:22:43,894 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 15:22:56,169 - MEDEX - DEBUG @ sign_in:76 :: Attemping to log in a user. 
+
+2022-06-27 15:23:00,317 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:23:05,069 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:23:23,465 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 15:23:23,468 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 15:23:44,517 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 15:23:44,519 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 15:23:50,287 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:23:55,773 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:28:45,512 - MEDEX - DEBUG @ sign_in:76 :: Attemping to log in a user. 
+
+2022-06-27 15:28:49,526 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:29:02,751 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:31:06,550 - MEDEX - DEBUG @ sign_in:76 :: Attemping to log in a user. 
+
+2022-06-27 15:31:10,497 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:31:17,266 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:55:38,591 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 15:55:38,593 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 15:55:46,372 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 15:57:52,877 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 15:57:52,879 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 16:00:34,056 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 16:17:44,115 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 16:17:44,116 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 16:18:04,140 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 16:19:20,783 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 16:21:36,228 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 20:31:02,804 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 20:31:02,807 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 20:31:22,836 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 20:32:12,568 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 20:32:12,569 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 20:32:32,592 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 20:33:21,280 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 20:33:21,282 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 20:33:46,313 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 20:34:54,442 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 20:34:54,442 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 20:35:24,480 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 20:37:13,391 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 20:37:13,392 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 20:37:33,427 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 20:56:57,891 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 20:56:57,893 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 20:57:19,169 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 20:57:19,171 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 20:57:39,224 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 21:05:21,160 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:05:21,162 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 21:05:41,183 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 21:07:19,873 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:07:19,875 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 21:08:29,939 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:08:29,940 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 21:08:49,971 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 21:09:03,135 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:09:03,137 - MEDEX - INFO @ start_rabbitmq:15 :: Starting up Rabbitmq.
+
+2022-06-27 21:09:23,189 - MEDEX - INFO @ start_celery:23 :: Starting up Celery.
+
+2022-06-27 21:13:59,382 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:13:59,383 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 21:14:14,054 - MEDEX - DEBUG @ sign_in:76 :: Attemping to log in a user. 
+
+2022-06-27 21:14:23,119 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:15:16,665 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:15:16,666 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 21:15:33,568 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:18:07,267 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:18:07,268 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 21:18:26,735 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:24:32,318 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:24:32,320 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 21:24:43,888 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:25:38,082 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:25:38,083 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 21:25:48,355 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:26:41,202 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:26:41,203 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 21:26:51,480 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:27:21,455 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:27:21,456 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 21:27:33,996 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:31:10,590 - MEDEX - INFO @ <module>:47 :: Logger Started.
+
+2022-06-27 21:31:10,592 - MEDEX - INFO @ <module>:53 :: Please start rabbitmq and celery. 
+
+2022-06-27 21:31:26,314 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:31:33,727 - MEDEX - DEBUG @ create_quote:31 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:38:39,856 - MEDEX - INFO @ <module>:48 :: Logger Started.
+
+2022-06-27 21:38:39,857 - MEDEX - INFO @ start_rabbitmq:16 :: Starting up Rabbitmq.
+
+2022-06-27 21:38:59,884 - MEDEX - INFO @ start_celery:24 :: Starting up Celery.
+
+2022-06-27 21:39:24,726 - MEDEX - DEBUG @ create_quote:33 :: Nirav Surajlal is logged in on create_quote page.
+
+2022-06-27 21:39:32,951 - MEDEX - DEBUG @ create_quote:33 :: Nirav Surajlal is logged in on create_quote page.
+
