@@ -1,11 +1,7 @@
-from multiprocessing import context
 import os
-from re import template
 from django.shortcuts import redirect, render
-from django.contrib.auth import authenticate, login, logout
 
-from .forms import CreateNewUser, UploadExcelFileForm
-from django.contrib.auth.forms import AuthenticationForm 
+from .forms import UploadExcelFileForm
 from django.contrib import messages
 import logging
 from medex.celery import medex_Celery
@@ -13,7 +9,7 @@ from .tasks import add_task
 
 # For MS Login Views
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 from medex.auth_helper import get_sign_in_flow, get_token_from_code, store_user, remove_user_and_token, get_token
 from medex.graph_helper import *
@@ -29,6 +25,7 @@ def create_quote(request):
     #     return redirect('login')
     try:
         users_name = request.session.get('users_name')
+        # assert users_name is not None, "Nobody logged in."
         email = request.session.get('email')
         __medex_LOGGER.debug(f"{users_name} is logged in on create_quote page.")
     except KeyError as e:
@@ -42,23 +39,28 @@ def create_quote(request):
         if form.is_valid():
             excel_doc_path = form.save_data_and_get_path(request.user)
             messages.success(request, "File uploaded.")
-            __qc_LOGGER.info(f"Attempting to create quote for {str(users_name)}")
+            __qc_LOGGER.info(f"Adding task for {str(users_name)}")
             if __MY_DEBUG__:
+                print('here')
                 add_task(email, excel_doc_path, users_name)
             else:
                 add_task.delay(email, excel_doc_path, users_name)
             form = UploadExcelFileForm()
-            template_name = os.path.join('quote_creator', 'create_quote.html')
+            template_name = os.path.join('quote_creator', 'selector.html')
             return render(request=request, template_name=template_name, context={'excel_upload_form': form})
         else:
             messages.error(request, "Unable to upload file. ")
             form = UploadExcelFileForm()
-            template_name = os.path.join('quote_creator', 'create_quote.html')
+            template_name = os.path.join('quote_creator', 'selector.html')
             return render(request=request, template_name=template_name, context={'excel_upload_form': form})
 
     form = UploadExcelFileForm()
     template_name = os.path.join('quote_creator', 'create_quote.html')
     return render(request=request, template_name=template_name, context={'excel_upload_form': form})
+
+def selector(request):
+    template_name = os.path.join('quote_creator', 'selector.html')
+    return render(request=request, template_name=template_name)
 
 #_________________________ FOR MS LOGIN _________________________
 def home(request):
@@ -111,4 +113,5 @@ def callback(request):
     # Store user from auth_helper.py script
     store_user(request, user)
     # return HttpResponseRedirect(reverse('home'))
-    return redirect('create_quote')
+    # return redirect('create_quote')
+    return redirect('selector')

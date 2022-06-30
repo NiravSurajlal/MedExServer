@@ -8,7 +8,8 @@ urlpatterns = [
     # path('login', views.login_view, name='login'),
     # path('logout', views.logout_view, name='logout'),
     path('create_quote', views.create_quote, name='create_quote'),
-
+    path('selector', views.selector, name='selector'),
+    
     path('signin', views.sign_in, name='signin'),
     path('signout', views.sign_out, name='signout'),
     path('callback', views.callback, name='callback'),

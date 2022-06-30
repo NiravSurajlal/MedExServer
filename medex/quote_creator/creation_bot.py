@@ -112,10 +112,10 @@ class QuoteBot():
         time.sleep(2) # to let mvn finish up and shut down safely
         # for troubleshooting purposes the subproc is stored
         self.subproc = subproc
-        if self.mvn_output_loc is not None:
-            for f in os.listdir(self.mvn_output_loc):
-                file_to_grab = os.path.join(self.mvn_output_loc, f)
-                self.grab_diagnostic_file(file_to_grab)
+        # if self.mvn_output_loc is not None:
+        #     for f in os.listdir(self.mvn_output_loc):
+        #         file_to_grab = os.path.join(self.mvn_output_loc, f)
+        #         self.grab_diagnostic_file(file_to_grab)
         return subproc
     
     def get_result(self, project_name, account_name, environment='production'):

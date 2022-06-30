@@ -25,8 +25,6 @@ with open(os.path.abspath('./credentials.json'), 'r') as f:
 
 hostname = socket.gethostname()
 ip_addr = socket.gethostbyname(hostname)
-# to allow Celery fork to work
-# os.environ['FORKED_BY_MULTIPROCESSING'] = '1'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -164,14 +162,18 @@ CELERY_RESULT_BACKEND = f'db+sqlite:///results.db'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'Africa/Nairobi'
+CELERY_TIMEZONE = 'Africa/Johannesburg'  # for full list visit https://gist.github.com/mjrulesamrat/0c1f7de951d3c508fb3a20b4b0b33a98
+CELERYD_OPTS = "--concurrency=1"
+ 
+# BROKER_HEARTBEAT = 0 # helps with connection lost?
+BROKER_CONNECTION_RETRY = True
+BROKER_CONNECTION_MAX_RETRIES = 100
 
 # FOR EMAILS
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp-mail.outlook.com'
 email_user =__CREDENTIALS__['MedexMailer-User']
-# email_user =__CREDENTIALS__
 EMAIL_HOST_USER  = email_user['username']
 DEFAULT_FROM_EMAIL = email_user['username']
 # EMAIL_HOST_PASSWORD = 'gqlnjnhcsrvfmcbg'
@@ -181,5 +183,4 @@ EMAIL_PORT = 587
 # FILE-HANDLING
 FILE_UPLOAD_HANDLERS = ['django.core.files.uploadhandler.MemoryFileUploadHandler',
                         'django.core.files.uploadhandler.TemporaryFileUploadHandler',]
-
 FILE_UPLOAD_MAX_MEMORY_SIZE = 2.5*1024*1024

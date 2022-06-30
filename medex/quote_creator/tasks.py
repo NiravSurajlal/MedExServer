@@ -1,4 +1,3 @@
-from csv import excel
 import logging
 import os
 from medex.celery import medex_Celery 
@@ -10,10 +9,12 @@ from medex import __CACHEPATH__
 from .shipment_order_bank import read_spreadsheet, make_new_cases
 import pandas as pd
 from .creation_bot import QuoteBot
+from time import sleep
 
-@medex_Celery.task(name="send_feedback_email_task")
+__taskhandler_LOG = logging.getLogger("taskhandler")
+
+# @medex_Celery.task(name="send_feedback_email_task")
 def send_feedback_email_task(email, message="test"):
-    __taskhandler_LOG = logging.getLogger("taskhandler")
     __taskhandler_LOG.info("Attempting to send email. ") 
     return send_feedback_email(email, message) 
 
@@ -25,16 +26,15 @@ def add_task(email, excel_doc_path=None, users_name=None):
         Runs the bot.
         Emails the result to the user.  
         """
-    __taskhandler_LOG = logging.getLogger("taskhandler")
+
+    __taskhandler_LOG.info(f"Attempting to create quote for {users_name}.")
+
     if excel_doc_path is None:
         __taskhandler_LOG.debug("File not uploaded.")
         return
     # excel_doc = pd.ExcelFile(os.path.join(__CACHEPATH__, "Medex.xlsb"))
     excel_doc = pd.ExcelFile(excel_doc_path)
     
-    # email = str(email)
-    # username = email.split("@")
-    # username = username[0]
     username = users_name
     task_data = {"email": email, "username":username, "start_time": ctime(), "excel_data": excel_doc}
 
@@ -58,9 +58,9 @@ def add_task(email, excel_doc_path=None, users_name=None):
     task_data['result'] = result
     task_data['end_time'] = ctime()
 
-    # task_data_json = json.dumps(task_data)
     task_data.pop('excel_data')
     json_path = os.path.join(__CACHEPATH__, f"{task_data['username']}_task.json")  
+    __taskhandler_LOG.info(f"Saving data to {json_path}.")
     with open(json_path, 'w+') as f:
         json.dump(task_data, f)
 
@@ -78,7 +78,6 @@ def generate_yaml(json_data, yaml_path):
         yaml.dump(data, yml)
 
 def json_to_yaml(json_data):
-    __taskhandler_LOG = logging.getLogger("taskhandler")
     data = {}
     data['Username1'] = 'fe_testing@tecex.com'
     data['Password1'] = 'Medex1234@!'
@@ -109,9 +108,10 @@ def json_to_yaml(json_data):
 def run_bot(username, project_name, account_name):
     """ Runs the selnium bot to generate the quote. 
         Returns a result. """
-    print("\n\n Running bot ... \n\n")
+    print(f"\n\n    Running bot for {username} ... \n\n\n")
     bot = QuoteBot(username)
     bot.execute()
+    # sleep(30)
     result = bot.get_result(project_name, account_name)
     return result
 # @shared_task

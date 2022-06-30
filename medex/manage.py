@@ -21,8 +21,10 @@ def start_rabbitmq(medex_LOGGER):
     sleep(20)
 
 def start_celery(medex_LOGGER):
-    medex_LOGGER.info("Starting up Celery.")
-    celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-P', 'eventlet']
+    medex_LOGGER.info("Starting up Celery. Command: ")
+    # celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-P', 'eventlet']
+    celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '--without-heartbeat', '-P', 'eventlet']
+    medex_LOGGER.info(f"{celery_cmd}")
     celery_process = subprocess.Popen(celery_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
     sleep(15)
 
@@ -50,7 +52,7 @@ if __name__ == '__main__':
     if not __MY_DEBUG__:
         # start_rabbitmq(medex_log)
         start_celery(medex_log)
-        print("Start alles. ")
+        # print("Start alles. ")
     else:
         medex_log.info("Please start rabbitmq and celery. ")
     main()

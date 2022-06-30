@@ -1,10 +1,9 @@
-from tempfile import template
-from django.conf import settings
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 import os
 from django.core import mail
 from medex.settings import __MY_DEBUG__
+from time import sleep
 
 def get_template_dir(is_project):
     cwd = os.getcwd()
@@ -36,3 +35,5 @@ def send_feedback_email(email, username, result):
         mail.EmailMessage(subject=mail_subject, 
                           body=mail_body, 
                           to=[email,]).send(fail_silently=False)
+    
+    # sleep(10)
