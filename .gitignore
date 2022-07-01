@@ -1,7 +1,3 @@
-# ignore maven
-medex/bot/
-medex/temp/
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

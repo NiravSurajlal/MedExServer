@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1656587774664" stop="1656587867905" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>GWT file1</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1656587774747" stop="1656587867902" status="broken">
+            <name>Creating a quote using a stand alone project no clinical trial with technical equipment adding delivery address parts and line items From Canada To Mexico</name>
+            <title>Creating a quote using a stand alone project no clinical trial with technical equipment adding delivery address parts and line items From Canada To Mexico</title>
+            <description type="text"></description>
+            <failure>
+                <message>CustomException: Unable to find the session info for particular sessionId 32238fd5ce52d54803bb6cc4eeb6576b, maybe session has quit already or timed out.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TECEX-PF142BX7', ip: '192.168.49.141', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\ltuser\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62625}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 32238fd5ce52d54803bb6cc4eeb...}
+Session ID: 32238fd5ce52d54803bb6cc4eeb6576b
+*** Element info: {Using=xpath, value=//input[@placeholder='Search Accounts']}</message>
+                <stack-trace>common.CustomException: Unable to find the session info for particular sessionId 32238fd5ce52d54803bb6cc4eeb6576b, maybe session has quit already or timed out.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TECEX-PF142BX7', ip: '192.168.49.141', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\ltuser\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62625}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 32238fd5ce52d54803bb6cc4eeb...}
+Session ID: 32238fd5ce52d54803bb6cc4eeb6576b
+*** Element info: {Using=xpath, value=//input[@placeholder='Search Accounts']}&#13;
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1656587775170" stop="1656587786207" status="passed">
+                    <name>Given I have access to TecEx Medical application</name>
+                    <title>Given I have access to TecEx Medical application</title>
+                </step>
+                <step start="1656587786209" stop="1656587794864" status="passed">
+                    <name>When I Entered Username in salesforce login as 'Username1'</name>
+                    <title>When I Entered Username in salesforce login as 'Username1'</title>
+                </step>
+                <step start="1656587794865" stop="1656587803300" status="passed">
+                    <name>And I Entered Password in salesforce login as 'Password1'</name>
+                    <title>And I Entered Password in salesforce login as 'Password1'</title>
+                </step>
+                <step start="1656587803302" stop="1656587813147" status="passed">
+                    <name>And I Selected Log In to Sandbox in salesforce login</name>
+                    <title>And I Selected Log In to Sandbox in salesforce login</title>
+                </step>
+                <step start="1656587813147" stop="1656587823834" status="passed">
+                    <name>And I Selected Shipment Orders dropdown in shipment</name>
+                    <title>And I Selected Shipment Orders dropdown in shipment</title>
+                </step>
+                <step start="1656587823836" stop="1656587832344" status="passed">
+                    <name>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</name>
+                    <title>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</title>
+                </step>
+                <step start="1656587832345" stop="1656587841183" status="passed">
+                    <name>And I Selected Medical Bot SO in shipment</name>
+                    <title>And I Selected Medical Bot SO in shipment</title>
+                </step>
+                <step start="1656587841185" stop="1656587850013" status="passed">
+                    <name>And I Selected SO New in shipment</name>
+                    <title>And I Selected SO New in shipment</title>
+                </step>
+                <step start="1656587850015" stop="1656587858817" status="passed">
+                    <name>And I Selected Quote in shipment</name>
+                    <title>And I Selected Quote in shipment</title>
+                </step>
+                <step start="1656587858817" stop="1656587865395" status="broken">
+                    <name>And I Entered Account in shipment as 'Account1'</name>
+                    <title>And I Entered Account in shipment as 'Account1'</title>
+                </step>
+                <step start="1656587865398" stop="1656587865401" status="canceled">
+                    <name>And I Selected Select Account in shipment</name>
+                    <title>And I Selected Select Account in shipment</title>
+                </step>
+                <step start="1656587865402" stop="1656587865403" status="canceled">
+                    <name>And I Entered Contact in shipment as 'Contact1'</name>
+                    <title>And I Entered Contact in shipment as 'Contact1'</title>
+                </step>
+                <step start="1656587865403" stop="1656587865404" status="canceled">
+                    <name>And I Selected Select Contact in shipment</name>
+                    <title>And I Selected Select Contact in shipment</title>
+                </step>
+                <step start="1656587865405" stop="1656587865407" status="canceled">
+                    <name>And I Selected Project in shipment</name>
+                    <title>And I Selected Project in shipment</title>
+                </step>
+                <step start="1656587865408" stop="1656587865409" status="canceled">
+                    <name>And I Selected Select Project in shipment</name>
+                    <title>And I Selected Select Project in shipment</title>
+                </step>
+                <step start="1656587865409" stop="1656587865411" status="canceled">
+                    <name>And I Selected Clinical trial in shipment</name>
+                    <title>And I Selected Clinical trial in shipment</title>
+                </step>
+                <step start="1656587865411" stop="1656587865412" status="canceled">
+                    <name>And I Selected Select Clinical trial in shipment</name>
+                    <title>And I Selected Select Clinical trial in shipment</title>
+                </step>
+                <step start="1656587865412" stop="1656587865413" status="canceled">
+                    <name>And I Entered Ship from country in shipment as 'Canada'</name>
+                    <title>And I Entered Ship from country in shipment as 'Canada'</title>
+                </step>
+                <step start="1656587865414" stop="1656587865414" status="canceled">
+                    <name>And I Selected Ship from country select in shipment</name>
+                    <title>And I Selected Ship from country select in shipment</title>
+                </step>
+                <step start="1656587865415" stop="1656587865416" status="canceled">
+                    <name>And I Selected Service type in shipment</name>
+                    <title>And I Selected Service type in shipment</title>
+                </step>
+                <step start="1656587865416" stop="1656587865417" status="canceled">
+                    <name>And I Selected Select Service type in shipment</name>
+                    <title>And I Selected Select Service type in shipment</title>
+                </step>
+                <step start="1656587865417" stop="1656587865418" status="canceled">
+                    <name>And I Selected International Freight in shipment</name>
+                    <title>And I Selected International Freight in shipment</title>
+                </step>
+                <step start="1656587865419" stop="1656587865419" status="canceled">
+                    <name>And I Selected Select International Freight in shipment</name>
+                    <title>And I Selected Select International Freight in shipment</title>
+                </step>
+                <step start="1656587865420" stop="1656587865420" status="canceled">
+                    <name>And I Selected Add to table in shipment</name>
+                    <title>And I Selected Add to table in shipment</title>
+                </step>
+                <step start="1656587865421" stop="1656587865422" status="canceled">
+                    <name>And I Selected Proceed in shipment</name>
+                    <title>And I Selected Proceed in shipment</title>
+                </step>
+                <step start="1656587865423" stop="1656587865424" status="canceled">
+                    <name>And I Entered Ship to country TB in shipment as 'Mexico'</name>
+                    <title>And I Entered Ship to country TB in shipment as 'Mexico'</title>
+                </step>
+                <step start="1656587865425" stop="1656587865426" status="canceled">
+                    <name>And I Selected Ship to country in shipment</name>
+                    <title>And I Selected Ship to country in shipment</title>
+                </step>
+                <step start="1656587865426" stop="1656587865427" status="canceled">
+                    <name>And I Selected Type of Product in shipment</name>
+                    <title>And I Selected Type of Product in shipment</title>
+                </step>
+                <step start="1656587865427" stop="1656587865428" status="canceled">
+                    <name>And I Selected Tech equipment in shipment</name>
+                    <title>And I Selected Tech equipment in shipment</title>
+                </step>
+                <step start="1656587865428" stop="1656587865429" status="canceled">
+                    <name>And I Selected Add Delivery Address Optional in shipment</name>
+                    <title>And I Selected Add Delivery Address Optional in shipment</title>
+                </step>
+                <step start="1656587865429" stop="1656587865430" status="canceled">
+                    <name>And I checked Add Delivery Address Checkbox in shipment</name>
+                    <title>And I checked Add Delivery Address Checkbox in shipment</title>
+                </step>
+                <step start="1656587865430" stop="1656587865431" status="canceled">
+                    <name>And I selected Add Delivery Address OK in shipment</name>
+                    <title>And I selected Add Delivery Address OK in shipment</title>
+                </step>
+                <step start="1656587865431" stop="1656587865432" status="canceled">
+                    <name>And I Entered Shipment Value in shipment as '1500'</name>
+                    <title>And I Entered Shipment Value in shipment as '1500'</title>
+                </step>
+                <step start="1656587865432" stop="1656587865433" status="canceled">
+                    <name>And I Selected PD Add First Package in package details</name>
+                    <title>And I Selected PD Add First Package in package details</title>
+                </step>
+                <step start="1656587865433" stop="1656587865433" status="canceled">
+                    <name>And I Selected PD Add Row in package details</name>
+                    <title>And I Selected PD Add Row in package details</title>
+                </step>
+                <step start="1656587865434" stop="1656587865434" status="canceled">
+                    <name>And I ClearAndEnterText PD How many packages TB in package details as 'PDHowmanypackagesTB1'</name>
+                    <title>And I ClearAndEnterText PD How many packages TB in package details as 'PDHowmanypackagesTB1'</title>
+                </step>
+                <step start="1656587865435" stop="1656587865435" status="canceled">
+                    <name>And I Selected PD Weight Unit in package details</name>
+                    <title>And I Selected PD Weight Unit in package details</title>
+                </step>
+                <step start="1656587865436" stop="1656587865436" status="canceled">
+                    <name>And I Selected PD Weight Unit value in package details</name>
+                    <title>And I Selected PD Weight Unit value in package details</title>
+                </step>
+                <step start="1656587865437" stop="1656587865437" status="canceled">
+                    <name>And I ClearAndEnterText PD Actual Weight in package details as 'PDActualWeight1'</name>
+                    <title>And I ClearAndEnterText PD Actual Weight in package details as 'PDActualWeight1'</title>
+                </step>
+                <step start="1656587865438" stop="1656587865439" status="canceled">
+                    <name>And I Selected PD Dimension Unit in package details</name>
+                    <title>And I Selected PD Dimension Unit in package details</title>
+                </step>
+                <step start="1656587865440" stop="1656587865442" status="canceled">
+                    <name>And I Selected PD Dimension Unit value in package details</name>
+                    <title>And I Selected PD Dimension Unit value in package details</title>
+                </step>
+                <step start="1656587865442" stop="1656587865443" status="canceled">
+                    <name>And I ClearAndEnterText PD Length in package details as 'PDLength1'</name>
+                    <title>And I ClearAndEnterText PD Length in package details as 'PDLength1'</title>
+                </step>
+                <step start="1656587865444" stop="1656587865445" status="canceled">
+                    <name>And I ClearAndEnterText PD Breadth in package details as 'PDBreadth1'</name>
+                    <title>And I ClearAndEnterText PD Breadth in package details as 'PDBreadth1'</title>
+                </step>
+                <step start="1656587865445" stop="1656587865446" status="canceled">
+                    <name>And I ClearAndEnterText PD Heigth in package details as 'PDHeigth1'</name>
+                    <title>And I ClearAndEnterText PD Heigth in package details as 'PDHeigth1'</title>
+                </step>
+                <step start="1656587865446" stop="1656587865447" status="canceled">
+                    <name>And I Selected PD Save in package details</name>
+                    <title>And I Selected PD Save in package details</title>
+                </step>
+                <step start="1656587865447" stop="1656587865448" status="canceled">
+                    <name>And I Selected PD Add Second Package in package details</name>
+                    <title>And I Selected PD Add Second Package in package details</title>
+                </step>
+                <step start="1656587865448" stop="1656587865449" status="canceled">
+                    <name>And I Selected PD Add Row in package details</name>
+                    <title>And I Selected PD Add Row in package details</title>
+                </step>
+                <step start="1656587865449" stop="1656587865450" status="canceled">
+                    <name>And I ClearAndEnterText PD How many packages TB in package details as '2'</name>
+                    <title>And I ClearAndEnterText PD How many packages TB in package details as '2'</title>
+                </step>
+                <step start="1656587865450" stop="1656587865451" status="canceled">
+                    <name>And I Selected PD Weight Unit in package details</name>
+                    <title>And I Selected PD Weight Unit in package details</title>
+                </step>
+                <step start="1656587865451" stop="1656587865451" status="canceled">
+                    <name>And I Selected PD Weight Unit value in package details</name>
+                    <title>And I Selected PD Weight Unit value in package details</title>
+                </step>
+                <step start="1656587865452" stop="1656587865452" status="canceled">
+                    <name>And I ClearAndEnterText PD Actual Weight in package details as '85'</name>
+                    <title>And I ClearAndEnterText PD Actual Weight in package details as '85'</title>
+                </step>
+                <step start="1656587865453" stop="1656587865453" status="canceled">
+                    <name>And I Selected PD Dimension Unit in package details</name>
+                    <title>And I Selected PD Dimension Unit in package details</title>
+                </step>
+                <step start="1656587865454" stop="1656587865456" status="canceled">
+                    <name>And I Selected PD Dimension Unit value in package details</name>
+                    <title>And I Selected PD Dimension Unit value in package details</title>
+                </step>
+                <step start="1656587865458" stop="1656587865460" status="canceled">
+                    <name>And I ClearAndEnterText PD Length in package details as '14'</name>
+                    <title>And I ClearAndEnterText PD Length in package details as '14'</title>
+                </step>
+                <step start="1656587865461" stop="1656587865463" status="canceled">
+                    <name>And I ClearAndEnterText PD Breadth in package details as '12'</name>
+                    <title>And I ClearAndEnterText PD Breadth in package details as '12'</title>
+                </step>
+                <step start="1656587865464" stop="1656587865467" status="canceled">
+                    <name>And I ClearAndEnterText PD Heigth in package details as '8'</name>
+                    <title>And I ClearAndEnterText PD Heigth in package details as '8'</title>
+                </step>
+                <step start="1656587865469" stop="1656587865470" status="canceled">
+                    <name>And I Selected PD Contains Batteries in package details</name>
+                    <title>And I Selected PD Contains Batteries in package details</title>
+                </step>
+                <step start="1656587865471" stop="1656587865474" status="canceled">
+                    <name>And I Selected PD Save in package details</name>
+                    <title>And I Selected PD Save in package details</title>
+                </step>
+                <step start="1656587865475" stop="1656587865477" status="canceled">
+                    <name>And I Selected Create Quote in shipment</name>
+                    <title>And I Selected Create Quote in shipment</title>
+                </step>
+                <step start="1656587865477" stop="1656587865478" status="canceled">
+                    <name>And I Selected Shipment Orders dropdown in shipment</name>
+                    <title>And I Selected Shipment Orders dropdown in shipment</title>
+                </step>
+                <step start="1656587865479" stop="1656587865479" status="canceled">
+                    <name>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</name>
+                    <title>And I Entered Shipment Orders Search in shipment as 'ShipmentOrdersSearch1'</title>
+                </step>
+                <step start="1656587865480" stop="1656587865481" status="canceled">
+                    <name>And I Selected Medical Bot SO in shipment</name>
+                    <title>And I Selected Medical Bot SO in shipment</title>
+                </step>
+                <step start="1656587865481" stop="1656587865482" status="canceled">
+                    <name>And I Wait in Seconds Wait in shipment as 'Wait1'</name>
+                    <title>And I Wait in Seconds Wait in shipment as 'Wait1'</title>
+                </step>
+                <step start="1656587865482" stop="1656587865483" status="canceled">
+                    <name>And I Selected Shipment orders refresh in shipment</name>
+                    <title>And I Selected Shipment orders refresh in shipment</title>
+                </step>
+                <step start="1656587865483" stop="1656587865485" status="canceled">
+                    <name>Then Verify text SO ID Copy in shipment</name>
+                    <title>Then Verify text SO ID Copy in shipment</title>
+                </step>
+                <step start="1656587865486" stop="1656587865487" status="canceled">
+                    <name>And 'Page1' is displayed with 'NA'</name>
+                    <title>And 'Page1' is displayed with 'NA'</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Creating a quote using a stand alone project no clinical trial with technical equipment adding delivery address parts and line items From Canada To Mexico"/>
+                <label name="feature" value="GWT file1"/>
+                <label name="host" value="TECEX-PF142BX7"/>
+                <label name="thread" value="19292@TECEX-PF142BX7.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="GWT file1"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

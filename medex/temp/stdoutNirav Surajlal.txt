@@ -1,0 +1,74 @@
+Command executed:
+mvn test -Dcucumber.options="--tags @uid1379562945" -DenvironmentType=staging -DbrowserName=Lambda
+Location:
+C:\Users\niravs\Documents\MedExServer\medex\bot\medex_2022_06_17
+
+Start StdOut:
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------< JavaSeleniumAlgoAfScripts:JavaSeleniumAlgoAfScripts >---------
+[INFO] Building JavaSeleniumAlgoAfScripts 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact xerces:xerces:jar:2.4.0 has been relocated to xerces:xercesImpl:jar:2.4.0
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ JavaSeleniumAlgoAfScripts ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ JavaSeleniumAlgoAfScripts ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ JavaSeleniumAlgoAfScripts ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ JavaSeleniumAlgoAfScripts ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ JavaSeleniumAlgoAfScripts ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running runner.TestRunner
+Running Feature child (scenario)...
+Begin scenario run...
+Url-----------null
+apiurl-----------null
+browserName-----------Lambda
+Environment Type is-----------staging
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by cucumber.deps.com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/niravs/.m2/repository/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar) to field java.util.TreeMap.comparator
+WARNING: Please consider reporting this to the maintainers of cucumber.deps.com.thoughtworks.xstream.core.util.Fields
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+browserName-----------------Lambda
+Attempting connection to LambdaTestDesired caps made successfully
+Jun 30, 2022 1:34:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Driver session id is :5d61ec9fb390308c6214c49617fd318e------------------------------
+ Status - 
+------------------------------
+C:\Users\niravs\Documents\MedExServer\medex\bot\medex_2022_06_17\output\Run_1656588850984
+PATH :C:\Users\niravs\Documents\MedExServer\medex\bot\medex_2022_06_17\output\Run_1656588850984//Execution_status.json
+gwt-file1;creating-a-quote-using-a-stand-alone-project-no-clinical-trial-with-technical-equipment-adding-delivery-address-parts-and-line-items-from-canada-to-mexico;;2Scenario completed...0
+Scenario completed...0
+
+1 Scenarios (1 passed)
+66 Steps (66 passed)
+10m14.059s
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 620.763 sec - in runner.TestRunner
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10:25 min
+[INFO] Finished at: 2022-06-30T13:44:30+02:00
+[INFO] ------------------------------------------------------------------------
