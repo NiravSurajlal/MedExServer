@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
+from pickle import FALSE
 import sys
 
 import logging
@@ -9,24 +10,30 @@ from logging.config import dictConfig
 import subprocess
 from time import sleep
 
-# debug = True
+from medex.celery import medex_Celery, pinging_Celery
 from medex.settings import __MY_DEBUG__
+# from quote_creator.tasks import start_pinger
 
 def start_rabbitmq(medex_LOGGER):
     medex_LOGGER.info("Starting up Rabbitmq.")
     rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server" )
     rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
-    # self.rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
+    # medex_LOGGER.info(f"{rabbitmq_cmd}")
     rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
-    sleep(20)
+    # sleep(40)
 
 def start_celery(medex_LOGGER):
-    medex_LOGGER.info("Starting up Celery. Command: ")
-    # celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-P', 'eventlet']
-    celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '--without-heartbeat', '-P', 'eventlet']
-    medex_LOGGER.info(f"{celery_cmd}")
+    medex_LOGGER.info("... Clearing Celery Queue ...")
+    medex_Celery.control.purge()
+    pinging_Celery.control.purge()
+    medex_LOGGER.info("Starting up Celery. ")
+    celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-P', 'eventlet']
+    # celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '--without-heartbeat', '-P', 'eventlet']
+    # medex_LOGGER.info(f"{celery_cmd}")
     celery_process = subprocess.Popen(celery_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
     sleep(15)
+    # if not __MY_DEBUG__:
+    #     start_pinger(10).delay()
 
 def main():
     """Run administrative tasks."""
@@ -50,7 +57,7 @@ if __name__ == '__main__':
         medex_log.info('Logger Started.')
 
     if not __MY_DEBUG__:
-        # start_rabbitmq(medex_log)
+        start_rabbitmq(medex_log)
         start_celery(medex_log)
         # print("Start alles. ")
     else:

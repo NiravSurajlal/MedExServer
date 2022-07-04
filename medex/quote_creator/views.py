@@ -21,8 +21,6 @@ __medex_LOGGER = logging.getLogger("MEDEX")
 _medex_queue_inspector = medex_Celery.control.inspect()
 
 def create_quote(request):
-    # if (request.user is None) or (str(request.user) == "AnonymousUser"):
-    #     return redirect('login')
     try:
         users_name = request.session.get('users_name')
         # assert users_name is not None, "Nobody logged in."
@@ -37,7 +35,14 @@ def create_quote(request):
         form = UploadExcelFileForm(request.POST, request.FILES)
 
         if form.is_valid():
-            excel_doc_path = form.save_data_and_get_path(request.user)
+            # excel_doc_path = form.save_data_and_get_path(request.user)
+            excel_doc_path = form.save_data_and_get_path(email)
+            if not request.FILES['excel_file'].name.lower().endswith(('xlsx')):
+                messages.error(request, "Unable to upload file. ")
+                form = UploadExcelFileForm()
+                template_name = os.path.join('quote_creator', 'selector.html')
+                return render(request=request, template_name=template_name, context={'excel_upload_form': form})
+
             messages.success(request, "File uploaded.")
             __qc_LOGGER.info(f"Adding task for {str(users_name)}")
             if __MY_DEBUG__:
@@ -62,6 +67,10 @@ def selector(request):
     template_name = os.path.join('quote_creator', 'selector.html')
     return render(request=request, template_name=template_name)
 
+def view_queue(request):
+    print(_medex_queue_inspector)
+    template_name = os.path.join('quote_creator', 'selector.html')
+    return render(request=request, template_name=template_name)
 #_________________________ FOR MS LOGIN _________________________
 def home(request):
     context = initialize_context(request)

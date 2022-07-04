@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<!--Upload File--> 
+<div class="container py-5">
+	<h1>Create Quote</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ excel_upload_form }}                    
+		<button class="btn btn-primary" type="submit">Upload</button>
+	</form>
+	<p class="text-center">Unimplemented. Please <a href="/quote_creator/logout">logout</a> instead.</p>
+</div>
+
+{% endblock %}

@@ -1,19 +1,36 @@
 import logging
 import os
-from medex.celery import medex_Celery 
-from .emails import send_feedback_email
 from time import ctime
 import json
 import yaml
+import pandas as pd
+from time import sleep
+from celery.schedules import crontab
+
+from medex.celery import medex_Celery, pinging_Celery 
+from .emails import send_feedback_email
 from medex import __CACHEPATH__
 from .shipment_order_bank import read_spreadsheet, make_new_cases
-import pandas as pd
 from .creation_bot import QuoteBot
-from time import sleep
 
 __taskhandler_LOG = logging.getLogger("taskhandler")
 
-# @medex_Celery.task(name="send_feedback_email_task")
+# @pinging_Celery.task(name="rabbitmq_pinging_task")
+# def rabbitmq_pinging_task(ping='ping'):
+#     return ping             
+
+# @pinging_Celery.task(name="start_pinger")
+# def start_pinger(sleeptime):
+#     __medex_LOG = logging.getLogger("MEDEX")
+#     __medex_LOG.info("Starting Rabbitmq hearbeat. ")
+#     uptime = 0
+#     while True:
+#         sleep(sleeptime)
+#         ping_result = rabbitmq_pinging_task.delay()
+#         uptime += sleeptime
+#         if uptime%60 == 0:
+#             __medex_LOG.info(f"Uptime {uptime/60} minutes.")
+
 def send_feedback_email_task(email, message="test"):
     __taskhandler_LOG.info("Attempting to send email. ") 
     return send_feedback_email(email, message) 
@@ -111,9 +128,5 @@ def run_bot(username, project_name, account_name):
     print(f"\n\n    Running bot for {username} ... \n\n\n")
     bot = QuoteBot(username)
     bot.execute()
-    # sleep(30)
     result = bot.get_result(project_name, account_name)
     return result
-# @shared_task
-# def add2(x, y):
-#     return x + y
