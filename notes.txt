@@ -20,6 +20,7 @@ To start Celery use in \medex:
     >> celery -A medex worker --loglevel=info -P eventlet
     - use to change number of processes
         >> --concurrency=X 
+    >> celery -A medex worker --loglevel=info -Q main --concurrency 1 -E -P eventlet -n worker1@%h
 
 To start the server use in \medex:
     >> python manage.py runserver (--noreload)
@@ -28,3 +29,7 @@ To start the server use in \medex:
 
 To run maven, use i\medex\bot\...\:
     >> mvn test -Dcucumber.options="--tags @uid1379562945" -DenvironmentType=NiravsRequest -DbrowserName=Lambda
+
+I can link a celery worker to a queue and a celery app to a queue, thus linking the worker and app. 
+Not touching the console works
+Rabbitmq has the whole queue, not celery. 

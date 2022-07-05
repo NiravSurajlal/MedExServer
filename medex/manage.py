@@ -10,30 +10,30 @@ from logging.config import dictConfig
 import subprocess
 from time import sleep
 
-from medex.celery import medex_Celery, pinging_Celery
+from medex.celery import medex_Celery
 from medex.settings import __MY_DEBUG__
-# from quote_creator.tasks import start_pinger
 
 def start_rabbitmq(medex_LOGGER):
     medex_LOGGER.info("Starting up Rabbitmq.")
     rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server" )
     rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
-    # medex_LOGGER.info(f"{rabbitmq_cmd}")
     rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
-    # sleep(40)
+    sleep(40)
 
 def start_celery(medex_LOGGER):
     medex_LOGGER.info("... Clearing Celery Queue ...")
+
     medex_Celery.control.purge()
-    pinging_Celery.control.purge()
-    medex_LOGGER.info("Starting up Celery. ")
-    celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-P', 'eventlet']
-    # celery_cmd = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '--without-heartbeat', '-P', 'eventlet']
-    # medex_LOGGER.info(f"{celery_cmd}")
-    celery_process = subprocess.Popen(celery_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
+    sleep(5)
+    
+    celery_cmd_1 = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-Q', 'main_queue', '--concurrency', '1', '-E', '--without-heartbeat', '-P', 'eventlet', '-n', 'worker1@nirav']
+    celery_cmd_2 = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-Q', 'pinger_queue', '--concurrency', '2', '-E', '--without-heartbeat', '-P', 'eventlet', '-n', 'worker2@nirav']
+    medex_LOGGER.info("Starting up Celery 1. ")
+    celery_process_1 = subprocess.Popen(celery_cmd_1, creationflags=subprocess.CREATE_NEW_CONSOLE)
     sleep(15)
-    # if not __MY_DEBUG__:
-    #     start_pinger(10).delay()
+    medex_LOGGER.info("Starting up Celery 2. ")
+    celery_process_2 = subprocess.Popen(celery_cmd_2, creationflags=subprocess.CREATE_NEW_CONSOLE)
+    sleep(15)
 
 def main():
     """Run administrative tasks."""

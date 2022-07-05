@@ -70,14 +70,14 @@ class QuoteBot():
         path = os.path.join(self.bot_dir, 'src', 'test', 'java', 'features')
         return [os.path.join(path, f) for f in os.listdir(path)]
 
-    def execute(self):
+    def execute(self, rabbitmq_pinging_task):
         try:
             self.qc_logger.info("Triggering bot.")
-            self.trigger_bot()
+            self.trigger_bot(rabbitmq_pinging_task)
         except Exception as e:
             print(e)
     
-    def trigger_bot(self):
+    def trigger_bot(self, rabbitmq_pinging_task):
         id_pattern = re.compile(r"SESSION ID => [a-z|A-Z|0-9]{32} <=")
         path_pattern = re.compile(r"PATH :[^\n]*Run_[0-9]{13}")
         with open(self.stdout_txt, 'w+') as f:
@@ -95,10 +95,13 @@ class QuoteBot():
                                        cwd=self.bot_dir)
             time.sleep(1)
         self.qc_logger.info("Started subprocess. ")
+        uptime = 0
         with open(self.stdout_txt, 'a') as stdoutfile:
             while subproc.poll() is None: # poll returns None when the process is still running -> https://stackoverflow.com/questions/2995983/using-subprocess-wait-and-poll
                 line = subproc.stdout.readline()
                 line_dec = line.decode('utf-8')
+                time.sleep(10)
+                uptime = rabbitmq_pinging_task.delay(uptime, 10).get()
                 if line:
                     stdoutfile.write(line.decode('utf-8'))
                     if path_pattern.match(line_dec):

@@ -2,12 +2,12 @@ import logging
 import os
 from time import ctime
 import json
+from turtle import up
 import yaml
 import pandas as pd
 from time import sleep
-from celery.schedules import crontab
 
-from medex.celery import medex_Celery, pinging_Celery 
+from medex.celery import medex_Celery 
 from .emails import send_feedback_email
 from medex import __CACHEPATH__
 from .shipment_order_bank import read_spreadsheet, make_new_cases
@@ -15,21 +15,23 @@ from .creation_bot import QuoteBot
 
 __taskhandler_LOG = logging.getLogger("taskhandler")
 
-# @pinging_Celery.task(name="rabbitmq_pinging_task")
-# def rabbitmq_pinging_task(ping='ping'):
-#     return ping             
-
-# @pinging_Celery.task(name="start_pinger")
+@medex_Celery.task(name="rabbitmq_pinging_task", )
+def rabbitmq_pinging_task(uptime, sleeptime, ping='PING'):
+    uptime += sleeptime
+    print(f"Current Process time: {uptime} seconds. ")
+    return uptime
+    
+# @medex_Celery.task(name="start_pinger", )
 # def start_pinger(sleeptime):
 #     __medex_LOG = logging.getLogger("MEDEX")
-#     __medex_LOG.info("Starting Rabbitmq hearbeat. ")
+#     __medex_LOG.info("Starting Rabbitmq pinger. ")
 #     uptime = 0
 #     while True:
 #         sleep(sleeptime)
-#         ping_result = rabbitmq_pinging_task.delay()
-#         uptime += sleeptime
+#         uptime = rabbitmq_pinging_task.delay(uptime, sleeptime).get()
+#         print(f"UPTIME: {uptime}")
 #         if uptime%60 == 0:
-#             __medex_LOG.info(f"Uptime {uptime/60} minutes.")
+#             __medex_LOG.info(f"Uptime {uptime/60} minutes.")       
 
 def send_feedback_email_task(email, message="test"):
     __taskhandler_LOG.info("Attempting to send email. ") 
@@ -45,7 +47,6 @@ def add_task(email, excel_doc_path=None, users_name=None):
         """
 
     __taskhandler_LOG.info(f"Attempting to create quote for {users_name}.")
-
     if excel_doc_path is None:
         __taskhandler_LOG.debug("File not uploaded.")
         return
@@ -127,6 +128,6 @@ def run_bot(username, project_name, account_name):
         Returns a result. """
     print(f"\n\n    Running bot for {username} ... \n\n\n")
     bot = QuoteBot(username)
-    bot.execute()
+    bot.execute(rabbitmq_pinging_task)
     result = bot.get_result(project_name, account_name)
     return result

@@ -1,20 +1,18 @@
 import os
-from django.shortcuts import redirect, render
-
-from .forms import UploadExcelFileForm
-from django.contrib import messages
 import logging
-from medex.celery import medex_Celery
-from .tasks import add_task
-
-# For MS Login Views
+from django.shortcuts import redirect, render
+from django.contrib import messages
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+
 from medex.auth_helper import get_sign_in_flow, get_token_from_code, store_user, remove_user_and_token, get_token
 from medex.graph_helper import *
 
+from .forms import UploadExcelFileForm
 from medex.settings import __MY_DEBUG__
+from medex.celery import medex_Celery
+from .tasks import add_task, start_pinger
 
 __qc_LOGGER = logging.getLogger("quote_creator")
 __medex_LOGGER = logging.getLogger("MEDEX")
@@ -49,7 +47,15 @@ def create_quote(request):
                 print('here')
                 add_task(email, excel_doc_path, users_name)
             else:
+                print(f"Active: {_medex_queue_inspector.active()}")
+                print(f"Reserved: {_medex_queue_inspector.reserved()}")
+                print(f"Scheduled: {_medex_queue_inspector.scheduled()}")
                 add_task.delay(email, excel_doc_path, users_name)
+                print("\t<<< After tasks added >>>")
+                print(f"Active: {_medex_queue_inspector.active()}")
+                print(f"Reserved: {_medex_queue_inspector.reserved()}")
+                print(f"Scheduled: {_medex_queue_inspector.scheduled()}")
+                # start_pinger.delay(1)
             form = UploadExcelFileForm()
             template_name = os.path.join('quote_creator', 'selector.html')
             return render(request=request, template_name=template_name, context={'excel_upload_form': form})

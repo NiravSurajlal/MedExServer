@@ -164,7 +164,7 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Africa/Johannesburg'  # for full list visit https://gist.github.com/mjrulesamrat/0c1f7de951d3c508fb3a20b4b0b33a98
-CELERYD_OPTS = "--concurrency=1"
+# CELERYD_OPTS = "--concurrency=1"
  
 # BROKER_HEARTBEAT = 0 # helps with connection lost?
 BROKER_CONNECTION_RETRY = True
