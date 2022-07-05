@@ -20,18 +20,6 @@ def rabbitmq_pinging_task(uptime, sleeptime, ping='PING'):
     uptime += sleeptime
     print(f"Current Process time: {uptime} seconds. ")
     return uptime
-    
-# @medex_Celery.task(name="start_pinger", )
-# def start_pinger(sleeptime):
-#     __medex_LOG = logging.getLogger("MEDEX")
-#     __medex_LOG.info("Starting Rabbitmq pinger. ")
-#     uptime = 0
-#     while True:
-#         sleep(sleeptime)
-#         uptime = rabbitmq_pinging_task.delay(uptime, sleeptime).get()
-#         print(f"UPTIME: {uptime}")
-#         if uptime%60 == 0:
-#             __medex_LOG.info(f"Uptime {uptime/60} minutes.")       
 
 def send_feedback_email_task(email, message="test"):
     __taskhandler_LOG.info("Attempting to send email. ") 

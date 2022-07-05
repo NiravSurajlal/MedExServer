@@ -62,4 +62,7 @@ if __name__ == '__main__':
         # print("Start alles. ")
     else:
         medex_log.info("Please start rabbitmq and celery. ")
-    main()
+    try:
+        main()
+    except KeyboardInterrupt as e:
+        print("\n ENGING \n")

@@ -37,7 +37,6 @@ SECRET_KEY = keyring.get_password(secret_user['service_name'], secret_user['user
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 __MY_DEBUG__ = False
-__PINGER_STATUS__ = False
 
 ALLOWED_HOSTS = []
 
