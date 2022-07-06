@@ -4,13 +4,12 @@
 
 <!--Upload File--> 
 <div class="container py-5">
-	<h1>Create Quote</h1>
-	<form method="POST">
-		{% csrf_token %}
-		{{ excel_upload_form }}                    
-		<button class="btn btn-primary" type="submit">Upload</button>
-	</form>
-	<p class="text-center">Unimplemented. Please <a href="/quote_creator/logout">logout</a> instead.</p>
+	<h1>Current Queues</h1>
+	{% for queue_item_info in all_queue_data %}
+		<p class="text-center"> {{queue_item_info}}</p>
+	{% endfor %}
+
+	<a href="/quote_creator/selector" class = "button">Back to Selector Page</a>
 </div>
 
 {% endblock %}

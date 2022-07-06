@@ -1,5 +1,4 @@
 from django.template.loader import render_to_string
-from django.core.mail import EmailMessage
 import os
 from django.core import mail
 from medex.settings import __MY_DEBUG__

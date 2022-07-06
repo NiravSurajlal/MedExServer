@@ -5,7 +5,8 @@ from django.db import IntegrityError as IE, models
 import logging
 import openpyxl as opxyl
 import os
-from medex import __USERDATCACHEPATH__
+from medex.settings import __USERDATCACHEPATH__
+# from medex.medex import __USERDATCACHEPATH__
 
 __LOGGER = logging.getLogger("quote_creator")
 

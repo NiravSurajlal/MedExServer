@@ -18,20 +18,19 @@ def start_rabbitmq(medex_LOGGER):
     rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server" )
     rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
     rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
-    sleep(40)
+    # sleep(40)
 
 def start_celery(medex_LOGGER):
     medex_LOGGER.info("... Clearing Celery Queue ...")
 
     medex_Celery.control.purge()
-    sleep(5)
     
-    celery_cmd_1 = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-Q', 'main_queue', '--concurrency', '1', '-E', '--without-heartbeat', '-P', 'eventlet', '-n', 'worker1@nirav']
-    celery_cmd_2 = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-Q', 'pinger_queue', '--concurrency', '2', '-E', '--without-heartbeat', '-P', 'eventlet', '-n', 'worker2@nirav']
     medex_LOGGER.info("Starting up Celery 1. ")
+    celery_cmd_1 = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-Q', 'medical_queue', '--concurrency', '1', '-E', '--without-heartbeat', '-P', 'eventlet', '-n', 'worker_medical@nirav']
     celery_process_1 = subprocess.Popen(celery_cmd_1, creationflags=subprocess.CREATE_NEW_CONSOLE)
     sleep(15)
     medex_LOGGER.info("Starting up Celery 2. ")
+    celery_cmd_2 = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-Q', 'pinger_queue', '--concurrency', '2', '-E', '--without-heartbeat', '-P', 'eventlet', '-n', 'worker_pinger@nirav']
     celery_process_2 = subprocess.Popen(celery_cmd_2, creationflags=subprocess.CREATE_NEW_CONSOLE)
     sleep(15)
 
@@ -50,6 +49,7 @@ def main():
 
 
 if __name__ == '__main__':
+    print(f"\n\t << DEBUG_MODE = {__MY_DEBUG__} >> \n")
     with open("log_config.json", 'r') as f:
         log_config_data = json.load(f)
         dictConfig(log_config_data)
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     if not __MY_DEBUG__:
         start_rabbitmq(medex_log)
         start_celery(medex_log)
-        # print("Start alles. ")
+        print("Start alles. ")
     else:
         medex_log.info("Please start rabbitmq and celery. ")
     try:

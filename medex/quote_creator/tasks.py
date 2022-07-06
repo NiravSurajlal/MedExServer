@@ -9,7 +9,8 @@ from time import sleep
 
 from medex.celery import medex_Celery 
 from .emails import send_feedback_email
-from medex import __CACHEPATH__
+# from medex import __CACHEPATH__
+from medex.settings import __CACHEPATH__
 from .shipment_order_bank import read_spreadsheet, make_new_cases
 from .creation_bot import QuoteBot
 
@@ -91,7 +92,10 @@ def json_to_yaml(json_data):
     data['Account1'] = json_data['SOSetup']['Account']
     data['Contact1'] = json_data['SOSetup']['Contact']
     data["Wait1"] = "15"
-    line_items_keys = list(json_data['SODetails']['1']['LineItems'].keys())
+    try:
+        line_items_keys = list(json_data['SODetails']['1']['LineItems'].keys())
+    except AttributeError as e:
+        line_items_keys = None
 
     for so_detail_num in json_data['SODetails'].keys():
         so_data = json_data['SODetails'][so_detail_num]
@@ -100,15 +104,17 @@ def json_to_yaml(json_data):
         data[f"EstimatedChargeableweight{so_detail_num}"] = so_data['Est. Chargeable Weight (KG)']
         data[f"ShipmentValue1{so_detail_num}"] = so_data['Shipment Value (USD)']
         data[f"Clientreference{so_detail_num}"] = so_data['Client Reference (optional)']
-        data[f"AddLineItems{so_detail_num}"] = ', '.join([str(elem) for elem in line_items_keys])
+        try:
+            data[f"AddLineItems{so_detail_num}"] = ', '.join([str(elem) for elem in line_items_keys])
+            li_data = so_data['LineItems']
+            num_LI = len(li_data)
+            for i in range(0, num_LI):
+                li_num = str(i)
+                for li_key in line_items_keys:
+                    data[f"AddLineItems{so_detail_num}"] = ", ".join([data[f"AddLineItems{so_detail_num}"], str(li_data[li_key][li_num])])
+        except TypeError as e:
+            print('No Line Items')
         
-        li_data = so_data['LineItems']
-        num_LI = len(li_data)
-        for i in range(0, num_LI):
-            li_num = str(i)
-            for li_key in line_items_keys:
-                data[f"AddLineItems{so_detail_num}"] = ", ".join([data[f"AddLineItems{so_detail_num}"], str(li_data[li_key][li_num])])
-
     return data
 
 def run_bot(username, project_name, account_name):

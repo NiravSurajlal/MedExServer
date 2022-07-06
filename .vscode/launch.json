@@ -16,8 +16,8 @@
             "name": "Django MGMT Command",
             "type": "python",
             "request": "launch",
-            // "program": "${workspaceFolder}\\medex\\manage.py",
-            "program": "manage.py",
+            "program": "${workspaceFolder}\\medex\\manage.py",
+            // "program": "manage.py",
             "console": "integratedTerminal",
             "args": [
                 "runserver",
@@ -28,8 +28,8 @@
             "name": "Django Testing",
             "type": "python",
             "request": "launch",
-            // "program": "${workspaceFolder}\\medex\\manage.py",
-            "program": "manage.py",
+            "program": "${workspaceFolder}\\medex\\manage.py",
+            // "program": "manage.py",
             "console": "integratedTerminal",
             "args": [
                 "test",

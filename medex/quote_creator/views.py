@@ -13,6 +13,7 @@ from .forms import UploadExcelFileForm
 from medex.settings import __MY_DEBUG__
 from medex.celery import medex_Celery
 from .tasks import add_task
+from .rabbitmq_api import get_queue_length, display_all_queue_items
 
 __qc_LOGGER = logging.getLogger("quote_creator")
 __medex_LOGGER = logging.getLogger("MEDEX")
@@ -46,14 +47,7 @@ def create_quote(request):
                 print('here')
                 add_task(email, excel_doc_path, users_name)
             else:
-                # print(f"Active: {_medex_queue_inspector.active()}")
-                # print(f"Reserved: {_medex_queue_inspector.reserved()}")
-                # print(f"Scheduled: {_medex_queue_inspector.scheduled()}")
                 add_task.delay(email, excel_doc_path, users_name)
-                # print("\t<<< After tasks added >>>")
-                # print(f"Active: {_medex_queue_inspector.active()}")
-                # print(f"Reserved: {_medex_queue_inspector.reserved()}")
-                # print(f"Scheduled: {_medex_queue_inspector.scheduled()}")
                 
             form = UploadExcelFileForm()
             template_name = os.path.join('quote_creator', 'selector.html')
@@ -73,9 +67,20 @@ def selector(request):
     return render(request=request, template_name=template_name)
 
 def view_queue(request):
-    print(_medex_queue_inspector)
-    template_name = os.path.join('quote_creator', 'selector.html')
-    return render(request=request, template_name=template_name)
+    try:
+        users_name = request.session.get('users_name')
+        # assert users_name is not None, "Nobody logged in."
+        email = request.session.get('email')
+        # get_all_queue_items()
+        all_queue_data = display_all_queue_items()
+        print(f" \n DATA: {all_queue_data}")
+        queues = get_queue_length()
+        template_name = os.path.join('quote_creator', 'view_queue.html')
+        return render(request=request, template_name=template_name, context={'queues': queues, 'all_queue_data': all_queue_data})
+    except KeyError as e:
+        messages.error(request, "No User logged in. ")
+        __qc_LOGGER.info(f"No User logged in. Error: {e}")
+        return redirect('')
 #_________________________ FOR MS LOGIN _________________________
 def home(request):
     context = initialize_context(request)

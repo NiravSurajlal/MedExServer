@@ -15,7 +15,7 @@ import os
 import socket
 import keyring
 import json
-from . import __USERDATCACHEPATH__
+from . import __USERDATCACHEPATH__, __CACHEPATH__, __ROOTPATH__
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -36,7 +36,7 @@ SECRET_KEY = keyring.get_password(secret_user['service_name'], secret_user['user
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-__MY_DEBUG__ = False
+__MY_DEBUG__ = True
 
 ALLOWED_HOSTS = []
 

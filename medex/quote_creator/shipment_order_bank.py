@@ -28,9 +28,12 @@ def read_spreadsheet(excel_spreadsheet):
 
     sheet = 'Test Outcomes'
     __qc_LOGGER.debug(f"Reading {sheet}. ")
-    df = pd.read_excel(f, sheet_name=sheet, index_col="TO Number").fillna('-')
-    df = df[~df.index.isna()]
-    raw_data['Test Outcomes'] = df.iloc[:, :6]
+    try:
+        df = pd.read_excel(f, sheet_name=sheet, index_col="TO Number").fillna('-')
+        df = df[~df.index.isna()]
+        raw_data['Test Outcomes'] = df.iloc[:, :6]
+    except Exception as e:
+        print(e)
 
     raw_data['Line Items'] = {}
     for sheet in f.sheet_names:
@@ -41,9 +44,12 @@ def read_spreadsheet(excel_spreadsheet):
             raw_data['Line Items'][sheet] = df
     
     __qc_LOGGER.debug('Reading the expected results sheet')
-    sheet = 'Expected Results (Python)'
-    df = pd.read_excel(f, sheet_name=sheet)
-    df = df[~df.index.isna()]
+    try:
+        sheet = 'Expected Results (Python)'
+        df = pd.read_excel(f, sheet_name=sheet)
+        df = df[~df.index.isna()]
+    except Exception as e:
+        print(e)
     __qc_LOGGER.debug('Closing up and keep clean')
     f.close()
     del f
@@ -68,7 +74,8 @@ def build_shipment_dict(spreadsheet_data, shipment_name, wip=False):
     for key in test_case_data.keys():
         so_list = []
         if 'sodetails' in key.lower():
-            so_list = test_case_data[key].split(';')
+            temp = str(test_case_data[key])
+            so_list = temp.split(';')
         if so_list:
             so_details = get_ALL_SODetails(data, so_list)
             break
@@ -86,7 +93,10 @@ def get_ALL_SODetails(data, so_list):
         # adds SODetails
         so_details_dict[so_detail_index_str] = json.loads(data['SODetails'].loc[int(so_detail_index)].to_json())
         line_item_index = so_details_dict[so_detail_index_str]['Line Items List']
-        line_item_data = json.loads(data['Line Items'][f"Line Item List {line_item_index}"].to_json())
+        try:
+            line_item_data = json.loads(data['Line Items'][f"Line Item List {line_item_index}"].to_json())
+        except KeyError as e:
+            line_item_data = None
         # adds Line Item data
         so_details_dict[so_detail_index_str]['LineItems'] = line_item_data
         # adds SOPs
@@ -99,7 +109,11 @@ def get_ALL_SODetails(data, so_list):
         sop_data = data['SOPs']
         sop_dict = {}
         for sop_index in sop_list:
-            sop_dict[sop_index] = json.loads(sop_data.iloc[int(sop_index)-1].to_json())
+            try:
+                sop_dict[sop_index] = json.loads(sop_data.iloc[int(sop_index)-1].to_json())
+            except ValueError as e:
+                print(e)
+            
         so_details_dict[so_detail_index_str]['SOP'] = sop_dict
 
     return so_details_dict

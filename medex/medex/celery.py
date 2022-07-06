@@ -8,7 +8,7 @@ __logger = logging.getLogger("MEDEX")
 __logger.debug("Starting celery. ")
 
 medex_Celery_task_routes = {
-    'add_task': {'queue': 'main_queue'},
+    'add_task': {'queue': 'medical_queue'},
     'rabbitmq_pinging_task': {'queue': 'pinger_queue'},
     'start_pinger': {'queue': 'pinger_queue'},
 }

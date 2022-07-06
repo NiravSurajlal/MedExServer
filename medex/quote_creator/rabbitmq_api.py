@@ -1,23 +1,72 @@
-from http import client
 import kombu
 import socket
+import logging
+import json
+import os
+
+from medex.settings import __CACHEPATH__
 
 hostname = socket.gethostname()
 ip_addr = socket.gethostbyname(hostname)
 
 requested_queues = [
-    'main_queue',
-    'pinger_queue'
+    'medical_queue'
 ]
 
-def get_current_queue():
-    conn = kombu.Connection(f'amqp://niravs:UuVZad3eEYPeXtFWRgwA@{ip_addr}:5672')
-    conn.connect()
-    client = conn.get_manager()
-    queues = client.get_queues()
-    # for queue in queues:
-    #     if queue.get("name") in requested_queues:
-    #         print(queue["name"])
-    #         print(queue["messages_ready"])
-    #         print(queue['messages_unacknowledged'])
-    return queues
+def get_queue_length():
+    __medex_LOGGER = logging.getLogger("MEDEX")
+    with kombu.Connection(f'amqp://niravs:UuVZad3eEYPeXtFWRgwA@{ip_addr}:5672') as conn:
+        conn.connect()
+        rabbit_client = conn.get_manager()
+        queues = rabbit_client.get_queues()
+        queue_results = {}
+        for queue in queues:
+            queue_name = queue.get("name")
+            if queue_name in requested_queues:
+                num_items = queue['messages_unacknowledged'] + queue["messages_ready"]
+                queue_results[queue_name] = num_items
+    return queue_results
+
+def get_all_queue_items():
+    __medex_LOGGER = logging.getLogger("MEDEX")
+    __medex_LOGGER.debug("Getting all queue items. ")
+    queue_data = {}
+    with kombu.Connection(f'amqp://niravs:UuVZad3eEYPeXtFWRgwA@{ip_addr}:5672') as conn:
+        conn.connect()
+        rabbit_client = conn.get_manager()
+        queues = rabbit_client.get_queues()
+        with conn.channel() as ch:
+            for queue in queues:
+                queue_name = queue.get("name")
+                if queue_name in requested_queues:
+                    names_in_queue = {}
+                    queue = kombu.Queue(queue_name, routing_key='queue', channel=ch)
+                    for i in range(0,10000):
+                        msg = queue.get()
+                        if msg is None:
+                            break
+                        names_in_queue[i] = msg.payload
+                    queue_data[queue_name] = names_in_queue
+    queue_data_path = os.path.join(__CACHEPATH__, "queue_data.json")
+    __medex_LOGGER.debug(f"Saving all json data to {queue_data_path}. ")
+    with open(queue_data_path, 'w+') as file:
+        json.dump(queue_data, file)
+
+def display_all_queue_items():
+    queue_data_path = os.path.join(__CACHEPATH__, "queue_data.json")
+    try:
+        with open(queue_data_path, 'r') as stream:
+            data = json.loads(stream.read())
+        all_data = []
+        for queue_name in data:
+            str_queue_name = queue_name.replace('_', " ").upper()+':   '
+            queue_data = data[queue_name]
+            for item in queue_data:
+                item_data = queue_data[item]
+                username = item_data[0][2]
+                all_data.append(str_queue_name+username)
+        return all_data
+    except Exception as e:
+        print(e)
+        return None
+    
