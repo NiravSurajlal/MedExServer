@@ -1,8 +1,15 @@
+""" 
+Module with the functions for reading and parsing the .xlsx data.
+"""
+
 import logging
 import pandas as pd
 import json
 
 def read_spreadsheet(excel_spreadsheet):
+    """ Takes the excel spreadsheet (bytes), parses it and returns a 
+        dictionary. """
+
     __qc_LOGGER = logging.getLogger("quote_creator")
 
     raw_data = {}
@@ -56,6 +63,8 @@ def read_spreadsheet(excel_spreadsheet):
     return raw_data
 
 def make_new_cases(spreadsheet_data):
+    """ Makes new cases from a dictionary and returns a dictionary. 
+        Should be called after read_spreadsheet on the data it returns. """
     on_creation_sos = {}
     for case_name in spreadsheet_data['SO'].index:
         test_case_data = build_shipment_dict(spreadsheet_data, case_name, wip=False)
@@ -64,6 +73,9 @@ def make_new_cases(spreadsheet_data):
     return on_creation_sos
 
 def build_shipment_dict(spreadsheet_data, shipment_name, wip=False):
+    """ Takes the dictionary data, parses it and returns a 
+    dictionary. """
+
     data = spreadsheet_data.copy()
     if not wip:
         test_case_data = data['SO'].T[shipment_name].to_json()
@@ -87,6 +99,7 @@ def build_shipment_dict(spreadsheet_data, shipment_name, wip=False):
 def get_ALL_SODetails(data, so_list):
     """ Gets SODetails from spreadsheets & corres LineItem data & Shipmnet Order Packages 
         data['SOPs']. """
+
     so_details_dict = {}
     for so_detail_index in so_list:
         so_detail_index_str = str(so_detail_index)

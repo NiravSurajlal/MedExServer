@@ -1,3 +1,14 @@
+"""
+Instantiates the Celery object to be used. 
+
+The object is configured from the medex.settings.py file. 
+
+Task routing is in place and correspondes to the workers (see the manage.py file).
+
+All functions that should be executed asynchronously, should be added to a queue.
+    Queues  :   'medical queue' -> contains the main process task
+                'pinger_queue'  -> contains the rabbitmq pinging task. 
+"""
 from __future__ import absolute_import
 import logging
 import os

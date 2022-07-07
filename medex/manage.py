@@ -1,7 +1,13 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""
+Django's command-line utility for administrative tasks.
+
+Intialises the logger from the log_config.json file.
+
+Starts up the RabbitMQ and Celery processes.
+"""
+
 import os
-from pickle import FALSE
 import sys
 
 import logging
@@ -18,7 +24,7 @@ def start_rabbitmq(medex_LOGGER):
     rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server" )
     rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
     rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
-    # sleep(40)
+    sleep(40)
 
 def start_celery(medex_LOGGER):
     medex_LOGGER.info("... Clearing Celery Queue ...")

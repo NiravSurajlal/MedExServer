@@ -1,3 +1,7 @@
+"""
+Defines all of the views for this app and the Microsoft SSO process.
+"""
+
 import os
 import logging
 from django.shortcuts import redirect, render
@@ -20,6 +24,9 @@ __medex_LOGGER = logging.getLogger("MEDEX")
 _medex_queue_inspector = medex_Celery.control.inspect()
 
 def create_quote(request):
+    """ View that allows a logged in user to upload a quote and add their request
+        to the queue. """
+
     try:
         users_name = request.session.get('users_name')
         # assert users_name is not None, "Nobody logged in."
@@ -63,10 +70,14 @@ def create_quote(request):
     return render(request=request, template_name=template_name, context={'excel_upload_form': form})
 
 def selector(request):
+    """ View that allows the user which quote creator they would like to access. """
+
     template_name = os.path.join('quote_creator', 'selector.html')
     return render(request=request, template_name=template_name)
 
 def view_queue(request):
+    """ View that serves the user limited information of the current queues. """
+    
     try:
         users_name = request.session.get('users_name')
         # assert users_name is not None, "Nobody logged in."

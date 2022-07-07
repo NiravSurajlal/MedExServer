@@ -1,3 +1,13 @@
+"""
+Module for the asynchronous PROCESS. Not all functions in this module can be called as
+an async process.
+
+Many functions that are called within an async process are also located here (not async
+themselves).
+
+This module defines the process flow for the medical quote creator.
+"""
+
 import logging
 import os
 from time import ctime
@@ -18,11 +28,16 @@ __taskhandler_LOG = logging.getLogger("taskhandler")
 
 @medex_Celery.task(name="rabbitmq_pinging_task", )
 def rabbitmq_pinging_task(uptime, sleeptime, ping='PING'):
+    """ ASYNC task. 
+        Pings the RabbitMQ service during the bot process. """
+
     uptime += sleeptime
     print(f"Current Process time: {uptime} seconds. ")
     return uptime
 
 def send_feedback_email_task(email, message="test"):
+    """ Sends a feedback (the result) email. """
+
     __taskhandler_LOG.info("Attempting to send email. ") 
     return send_feedback_email(email, message) 
 
@@ -85,6 +100,7 @@ def generate_yaml(json_data, yaml_path):
         yaml.dump(data, yml)
 
 def json_to_yaml(json_data):
+    """ Converts json data (already loaded) to the YAML format required by the bot. """
     data = {}
     data['Username1'] = 'fe_testing@tecex.com'
     data['Password1'] = 'Medex1234@!'

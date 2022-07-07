@@ -1,3 +1,10 @@
+"""
+__init__ for medex project.
+
+Makes the required paths used throughout the project.
+
+"""
+
 from __future__ import absolute_import
 from .celery import medex_Celery
 import os

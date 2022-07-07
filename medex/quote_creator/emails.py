@@ -1,3 +1,6 @@
+"""
+Configures and sends the emails.
+"""
 from django.template.loader import render_to_string
 import os
 from django.core import mail
@@ -5,6 +8,9 @@ from medex.settings import __MY_DEBUG__
 from time import sleep
 
 def get_template_dir(is_project):
+    """ Gets the templates for the email depending on whether a project or 
+        single so was requested. """
+
     cwd = os.getcwd()
     if __MY_DEBUG__:
         text_body_dir = os.path.join(cwd, "medex", "templates", "emails")
@@ -19,6 +25,9 @@ def get_template_dir(is_project):
     return text_body_dir
     
 def send_feedback_email(email, username, result):
+    """ Send an email with the result to the user who requested the 
+        quote. """
+        
     mail_subject = "MEDICAL - Your Quote"
 
     if result['Project Name']:

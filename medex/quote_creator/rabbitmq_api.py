@@ -1,3 +1,7 @@
+""" 
+Module for API calls to RabbitMQ. 
+"""
+
 import kombu
 import socket
 import logging
@@ -9,11 +13,13 @@ from medex.settings import __CACHEPATH__
 hostname = socket.gethostname()
 ip_addr = socket.gethostbyname(hostname)
 
-requested_queues = [
-    'medical_queue'
-]
+# requested_queues = [
+#     'medical_queue'
+# ]
 
-def get_queue_length():
+def get_queue_length(requested_queues=['medical_queue']):
+    """ Gets the queue length for the requested queues. """
+
     __medex_LOGGER = logging.getLogger("MEDEX")
     with kombu.Connection(f'amqp://niravs:UuVZad3eEYPeXtFWRgwA@{ip_addr}:5672') as conn:
         conn.connect()
@@ -27,7 +33,9 @@ def get_queue_length():
                 queue_results[queue_name] = num_items
     return queue_results
 
-def get_all_queue_items():
+def get_all_queue_items(requested_queues=['medical_queue']):
+    """ Gets data from the requested queues. """
+
     __medex_LOGGER = logging.getLogger("MEDEX")
     __medex_LOGGER.debug("Getting all queue items. ")
     queue_data = {}
@@ -53,6 +61,9 @@ def get_all_queue_items():
         json.dump(queue_data, file)
 
 def display_all_queue_items():
+    """ Function to display the most updated queue to the user.
+        Only displays queue name and user name. """
+
     queue_data_path = os.path.join(__CACHEPATH__, "queue_data.json")
     try:
         with open(queue_data_path, 'r') as stream:

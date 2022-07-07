@@ -1,3 +1,7 @@
+"""
+Defines all of the urls acessible in this module.
+"""
+
 from django.urls import path
 
 from . import views

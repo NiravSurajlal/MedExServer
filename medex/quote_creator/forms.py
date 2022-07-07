@@ -1,7 +1,15 @@
+"""
+Contains the forms to be used. 
+
+Has a CreateNewUser class for simple, sqlite databases.
+
+Has an UploadExcelFileForm to allow the user to upload an Excel (.xlsx) file
+from the /create_quote page. 
+"""
+
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from django.db import IntegrityError as IE, models
 import logging
 import openpyxl as opxyl
 import os
@@ -36,9 +44,14 @@ class CreateNewUser(UserCreationForm):
         return (user, error)
 
 class UploadExcelFileForm(forms.Form):
+    """ Class to allow user to upload Excel file. """
     excel_file = forms.FileField(required=True)
 
     def save_data_and_get_path(self, user):
+        """ Saves the data in a local location for use.
+            Also limits the file to only .xlsx files.
+            All the files saved should be nuked at the end of each process. """
+            
         error = None
 
         user = str(user)

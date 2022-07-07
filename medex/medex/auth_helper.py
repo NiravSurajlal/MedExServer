@@ -1,3 +1,7 @@
+
+"""
+Contains functions that assist with SSO authentication. 
+"""
 import yaml
 import msal
 import os

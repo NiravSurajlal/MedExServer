@@ -1,3 +1,7 @@
+""" 
+Module to make accessing, adding and changing data on salesforce easier.
+"""
+
 import keyring
 import simple_salesforce as sf
 from medex.settings import __CREDENTIALS__
