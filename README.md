@@ -17,6 +17,7 @@ This app is a Django App that uses Celery to process the tasks and RabbitMQ as t
     - visit https://phoenixnap.com/kb/install-maven-windows to install them.
     - Running "$ java --version" should return:
         > java --version
+        
         	> java 11.0.15.1 2022-04-22 LTS
         	
 		> Java(TM) SE Runtime Environment 18.9 (build 11.0.15.1+2-LTS-10)
@@ -25,6 +26,7 @@ This app is a Django App that uses Celery to process the tasks and RabbitMQ as t
 		
     - Running "$ mvn --version" should return:
         > mvn --version
+        
         	> Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
         	
 		> Maven home: C:\apache-maven-3.8.4
