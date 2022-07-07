@@ -46,6 +46,9 @@ Once these are up, you can head over to localhost or the server address and star
 
 ## Loggers
 Located in the log_config.json file and loaded when the server starts up.
+
 'MEDEX'         : Overall & misc. Users on pages, logged in and logged out, function .
+
 'quote_creator' : Quote creation process. Start, end & other.
+
 'taskhandler'   : To log from the queue on individual tasks.  
