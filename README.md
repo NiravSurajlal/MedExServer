@@ -1,5 +1,5 @@
 # Medical Server
-Allows registered Microsoft Vat IT users to create quote for medical by:
+Allows registered Microsoft Vat IT users to create a quote for TecEx Medical by:
     1) Logging in with their Microsoft account.
     2) Uploading a .xlsx file.
     3) The request will be added to a queue, waiting for a free bot to create the quote. 
@@ -14,7 +14,7 @@ This app is a Django App that uses Celery to process the tasks and RabbitMQ as t
 - RabbitMQ should be installed next.
     - visit https://lostechies.com/derekgreer/2012/03/05/rabbitmq-for-windows-introduction/ to install.
 - Maven and Java can be installed at anytime, but the bot will not run without them. Java must be installed first, and its path must be configured.
-    - visit https://phoenixnap.com/kb/install-maven-windows to install them.
+    - visit https://phoenixnap.com/kb/install-maven-windows to install them. Their versions must be the same as below.
     - Running "$ java --version" should return:
         > $ java --version
         
@@ -33,7 +33,16 @@ This app is a Django App that uses Celery to process the tasks and RabbitMQ as t
         	
 - The python requirements can be found in the requirements.txt file located in the top directory. Use 
     > $ pip install -r requirements.txt
+- Make sure that python's 'eventlet' library is installed or the Celery processes will not run. This is a Windows issue. 
 - Finally, this process uses keyringer to get credentials from the (Windows) credentials manager. Please ensure that you have the credentials available or contact niravs@tecex.com. 
+
+## Usage
+Once the system has all of the requirements, the server can be started. Head over to the file directory "...\medex\" and run
+	> $ python manage.py runserver --noreload
+
+This will start up the server. First you will see the RabbitMQ process start up this can take up to 30 seconds. Thereafter, to workers are instantiated. One to run the bot, and the other to ping RabbitMQ service while the bot is running, as the bot process makes RabbitMQ go 'idle'. The are started up synchronously, and take around 15 seconds each.
+
+Once these are up, you can head over to localhost or the server address and started uploading files.
 
 ## Loggers
 Located in the log_config.json file and loaded when the server starts up.
