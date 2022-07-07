@@ -16,14 +16,14 @@ This app is a Django App that uses Celery to process the tasks and RabbitMQ as t
 - Maven and Java can be installed at anytime, but the bot will not run without them. Java must be installed first, and its path must be configured.
     - visit https://phoenixnap.com/kb/install-maven-windows to install them.
     - Running "$ java --version" should return:
-        > java --version
+        > $ java --version
         
         	> java 11.0.15.1 2022-04-22 LTS
         	> Java(TM) SE Runtime Environment 18.9 (build 11.0.15.1+2-LTS-10)
         	> Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.15.1+2-LTS-10, mixed mode)
 		
     - Running "$ mvn --version" should return:
-        > mvn --version
+        > $ mvn --version
         
         	> Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
         	> Maven home: C:\apache-maven-3.8.4
