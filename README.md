@@ -26,15 +26,11 @@ This app is a Django App that uses Celery to process the tasks and RabbitMQ as t
         > mvn --version
         
         	> Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+        	> Maven home: C:\apache-maven-3.8.4
+        	> Java version: 11.0.15.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11.0.15.1
+        	> Default locale: en_US, platform encoding: Cp1252
+        	> OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
         	
-		> Maven home: C:\apache-maven-3.8.4
-		
-		> Java version: 11.0.15.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11.0.15.1
-		
-		> Default locale: en_US, platform encoding: Cp1252
-		
-		> OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
-		
 - The python requirements can be found in the requirements.txt file located in the top directory. Use 
     > $ pip install -r requirements.txt
 - Finally, this process uses keyringer to get credentials from the (Windows) credentials manager. Please ensure that you have the credentials available or contact niravs@tecex.com. 
