@@ -6,7 +6,8 @@ import subprocess
 import re 
 import threading
 import logging
-from medex.settings import __CREDENTIALS__, __MY_DEBUG__
+from quote_creator.emails import send_error_mail
+from medex.settings import __CREDENTIALS__, __MY_DEBUGGER__
 from .salesforce import ComplexSF
 
 class QuoteBot():
@@ -15,7 +16,7 @@ class QuoteBot():
         self.lambdacreds = self.get_lambda_creds
         self.bot_dir = self.get_bot_dir
         self.stdout_name = f"stdout{self.username}"
-        if __MY_DEBUG__:
+        if __MY_DEBUGGER__['mode']:
             self.temp_dir = os.path.join(os.getcwd(), 'medex', 'temp')
             if not os.path.exists(self.temp_dir):
                 os.mkdir(self.temp_dir)
@@ -41,7 +42,7 @@ class QuoteBot():
     
     @property
     def get_bot_dir(self):
-        if __MY_DEBUG__:
+        if __MY_DEBUGGER__['mode']:
             return os.path.join(os.getcwd(), 'medex', 'bot', 'medex_2022_06_17')
         else:
             return os.path.join(os.getcwd(), 'bot', 'medex_2022_06_17')
@@ -134,10 +135,12 @@ class QuoteBot():
             query_str = f"SELECT Id,Name FROM Shipment_Order__c WHERE CreatedDate >= TODAY AND RecordType.Name LIKE 'Medical%' AND CreatedBy.Name = 'AmDo Testing' AND Account__r.Name = '{account_name}' ORDER BY CreatedDate DESC LIMIT 1"
             query_result = sf.query_all(query_str)
         
-        result['Project Name'] = project_name
-        result['Id'] = query_result['records'][0]['Id']
-        result['Name'] = query_result['records'][0]['Name']
-        
+        try:
+            result['Project Name'] = project_name
+            result['Id'] = query_result['records'][0]['Id']
+            result['Name'] = query_result['records'][0]['Name']
+        except Exception as e:
+            return f'NO RESULT. Error: {e}'        
 
         if project_name:
             if environment.lower() != 'production':

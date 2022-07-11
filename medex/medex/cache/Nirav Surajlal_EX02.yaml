@@ -16,30 +16,22 @@ InternationalFreight2: Client
 InternationalFreightDifferent: 'Yes'
 NumofDeliverySites1: 2
 NumofDeliverySites2: 1
-PackageActualWeight1.1: 100
-PackageActualWeight1.2: 85
-PackageActualWeight2.2: 85
-PackageBreadth1.1: 10
-PackageBreadth1.2: 12
-PackageBreadth2.2: 12
-PackageContainsBatteries1.1: false
-PackageContainsBatteries1.2: true
-PackageContainsBatteries2.2: true
+PackageActualWeight1.0: 100
+PackageActualWeight1.1: 85
+PackageBreadth1.0: 10
+PackageBreadth1.1: 12
+PackageContainsBatteries1.0: false
+PackageContainsBatteries1.1: true
+PackageDimensionUnit1.0: INs
 PackageDimensionUnit1.1: INs
-PackageDimensionUnit1.2: INs
-PackageDimensionUnit2.2: INs
-PackageHeight1.1: 10
-PackageHeight1.2: 8
-PackageHeight2.2: 8
-PackageHowManyPacks1.1: 1
-PackageHowManyPacks1.2: 2
-PackageHowManyPacks2.2: 2
-PackageLength1.1: 10
-PackageLength1.2: 14
-PackageLength2.2: 14
+PackageHeight1.0: 10
+PackageHeight1.1: 8
+PackageHowManyPacks1.0: 1
+PackageHowManyPacks1.1: 2
+PackageLength1.0: 10
+PackageLength1.1: 14
+PackageWeightUnit1.0: Imperial (lbs/inch)
 PackageWeightUnit1.1: Imperial (lbs/inch)
-PackageWeightUnit1.2: Imperial (lbs/inch)
-PackageWeightUnit2.2: Imperial (lbs/inch)
 Password1: Medex1234@!
 Project: Yes- Add to Existing Project
 ProjectName: jrthat

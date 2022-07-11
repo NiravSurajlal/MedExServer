@@ -14,7 +14,7 @@ from medex.auth_helper import get_sign_in_flow, get_token_from_code, store_user,
 from medex.graph_helper import *
 
 from .forms import UploadExcelFileForm
-from medex.settings import __MY_DEBUG__
+from medex.settings import __MY_DEBUGGER__
 from medex.celery import medex_Celery
 from .tasks import add_task
 from .rabbitmq_api import get_queue_length, display_all_queue_items
@@ -50,7 +50,7 @@ def create_quote(request):
 
             messages.success(request, "File uploaded.")
             __qc_LOGGER.info(f"Adding task for {str(users_name)}")
-            if __MY_DEBUG__:
+            if not __MY_DEBUGGER__['asnyc_mode']:
                 print('here')
                 add_task(email, excel_doc_path, users_name)
             else:
@@ -84,7 +84,6 @@ def view_queue(request):
         email = request.session.get('email')
         # get_all_queue_items()
         all_queue_data = display_all_queue_items()
-        print(f" \n DATA: {all_queue_data}")
         queues = get_queue_length()
         template_name = os.path.join('quote_creator', 'view_queue.html')
         return render(request=request, template_name=template_name, context={'queues': queues, 'all_queue_data': all_queue_data})

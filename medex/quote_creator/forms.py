@@ -14,6 +14,7 @@ import logging
 import openpyxl as opxyl
 import os
 from django.db import IntegrityError as IE
+from datetime import date, datetime
 
 from .emails import send_error_mail
 from medex.settings import __USERDATCACHEPATH__
@@ -56,9 +57,10 @@ class UploadExcelFileForm(forms.Form):
             All the files saved should be nuked at the end of each process. """
             
         error = None
-
-        user = str(user)
-        user = f"{user}.xlsx"
+        now = datetime.now()
+        ct = now.strftime("%H-%M")
+        user = user.split('@')[0]
+        user = f"{user}_{ct}.xlsx"
         path = os.path.join(__USERDATCACHEPATH__, user)
 
         try:

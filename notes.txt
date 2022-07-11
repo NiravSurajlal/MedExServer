@@ -18,9 +18,10 @@ To start up RabbitMQ (usually port 5672/15672 ), use:
 To start Celery use in \medex:
     >> celery -A medex worker -l info 
     >> celery -A medex worker --loglevel=info -P eventlet
-    - use to change number of processes
+    - use to change number of processes (%h)
         >> --concurrency=X 
-    >> celery -A medex worker --loglevel=info -Q main --concurrency 1 -E -P eventlet -n worker1@%h
+    >> celery -A medex worker --loglevel=info -Q medical_queue --concurrency 1 -E --without-heartbeat -P eventlet -n worker_medical@nirav
+    >> celery -A medex worker --loglevel=info -Q pinger_queue --concurrency 1 -E --without-heartbeat -P eventlet -n worker_pinger@nirav
 
 To start the server use in \medex:
     >> python manage.py runserver (--noreload)

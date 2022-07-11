@@ -1,0 +1,7 @@
+Command executed:
+mvn test -Dcucumber.options="--tags @uid1379562945" -DenvironmentType=staging -DbrowserName=Lambda
+Location:
+C:\Users\niravs\Documents\MedExServer\bot\medex_2022_06_17
+
+Start StdOut:
+

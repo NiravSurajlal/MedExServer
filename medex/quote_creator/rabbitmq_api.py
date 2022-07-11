@@ -8,7 +8,7 @@ import logging
 import json
 import os
 
-from medex.settings import __CACHEPATH__
+from medex.settings import __CACHEPATH__, __MY_DEBUGGER__
 
 hostname = socket.gethostname()
 ip_addr = socket.gethostbyname(hostname)
@@ -63,6 +63,9 @@ def get_all_queue_items(requested_queues=['medical_queue']):
 def display_all_queue_items():
     """ Function to display the most updated queue to the user.
         Only displays queue name and user name. """
+    
+    if __MY_DEBUGGER__['quickly_load_queue']:
+        get_all_queue_items()
 
     queue_data_path = os.path.join(__CACHEPATH__, "queue_data.json")
     try:
@@ -70,12 +73,14 @@ def display_all_queue_items():
             data = json.loads(stream.read())
         all_data = []
         for queue_name in data:
-            str_queue_name = queue_name.replace('_', " ").upper()+':   '
+            str_queue_name = queue_name.replace('_', " ").upper() #+':   '
             queue_data = data[queue_name]
             for item in queue_data:
                 item_data = queue_data[item]
+                file_name = os.path.split(item_data[0][1])[1]
+                user_start_time = file_name[-10:-5].replace('-', ':')
                 username = item_data[0][2]
-                all_data.append(str_queue_name+username)
+                all_data.append("{} :  {} - {}".format(user_start_time.ljust(9), str_queue_name, username))
         return all_data
     except Exception as e:
         print(e)

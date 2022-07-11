@@ -17,14 +17,14 @@ import subprocess
 from time import sleep
 
 from medex.celery import medex_Celery
-from medex.settings import __MY_DEBUG__
+from medex.settings import __MY_DEBUGGER__
 
 def start_rabbitmq(medex_LOGGER):
     medex_LOGGER.info("Starting up Rabbitmq.")
     rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server" )
     rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
     rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
-    sleep(40)
+    # sleep(40)
 
 def start_celery(medex_LOGGER):
     medex_LOGGER.info("... Clearing Celery Queue ...")
@@ -55,21 +55,27 @@ def main():
 
 
 if __name__ == '__main__':
-    print(f"\n\t << DEBUG_MODE = {__MY_DEBUG__} >> \n")
-    print("\t NO NOTES ")
+    print(f"\n\t << DEBUG_MODE = {__MY_DEBUGGER__['mode']} >> \n")
     with open("log_config.json", 'r') as f:
         log_config_data = json.load(f)
         dictConfig(log_config_data)
         medex_log = logging.getLogger("MEDEX")
-        medex_log.info('Logger Started.')
+        
 
-    if not __MY_DEBUG__:
+    if __MY_DEBUGGER__['start_services'] and __MY_DEBUGGER__['asnyc_mode']:
+        medex_log.info('Logger Started.')
         start_rabbitmq(medex_log)
         start_celery(medex_log)
-        print("Start alles. ")
-    else:
-        medex_log.info("Please start rabbitmq and celery. ")
+    if not __MY_DEBUGGER__['start_services']:
+        if __MY_DEBUGGER__['asnyc_mode']:
+            print(f"\t PLEASE MAKE SURE YOUR BACKGROUND SERVICES ARE RUNNING")
+            medex_log.info('Logger Started.')
+    if not __MY_DEBUGGER__['asnyc_mode']:
+        print(f"\t RUNNING IN SYNCHRONOUS MODE ")
+        medex_log.info('Logger Started.')
+    print("\n")
+
     try:
         main()
     except KeyboardInterrupt as e:
-        print("\n ENGING \n")
+        print("\n ENDGING \n")

@@ -19,11 +19,11 @@ import pandas as pd
 from time import sleep
 
 from medex.celery import medex_Celery 
-from .emails import send_feedback_email
-# from medex import __CACHEPATH__
+from .emails import send_feedback_email, send_error_mail
 from medex.settings import __CACHEPATH__
 from .shipment_order_bank import read_spreadsheet, make_new_cases
 from .creation_bot import QuoteBot
+from .rabbitmq_api import get_all_queue_items
 
 __taskhandler_LOG = logging.getLogger("taskhandler")
 
@@ -50,8 +50,12 @@ def add_task(email, excel_doc_path=None, users_name=None):
         Runs the bot.
         Emails the result to the user.  
         """
-
     __taskhandler_LOG.info(f"Attempting to create quote for {users_name}.")
+    sleep(1)
+    __taskhandler_LOG.info(f"Updating queue for {users_name}.")
+    get_all_queue_items()
+
+    
     if excel_doc_path is None:
         __taskhandler_LOG.debug("File not uploaded.")
         return
@@ -88,7 +92,10 @@ def add_task(email, excel_doc_path=None, users_name=None):
         json.dump(task_data, f)
 
     __taskhandler_LOG.info(f"Sending email to {task_data['email']}. ")
-    send_feedback_email(email, username, result)
+    if isinstance(result, dict):
+        send_feedback_email(email, username, result)
+    else:
+        send_error_mail(result)
     __taskhandler_LOG.info(f"Email sent to {task_data['email']}, and process complete. ")
 
 def generate_yaml(json_data, yaml_path):

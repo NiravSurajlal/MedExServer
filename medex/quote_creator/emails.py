@@ -4,7 +4,7 @@ Configures and sends the emails.
 from django.template.loader import render_to_string
 import os
 from django.core import mail
-from medex.settings import __MY_DEBUG__
+from medex.settings import __MY_DEBUGGER__
 from time import sleep
 
 def get_template_dir(is_project):
@@ -12,7 +12,7 @@ def get_template_dir(is_project):
         single so was requested. """
 
     cwd = os.getcwd()
-    if __MY_DEBUG__:
+    if __MY_DEBUGGER__['mode']:
         text_body_dir = os.path.join(cwd, "medex", "templates", "emails")
     else:
         text_body_dir = os.path.join(cwd, "templates", "emails")
@@ -48,4 +48,4 @@ def send_feedback_email(email, username, result):
 
 def send_error_mail(error_msg):
     email='niravs@tecex.com'
-    pass
+    sleep(120)
