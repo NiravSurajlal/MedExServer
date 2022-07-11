@@ -1,6 +1,7 @@
 # MyStuff
 /medex/logs
 /medex/bot
+/medex/medex/cache
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

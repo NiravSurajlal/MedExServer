@@ -80,7 +80,7 @@ def display_all_queue_items():
                 file_name = os.path.split(item_data[0][1])[1]
                 user_start_time = file_name[-10:-5].replace('-', ':')
                 username = item_data[0][2]
-                all_data.append("{} :  {} - {}".format(user_start_time.ljust(9), str_queue_name, username))
+                all_data.append("{} {} - {}".format(user_start_time.ljust(9), str_queue_name, username))
         return all_data
     except Exception as e:
         print(e)

@@ -1,11 +1,12 @@
 """
 Configures and sends the emails.
 """
-from django.template.loader import render_to_string
 import os
+import datetime
+from multiprocessing import context
+from django.template.loader import render_to_string
 from django.core import mail
 from medex.settings import __MY_DEBUGGER__
-from time import sleep
 
 def get_template_dir(is_project):
     """ Gets the templates for the email depending on whether a project or 
@@ -46,6 +47,23 @@ def send_feedback_email(email, username, result):
     
     # sleep(10)
 
-def send_error_mail(error_msg):
-    email='niravs@tecex.com'
-    sleep(120)
+def send_error_mail(error_msg, email=None, username=None):
+    email_1='niravs@tecex.com'
+    mail_subject = "ERROR"
+
+    context =  {'name': username, 'email': email, 'error_msg': error_msg}
+
+    text_body_dir = os.path.join(text_body_dir, "error_email.txt")
+
+    mail_body = render_to_string(text_body_dir, context=context)
+    
+    if email is not None:
+        with mail.get_connection() as connection:
+            mail.EmailMessage(subject=mail_subject, 
+                            body=mail_body, 
+                            to=[email_1,email]).send(fail_silently=False)
+    else:
+        with mail.get_connection() as connection:
+            mail.EmailMessage(subject=mail_subject, 
+                            body=mail_body, 
+                            to=[email_1]).send(fail_silently=False)     

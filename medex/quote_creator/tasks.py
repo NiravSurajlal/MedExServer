@@ -94,9 +94,13 @@ def add_task(email, excel_doc_path=None, users_name=None):
     __taskhandler_LOG.info(f"Sending email to {task_data['email']}. ")
     if isinstance(result, dict):
         send_feedback_email(email, username, result)
+        __taskhandler_LOG.info(f"Email sent to {task_data['email']}")
+        __taskhandler_LOG.info(f"Cleaning up and removing files for {task_data['email']}.")
+        clean_up(excel_doc_path, yaml_path)
+        __taskhandler_LOG.info(f"Files deleted and process for {task_data['email']} complete.")
     else:
-        send_error_mail(result)
-    __taskhandler_LOG.info(f"Email sent to {task_data['email']}, and process complete. ")
+        send_error_mail(result, email=email, username=username)
+        __taskhandler_LOG.info(f"Error Email sent to {task_data['email']}")
 
 def generate_yaml(json_data, yaml_path):
     """ Generates yaml from xlsx by converting to JSON then to YAML. 
@@ -199,3 +203,7 @@ def run_bot(username, project_name, account_name):
     bot.execute(rabbitmq_pinging_task)
     result = bot.get_result(project_name, account_name)
     return result
+
+def clean_up(excel_doc_path, yaml_path):
+    os.remove(excel_doc_path)
+    os.remove(yaml_path)

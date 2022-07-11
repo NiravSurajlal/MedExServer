@@ -1,0 +1,9 @@
+Hello {{name|safe}},
+
+Thank you for your request. 
+
+There was an error when processing your request.
+
+ERROR MESSAGE: {{error_msg|safe}}
+
+Kind Regards,
