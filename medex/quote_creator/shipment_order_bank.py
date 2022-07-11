@@ -5,10 +5,16 @@ Module with the functions for reading and parsing the .xlsx data.
 import logging
 import pandas as pd
 import json
+from .emails import send_error_mail
 
 def read_spreadsheet(excel_spreadsheet):
     """ Takes the excel spreadsheet (bytes), parses it and returns a 
-        dictionary. """
+        dictionary and a list of errors. 
+        
+        Test outcome and Expected results caught errors are okay in this process. 
+        They may not be populated. """
+
+    errors = {}
 
     __qc_LOGGER = logging.getLogger("quote_creator")
 
@@ -17,19 +23,34 @@ def read_spreadsheet(excel_spreadsheet):
 
     sheet = 'SOSetup'
     __qc_LOGGER.debug(f"Reading {sheet}. ")
-    df = pd.read_excel(f, sheet_name=sheet, index_col='Setup Reference')
-    df = df[~df.index.isna()]
-    raw_data['SO'] = df[~df.index.str.contains('WIP')]
+    try:
+        df = pd.read_excel(f, sheet_name=sheet, index_col='Setup Reference')
+    except ValueError as e:
+        error_msg = f"Worksheet {sheet} or index not found: Error {e}"
+        errors['SOSetup'] = error_msg
+
+    # df = df[~df.index.isna()]
+    raw_data['SOSetup'] = df[~df.index.str.contains('WIP')]
     raw_data['WIP'] = df[df.index.str.contains('WIP')]
 
     sheet = 'SODetails'
     __qc_LOGGER.debug(f"Reading {sheet}. ")
-    df = pd.read_excel(f, sheet_name=sheet, index_col="Index")
+    try:
+        df = pd.read_excel(f, sheet_name=sheet, index_col="Index")
+    except ValueError as e:
+        error_msg = f"Worksheet {sheet} or index not found: Error {e}"
+        errors['SODetails'] = error_msg
+
     raw_data[sheet] = df
 
     sheet = 'Shipment Order Packages'
     __qc_LOGGER.debug(f"Reading {sheet}. ")
-    df = pd.read_excel(f, sheet_name=sheet, index_col="Index")
+    try:
+        df = pd.read_excel(f, sheet_name=sheet, index_col="Index")
+    except ValueError as e:
+        error_msg = f"Worksheet {sheet} or index not found: Error {e}"
+        errors['ShipmentOrderPackages'] = error_msg
+        
     df = df[~df.index.isna()]
     raw_data['SOPs'] = df.iloc[:, : 10]
 
@@ -39,34 +60,42 @@ def read_spreadsheet(excel_spreadsheet):
         df = pd.read_excel(f, sheet_name=sheet, index_col="TO Number").fillna('-')
         df = df[~df.index.isna()]
         raw_data['Test Outcomes'] = df.iloc[:, :6]
-    except Exception as e:
-        print(e)
+    except ValueError as e:
+        error_msg = f"Worksheet {sheet} or index not found: Error {e}"
+        errors['TestOutcomes'] = error_msg
 
     raw_data['Line Items'] = {}
     for sheet in f.sheet_names:
         if 'Line Item List' in sheet:
             __qc_LOGGER.debug(f'Reading the Line Items sheet -> {sheet}')
-            df = pd.read_excel(f, sheet_name=sheet)
+            try:
+                df = pd.read_excel(f, sheet_name=sheet)
+            except ValueError as e:
+                error_msg = f"Worksheet {sheet} or index not found: Error {e}"
+                errors['LIList'] = error_msg
+
             df = df[[c for c in df.columns if not(c.startswith('Unnamed:'))]]
             raw_data['Line Items'][sheet] = df
     
     __qc_LOGGER.debug('Reading the expected results sheet')
+    sheet = 'Expected Results (Python)'
     try:
-        sheet = 'Expected Results (Python)'
         df = pd.read_excel(f, sheet_name=sheet)
         df = df[~df.index.isna()]
-    except Exception as e:
-        print(e)
-    __qc_LOGGER.debug('Closing up and keep clean')
+    except ValueError as e:
+        error_msg = f"Worksheet {sheet} or index not found: Error {e}"
+        errors['ExpectedResults'] = error_msg
+
+    __qc_LOGGER.debug('Closing up and keep clean.')
     f.close()
     del f
-    return raw_data
+    return raw_data, errors
 
 def make_new_cases(spreadsheet_data):
     """ Makes new cases from a dictionary and returns a dictionary. 
         Should be called after read_spreadsheet on the data it returns. """
     on_creation_sos = {}
-    for case_name in spreadsheet_data['SO'].index:
+    for case_name in spreadsheet_data['SOSetup'].index:
         test_case_data = build_shipment_dict(spreadsheet_data, case_name, wip=False)
         on_creation_sos[case_name] = test_case_data
 
@@ -78,7 +107,7 @@ def build_shipment_dict(spreadsheet_data, shipment_name, wip=False):
 
     data = spreadsheet_data.copy()
     if not wip:
-        test_case_data = data['SO'].T[shipment_name].to_json()
+        test_case_data = data['SOSetup'].T[shipment_name].to_json()
     else:
         test_case_data = data['WIP'].T[shipment_name].to_json()
     test_case_data = json.loads(test_case_data)
@@ -91,14 +120,21 @@ def build_shipment_dict(spreadsheet_data, shipment_name, wip=False):
         if so_list:
             so_details = get_ALL_SODetails(data, so_list)
             break
+    
+    sops_dict = {}
+    for i in data['SOPs'].index: 
+        sops_dict[str(i)] = json.loads(data['SOPs'].iloc[i-1].to_json())
 
     full_dict = {'SOSetup': test_case_data,
-                 'SODetails': so_details}
+                 'SODetails': so_details,
+                 'SOPs': sops_dict}
     return full_dict
 
 def get_ALL_SODetails(data, so_list):
     """ Gets SODetails from spreadsheets & corres LineItem data & Shipmnet Order Packages 
-        data['SOPs']. """
+        data['SOPs']. 
+        
+        Some may not have Line Items, so the KeyError is caught and handled. """
 
     so_details_dict = {}
     for so_detail_index in so_list:

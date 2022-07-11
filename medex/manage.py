@@ -56,6 +56,7 @@ def main():
 
 if __name__ == '__main__':
     print(f"\n\t << DEBUG_MODE = {__MY_DEBUG__} >> \n")
+    print("\t NO NOTES ")
     with open("log_config.json", 'r') as f:
         log_config_data = json.load(f)
         dictConfig(log_config_data)

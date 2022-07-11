@@ -1,0 +1,72 @@
+Account1: Internal testing Medical
+AddDeliveryAddress1: null
+AddDeliveryAddress2: null
+AddLineItems1: null
+AddLineItems2: null
+AddPickUpAddress: null
+ClientReference1: Medical SO Creation script testing
+ClientReference2: Medical SO Creation script testing
+ClinicalTrial: null
+Contact1: Medical Test Contact
+EstChargeableWeight1: null
+EstChargeableWeight2: 250.0
+InternationalFreight: null
+InternationalFreight1: TecEx
+InternationalFreight2: Client
+InternationalFreightDifferent: 'Yes'
+NumofDeliverySites1: 2
+NumofDeliverySites2: 1
+PackageActualWeight1.1: 100
+PackageActualWeight1.2: 85
+PackageActualWeight2.2: 85
+PackageBreadth1.1: 10
+PackageBreadth1.2: 12
+PackageBreadth2.2: 12
+PackageContainsBatteries1.1: false
+PackageContainsBatteries1.2: true
+PackageContainsBatteries2.2: true
+PackageDimensionUnit1.1: INs
+PackageDimensionUnit1.2: INs
+PackageDimensionUnit2.2: INs
+PackageHeight1.1: 10
+PackageHeight1.2: 8
+PackageHeight2.2: 8
+PackageHowManyPacks1.1: 1
+PackageHowManyPacks1.2: 2
+PackageHowManyPacks2.2: 2
+PackageLength1.1: 10
+PackageLength1.2: 14
+PackageLength2.2: 14
+PackageWeightUnit1.1: Imperial (lbs/inch)
+PackageWeightUnit1.2: Imperial (lbs/inch)
+PackageWeightUnit2.2: Imperial (lbs/inch)
+Password1: Medex1234@!
+Project: Yes- Add to Existing Project
+ProjectName: jrthat
+SalesforceURL: Implement Choice
+SecondHandOrRefurbished1: null
+SecondHandOrRefurbished2: Neither of them
+ServiceType: null
+ServiceType1: IOR
+ServiceType2: EOR
+ServiceTypeDifferent: 'Yes'
+ShipFromCountry: null
+ShipFromCountry1: Brazil
+ShipFromCountry2: South Africa
+ShipFromDifferent: 'Yes'
+ShipToCountry1: United States
+ShipToCountry2: South Korea
+ShipmentOrdersSearch1: Medical BOT SO's - IS THIS USED ?
+ShipmentValue1: 1052
+ShipmentValue2: 12345
+TemperatureControlRange1: "+15\xB0C - +25\xB0C (CTR)"
+TemperatureControlRange2: null
+TemperatureControlRequirements1: Transit
+TemperatureControlRequirements2: null
+TypeOfProduct1: Medical Devices
+TypeOfProduct2: Tech Equipment
+UnitsOfMeasurement: Imperial (lbs/inch)
+Username1: fe_testing@tecex.com + CHANGE SOME HOW
+VendorReference1: Test02.1
+VendorReference2: Test02.2
+Wait1: '15'

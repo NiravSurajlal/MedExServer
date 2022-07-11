@@ -10,6 +10,7 @@ This module defines the process flow for the medical quote creator.
 
 import logging
 import os
+from re import I
 from time import ctime
 import json
 from turtle import up
@@ -61,7 +62,7 @@ def add_task(email, excel_doc_path=None, users_name=None):
     task_data = {"email": email, "username":username, "start_time": ctime(), "excel_data": excel_doc}
 
     __taskhandler_LOG.info(f"Generating raw_data for {task_data['username']}. ") 
-    raw_data = read_spreadsheet(excel_doc)
+    raw_data, spread_sheet_errors = read_spreadsheet(excel_doc)
     __taskhandler_LOG.info(f"Generating json_data for {task_data['username']}. ")
     json_data = make_new_cases(raw_data)
 
@@ -102,34 +103,84 @@ def generate_yaml(json_data, yaml_path):
 def json_to_yaml(json_data):
     """ Converts json data (already loaded) to the YAML format required by the bot. """
     data = {}
-    data['Username1'] = 'fe_testing@tecex.com'
+    data['SalesforceURL'] = 'Implement Choice'
+    data['Username1'] = 'fe_testing@tecex.com + CHANGE SOME HOW'
     data['Password1'] = 'Medex1234@!'
-    data['ShipmentOrdersSearch1'] = "Medical BOT SO's"
+    data["Wait1"] = "15"
+
+    data['ShipmentOrdersSearch1'] = "Medical BOT SO's - IS THIS USED ?"
     data['Account1'] = json_data['SOSetup']['Account']
     data['Contact1'] = json_data['SOSetup']['Contact']
-    data["Wait1"] = "15"
-    try:
-        line_items_keys = list(json_data['SODetails']['1']['LineItems'].keys())
-    except AttributeError as e:
-        line_items_keys = None
+    data['Project'] = json_data['SOSetup']['Project']
+    data['ProjectName'] = json_data['SOSetup']['Project Name']
+    data['ClinicalTrial'] = json_data['SOSetup']['Is this a clinical trial?']
+    data['ShipFromDifferent'] = json_data['SOSetup']['Ship From Different for each Shipment']
+    data['ShipFromCountry'] = json_data['SOSetup']['Ship From Country']
+    data['AddPickUpAddress'] = json_data['SOSetup']['Add pickup address (optional)']
+    data['ServiceTypeDifferent'] = json_data['SOSetup']['Service Type Different for each Shipment']
+    data['ServiceType'] = json_data['SOSetup']['Service Type']
+    data['InternationalFreightDifferent'] = json_data['SOSetup']['International Freight Different for each Shipment']
+    data['InternationalFreight'] = json_data['SOSetup']['International Freight']
+    data['UnitsOfMeasurement'] = json_data['SOSetup']['Units of Measurement']
 
-    for so_detail_num in json_data['SODetails'].keys():
+    so_detail_nums = json_data['SOSetup']['SODetails'].split(';')
+    for so_detail_num in so_detail_nums:
         so_data = json_data['SODetails'][so_detail_num]
-        data[f"Shipfromcountry{so_detail_num}"] = so_data['Ship From Country']
-        data[f"Shiptocountry{so_detail_num}"] = so_data['Ship To Country']
-        data[f"EstimatedChargeableweight{so_detail_num}"] = so_data['Est. Chargeable Weight (KG)']
-        data[f"ShipmentValue1{so_detail_num}"] = so_data['Shipment Value (USD)']
-        data[f"Clientreference{so_detail_num}"] = so_data['Client Reference (optional)']
+        data[f"ShipFromCountry{so_detail_num}"] = so_data['Ship From Country']
+        data[f"ServiceType{so_detail_num}"] = so_data['Service Type']
+        data[f"ShipToCountry{so_detail_num}"] = so_data['Ship To Country']
+        data[f"SecondHandOrRefurbished{so_detail_num}"] = so_data['Second hand or Refurbished Goods?']
+        data[f"InternationalFreight{so_detail_num}"] = so_data['International Freight']
+        data[f"TypeOfProduct{so_detail_num}"] = so_data['Type Of Product']
+        data[f"TemperatureControlRequirements{so_detail_num}"] = so_data['Temperature Control Requirements']
+        data[f"TemperatureControlRange{so_detail_num}"] = so_data['Temperature Control Range']
+        data[f"NumofDeliverySites{so_detail_num}"] = so_data['# of Delivery Sites']
+
+        # requires for loop?
+        data[f"AddDeliveryAddress{so_detail_num}"] = so_data['Add Delivery address (optional)']
+
+        data[f"ShipmentValue{so_detail_num}"] = so_data['Shipment Value (USD)']
+        data[f"EstChargeableWeight{so_detail_num}"] = so_data['Est. Chargeable Weight (KG)']
+        data[f"AddLineItems{so_detail_num}"] = so_data['LineItems']
+
+        if so_data['Shipment Order Packages'] is not None: 
+            try:
+                package_nums = str(so_data['Shipment Order Packages']).split(';')
+                i = 0
+                for package_num in package_nums:
+                    # requires for loop for package num?
+                    sop_data = json_data['SOPs'][package_num]
+                    data[f"PackageHowManyPacks{so_detail_num}.{i}"] = sop_data['How many packages?']
+                    data[f"PackageWeightUnit{so_detail_num}.{i}"] = sop_data['Weight Unit']
+                    data[f"PackageActualWeight{so_detail_num}.{i}"] = sop_data['Actual Weight']
+                    data[f"PackageDimensionUnit{so_detail_num}.{i}"] = sop_data['Dimension Unit']
+                    data[f"PackageLength{so_detail_num}.{i}"] = sop_data['Length']
+                    data[f"PackageBreadth{so_detail_num}.{i}"] = sop_data['Breadth']
+                    data[f"PackageHeight{so_detail_num}.{i}"] = sop_data['Height']
+                    data[f"PackageContainsBatteries{so_detail_num}.{i}"] = sop_data['Contains batteries?']
+                    i = i + 1
+            except AttributeError as e:
+                error_msg = f"No packages. "
+                
+        data[f"ClientReference{so_detail_num}"] = so_data['Client Reference (optional)']
+        data[f"VendorReference{so_detail_num}"] = so_data['Vendor Reference (optional)']
+
         try:
-            data[f"AddLineItems{so_detail_num}"] = ', '.join([str(elem) for elem in line_items_keys])
-            li_data = so_data['LineItems']
-            num_LI = len(li_data)
-            for i in range(0, num_LI):
-                li_num = str(i)
-                for li_key in line_items_keys:
-                    data[f"AddLineItems{so_detail_num}"] = ", ".join([data[f"AddLineItems{so_detail_num}"], str(li_data[li_key][li_num])])
-        except TypeError as e:
-            print('No Line Items')
+            line_items_keys = list(json_data['SODetails']['1']['LineItems'].keys())
+        except AttributeError as e:
+            line_items_keys = None
+            
+        if data[f"AddLineItems{so_detail_num}"]:
+            try:
+                data[f"AddLineItems{so_detail_num}"] = ', '.join([str(elem) for elem in line_items_keys])
+                li_data = so_data['LineItems']
+                num_LI = len(li_data)
+                for i in range(0, num_LI):
+                    li_num = str(i)
+                    for li_key in line_items_keys:
+                        data[f"AddLineItems{so_detail_num}"] = ", ".join([data[f"AddLineItems{so_detail_num}"], str(li_data[li_key][li_num])])
+            except TypeError as e:
+                print('No Line Items')
         
     return data
 

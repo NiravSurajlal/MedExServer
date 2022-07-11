@@ -13,6 +13,9 @@ from django.contrib.auth.models import User
 import logging
 import openpyxl as opxyl
 import os
+from django.db import IntegrityError as IE
+
+from .emails import send_error_mail
 from medex.settings import __USERDATCACHEPATH__
 # from medex.medex import __USERDATCACHEPATH__
 
@@ -57,8 +60,19 @@ class UploadExcelFileForm(forms.Form):
         user = str(user)
         user = f"{user}.xlsx"
         path = os.path.join(__USERDATCACHEPATH__, user)
-        
-        excel_doc = self.cleaned_data['excel_file']
+
+        try:
+            excel_doc = self.cleaned_data['excel_file']
+        except Exception as e:
+            error_msg = f"Unable to CLEAN data. Error: {e}"
+            send_error_mail(error_msg=error_msg) 
+
         excel_file = opxyl.load_workbook(excel_doc)
-        excel_file.save(path)
+
+        try:
+            excel_file.save(path)
+        except Exception as e:
+            error_msg = f"Unable to SAVE data. Error: {e}"
+            send_error_mail(error_msg=error_msg)
+
         return path        

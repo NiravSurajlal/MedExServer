@@ -45,3 +45,7 @@ def send_feedback_email(email, username, result):
                           to=[email,]).send(fail_silently=False)
     
     # sleep(10)
+
+def send_error_mail(error_msg):
+    email='niravs@tecex.com'
+    pass
