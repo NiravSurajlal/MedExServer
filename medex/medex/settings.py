@@ -30,17 +30,19 @@ ip_addr = socket.gethostbyname(hostname)
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-^(8p_ho5j2z9=$p+p(wd!z$sp6^^exc+7w7o&dgq7d7#5z22@9'
+# SECRET_KEY =
+# 'django-insecure-^(8p_ho5j2z9=$p+p(wd!z$sp6^^exc+7w7o&dgq7d7#5z22@9'
 secret_user = __CREDENTIALS__["medex_django_secret_key"]
-SECRET_KEY = keyring.get_password(secret_user['service_name'], secret_user['username']) 
+SECRET_KEY = keyring.get_password(secret_user['service_name'],
+                                  secret_user['username'])
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-__MY_DEBUGGER__ = {'mode':False, 
-                   'asnyc_mode': False, 
-                   'start_services':False, 
-                   'quickly_load_queue':False,
-                   'remove_files':True}
+__MY_DEBUGGER__ = {'mode': False,
+                   'asnyc_mode': False,
+                   'start_services': False,
+                   'quickly_load_queue': False,
+                   'remove_files': True}
 
 ALLOWED_HOSTS = []
 
@@ -98,8 +100,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
     # 'default': {
-    #     'ENGINE': 'djongo',      
-    #     'NAME': 'medex_db',   
+    #     'ENGINE': 'djongo',
+    #     'NAME': 'medex_db',
     # }
 }
 
@@ -162,13 +164,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # FOR CELERY
 BROKER_URL = f'amqp://niravs:UuVZad3eEYPeXtFWRgwA@{ip_addr}:5672'
 # BROKER_URL = f'amqp://localhost:5672'
-CELERY_RESULT_BACKEND = f'db+sqlite:///results.db'
+CELERY_RESULT_BACKEND = 'db+sqlite:///results.db'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Africa/Johannesburg'  # for full list visit https://gist.github.com/mjrulesamrat/0c1f7de951d3c508fb3a20b4b0b33a98
 # CELERYD_OPTS = "--concurrency=1"
- 
+
 # BROKER_HEARTBEAT = 0 # helps with connection lost?
 BROKER_CONNECTION_RETRY = True
 BROKER_CONNECTION_MAX_RETRIES = 100
@@ -177,14 +179,14 @@ BROKER_CONNECTION_MAX_RETRIES = 100
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp-mail.outlook.com'
-email_user =__CREDENTIALS__['MedexMailer-User']
-EMAIL_HOST_USER  = email_user['username']
+email_user = __CREDENTIALS__['MedexMailer-User']
+EMAIL_HOST_USER = email_user['username']
 DEFAULT_FROM_EMAIL = email_user['username']
 # EMAIL_HOST_PASSWORD = 'gqlnjnhcsrvfmcbg'
-EMAIL_HOST_PASSWORD = keyring.get_password(email_user['service_name'], email_user['username']) 
+EMAIL_HOST_PASSWORD = keyring.get_password(email_user['service_name'], email_user['username'])
 EMAIL_PORT = 587
 
 # FILE-HANDLING
 FILE_UPLOAD_HANDLERS = ['django.core.files.uploadhandler.MemoryFileUploadHandler',
-                        'django.core.files.uploadhandler.TemporaryFileUploadHandler',]
+                        'django.core.files.uploadhandler.TemporaryFileUploadHandler', ]
 FILE_UPLOAD_MAX_MEMORY_SIZE = 2.5*1024*1024

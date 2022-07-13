@@ -1,18 +1,20 @@
 """
-Instantiates the Celery object to be used. 
+Instantiates the Celery object to be used.
 
-The object is configured from the medex.settings.py file. 
+The object is configured from the medex.settings.py file.
 
-Task routing is in place and correspondes to the workers (see the manage.py file).
+Task routing is in place and correspondes to the workers
+(see the manage.py file).
 
-All functions that should be executed asynchronously, should be added to a queue.
+All functions that should be executed asynchronously,
+should be added to a queue.
     Queues  :   'medical queue' -> contains the main process task
-                'pinger_queue'  -> contains the rabbitmq pinging task. 
+                'pinger_queue'  -> contains the rabbitmq pinging task.
 """
 from __future__ import absolute_import
 import logging
 import os
-from celery import Celery 
+from celery import Celery
 from django.conf import settings
 
 __logger = logging.getLogger("MEDEX")
@@ -28,7 +30,7 @@ pinging_Celery_task_routes = {
     'start_pinger': {'queue': 'pinger_queue'},
 }
 
-# set the default Django settings module for this celery 
+# set the default Django settings module for this celery
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medex.settings')
 medex_Celery = Celery("medex")
 
@@ -36,6 +38,7 @@ medex_Celery = Celery("medex")
 medex_Celery.config_from_object("django.conf:settings")
 medex_Celery.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 medex_Celery.conf.task_routes = medex_Celery_task_routes
+
 
 @medex_Celery.task(bind=True)
 def debug_task(self):

@@ -1,5 +1,5 @@
-""" 
-Module for API calls to RabbitMQ. 
+"""
+Module for API calls to RabbitMQ.
 """
 
 import kombu
@@ -17,6 +17,7 @@ ip_addr = socket.gethostbyname(hostname)
 #     'medical_queue'
 # ]
 
+
 def get_queue_length(requested_queues=['medical_queue']):
     """ Gets the queue length for the requested queues. """
 
@@ -32,6 +33,7 @@ def get_queue_length(requested_queues=['medical_queue']):
                 num_items = queue['messages_unacknowledged'] + queue["messages_ready"]
                 queue_results[queue_name] = num_items
     return queue_results
+
 
 def get_all_queue_items(requested_queues=['medical_queue']):
     """ Gets data from the requested queues. """
@@ -49,7 +51,7 @@ def get_all_queue_items(requested_queues=['medical_queue']):
                 if queue_name in requested_queues:
                     names_in_queue = {}
                     queue = kombu.Queue(queue_name, routing_key='queue', channel=ch)
-                    for i in range(0,10000):
+                    for i in range(0, 10000):
                         msg = queue.get()
                         if msg is None:
                             break
@@ -60,10 +62,11 @@ def get_all_queue_items(requested_queues=['medical_queue']):
     with open(queue_data_path, 'w+') as file:
         json.dump(queue_data, file)
 
+
 def display_all_queue_items():
     """ Function to display the most updated queue to the user.
         Only displays queue name and user name. """
-    
+
     if __MY_DEBUGGER__['quickly_load_queue']:
         get_all_queue_items()
 
@@ -73,7 +76,7 @@ def display_all_queue_items():
             data = json.loads(stream.read())
         all_data = []
         for queue_name in data:
-            str_queue_name = queue_name.replace('_', " ").upper() #+':   '
+            str_queue_name = queue_name.replace('_', " ").upper()  # +':   '
             queue_data = data[queue_name]
             for item in queue_data:
                 item_data = queue_data[item]
@@ -85,4 +88,3 @@ def display_all_queue_items():
     except Exception as e:
         print(e)
         return None
-    

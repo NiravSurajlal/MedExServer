@@ -1,10 +1,11 @@
-""" 
+"""
 Module to make accessing, adding and changing data on salesforce easier.
 """
 
 import keyring
 import simple_salesforce as sf
 from medex.settings import __CREDENTIALS__
+
 
 class ComplexSF(sf.Salesforce):
     def __init__(self, environment='production'):
@@ -23,7 +24,7 @@ class ComplexSF(sf.Salesforce):
             self.__pass_service_name += '.' + self.environment.lower()
             self.__key_service_name += '.' + self.environment.lower()
             self.__domain = 'test'
-        
+
         # get user password
         password = keyring.get_password(self._ComplexSF__pass_service_name, self._ComplexSF__username)
         assert password is not None, "Could not find a Salesforce Login."
@@ -32,9 +33,9 @@ class ComplexSF(sf.Salesforce):
         api_token = keyring.get_password(self._ComplexSF__key_service_name, self._ComplexSF__username)
         assert api_token is not None, "Could not find a Salesforce Token."
 
-        super().__init__(username=self.__username, 
-                         password=password, 
-                         security_token=api_token, 
+        super().__init__(username=self.__username,
+                         password=password,
+                         security_token=api_token,
                          domain=self.__domain)
 # self._ComplexSF__key_service_name
 # self._ComplexSF__username

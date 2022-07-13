@@ -1,4 +1,4 @@
-""" 
+"""
 Module with the functions for reading and parsing the .xlsx data.
 """
 
@@ -7,11 +7,12 @@ import pandas as pd
 import json
 from .emails import send_error_mail
 
+
 def read_spreadsheet(excel_spreadsheet):
-    """ Takes the excel spreadsheet (bytes), parses it and returns a 
-        dictionary and a list of errors. 
-        
-        Test outcome and Expected results caught errors are okay in this process. 
+    """ Takes the excel spreadsheet (bytes), parses it and returns a
+        dictionary and a list of errors.
+
+        Test outcome and Expected results caught errors are okay in this process.
         They may not be populated. """
 
     errors = {}
@@ -19,7 +20,7 @@ def read_spreadsheet(excel_spreadsheet):
     __qc_LOGGER = logging.getLogger("quote_creator")
 
     raw_data = {}
-    f = pd.ExcelFile(excel_spreadsheet)    
+    f = pd.ExcelFile(excel_spreadsheet)
 
     sheet = 'SOSetup'
     __qc_LOGGER.debug(f"Reading {sheet}. ")
@@ -50,7 +51,7 @@ def read_spreadsheet(excel_spreadsheet):
     except ValueError as e:
         error_msg = f"Worksheet {sheet} or index not found: Error {e}"
         errors['ShipmentOrderPackages'] = error_msg
-        
+
     df = df[~df.index.isna()]
     raw_data['SOPs'] = df.iloc[:, : 10]
 
@@ -76,7 +77,7 @@ def read_spreadsheet(excel_spreadsheet):
 
             df = df[[c for c in df.columns if not(c.startswith('Unnamed:'))]]
             raw_data['Line Items'][sheet] = df
-    
+
     __qc_LOGGER.debug('Reading the expected results sheet')
     sheet = 'Expected Results (Python)'
     try:
@@ -91,8 +92,9 @@ def read_spreadsheet(excel_spreadsheet):
     del f
     return raw_data, errors
 
+
 def make_new_cases(spreadsheet_data):
-    """ Makes new cases from a dictionary and returns a dictionary. 
+    """ Makes new cases from a dictionary and returns a dictionary.
         Should be called after read_spreadsheet on the data it returns. """
     on_creation_sos = {}
     for case_name in spreadsheet_data['SOSetup'].index:
@@ -101,8 +103,9 @@ def make_new_cases(spreadsheet_data):
 
     return on_creation_sos
 
+
 def build_shipment_dict(spreadsheet_data, shipment_name, wip=False):
-    """ Takes the dictionary data, parses it and returns a 
+    """ Takes the dictionary data, parses it and returns a
     dictionary. """
 
     data = spreadsheet_data.copy()
@@ -120,9 +123,9 @@ def build_shipment_dict(spreadsheet_data, shipment_name, wip=False):
         if so_list:
             so_details = get_ALL_SODetails(data, so_list)
             break
-    
+
     sops_dict = {}
-    for i in data['SOPs'].index: 
+    for i in data['SOPs'].index:
         sops_dict[str(i)] = json.loads(data['SOPs'].iloc[i-1].to_json())
 
     full_dict = {'SOSetup': test_case_data,
@@ -130,10 +133,11 @@ def build_shipment_dict(spreadsheet_data, shipment_name, wip=False):
                  'SOPs': sops_dict}
     return full_dict
 
+
 def get_ALL_SODetails(data, so_list):
-    """ Gets SODetails from spreadsheets & corres LineItem data & Shipmnet Order Packages 
-        data['SOPs']. 
-        
+    """ Gets SODetails from spreadsheets & corres LineItem data &
+        Shipmnet Order Packages data['SOPs'].
+
         Some may not have Line Items, so the KeyError is caught and handled. """
 
     so_details_dict = {}
@@ -162,7 +166,7 @@ def get_ALL_SODetails(data, so_list):
                 sop_dict[sop_index] = json.loads(sop_data.iloc[int(sop_index)-1].to_json())
             except ValueError as e:
                 print(e)
-            
+
         so_details_dict[so_detail_index_str]['SOP'] = sop_dict
 
     return so_details_dict

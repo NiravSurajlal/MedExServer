@@ -10,15 +10,13 @@ This module defines the process flow for the medical quote creator.
 
 import logging
 import os
-from re import I
 from time import ctime
 import json
-from turtle import up
 import yaml
 import pandas as pd
 from time import sleep
 
-from medex.celery import medex_Celery 
+from medex.celery import medex_Celery
 from .emails import send_feedback_email, send_error_mail
 from medex.settings import __CACHEPATH__
 from .shipment_order_bank import read_spreadsheet, make_new_cases
@@ -27,45 +25,47 @@ from .rabbitmq_api import get_all_queue_items
 
 __taskhandler_LOG = logging.getLogger("taskhandler")
 
+
 @medex_Celery.task(name="rabbitmq_pinging_task", )
 def rabbitmq_pinging_task(uptime, sleeptime, ping='PING'):
-    """ ASYNC task. 
+    """ ASYNC task.
         Pings the RabbitMQ service during the bot process. """
 
     uptime += sleeptime
     print(f"Current Process time: {uptime} seconds. ")
     return uptime
 
+
 def send_feedback_email_task(email, message="test"):
     """ Sends a feedback (the result) email. """
 
-    __taskhandler_LOG.info("Attempting to send email. ") 
-    return send_feedback_email(email, message) 
+    __taskhandler_LOG.info("Attempting to send email. ")
+    return send_feedback_email(email, message)
+
 
 @medex_Celery.task(name="add_task")
 def add_task(email, excel_doc_path=None, users_name=None):
-    """ Passes the task to celery. 
+    """ Passes the task to celery.
         Performs the process of generating the json then yml from the excel uploaded.
         Stores the information in a json of the users name.
         Runs the bot.
-        Emails the result to the user.  
+        Emails the result to the user.
         """
     __taskhandler_LOG.info(f"Attempting to create quote for {users_name}.")
     sleep(1)
     __taskhandler_LOG.info(f"Updating queue for {users_name}.")
     get_all_queue_items()
 
-    
     if excel_doc_path is None:
         __taskhandler_LOG.debug("File not uploaded.")
         return
     # excel_doc = pd.ExcelFile(os.path.join(__CACHEPATH__, "Medex.xlsb"))
     excel_doc = pd.ExcelFile(excel_doc_path)
-    
-    username = users_name
-    task_data = {"email": email, "username":username, "start_time": ctime(), "excel_data": excel_doc}
 
-    __taskhandler_LOG.info(f"Generating raw_data for {task_data['username']}. ") 
+    username = users_name
+    task_data = {"email": email, "username": username, "start_time": ctime(), "excel_data": excel_doc}
+
+    __taskhandler_LOG.info(f"Generating raw_data for {task_data['username']}. ")
     raw_data, spread_sheet_errors = read_spreadsheet(excel_doc)
     __taskhandler_LOG.info(f"Generating json_data for {task_data['username']}. ")
     json_data = make_new_cases(raw_data)
@@ -76,8 +76,8 @@ def add_task(email, excel_doc_path=None, users_name=None):
         if json_data[case_name]['SOSetup']['Project Name']:
             project_name = json_data[case_name]['SOSetup']['Project Name']
         else:
-            project_name = None 
-        yaml_path = os.path.join(__CACHEPATH__, f"{task_data['username']}_{case_name}.yaml") 
+            project_name = None
+        yaml_path = os.path.join(__CACHEPATH__, f"{task_data['username']}_{case_name}.yaml")
         generate_yaml(json_data[case_name], yaml_path)
 
     __taskhandler_LOG.info(f"Running {task_data['username']} bot. ")
@@ -86,7 +86,7 @@ def add_task(email, excel_doc_path=None, users_name=None):
     task_data['end_time'] = ctime()
 
     task_data.pop('excel_data')
-    json_path = os.path.join(__CACHEPATH__, f"{task_data['username']}_task.json")  
+    json_path = os.path.join(__CACHEPATH__, f"{task_data['username']}_task.json")
     __taskhandler_LOG.info(f"Saving data to {json_path}.")
     with open(json_path, 'w+') as f:
         json.dump(task_data, f)
@@ -102,14 +102,16 @@ def add_task(email, excel_doc_path=None, users_name=None):
         send_error_mail(result, email=email, username=username)
         __taskhandler_LOG.info(f"Error Email sent to {task_data['email']}")
 
+
 def generate_yaml(json_data, yaml_path):
-    """ Generates yaml from xlsx by converting to JSON then to YAML. 
-        Saves the YAML in the cache. 
+    """ Generates yaml from xlsx by converting to JSON then to YAML.
+        Saves the YAML in the cache.
         Returns yaml file location. """
 
     data = json_to_yaml(json_data)
     with open(yaml_path, 'w+') as yml:
         yaml.dump(data, yml)
+
 
 def json_to_yaml(json_data):
     """ Converts json data (already loaded) to the YAML format required by the bot. """
@@ -154,7 +156,7 @@ def json_to_yaml(json_data):
         data[f"EstChargeableWeight{so_detail_num}"] = so_data['Est. Chargeable Weight (KG)']
         data[f"AddLineItems{so_detail_num}"] = so_data['LineItems']
 
-        if so_data['Shipment Order Packages'] is not None: 
+        if so_data['Shipment Order Packages'] is not None:
             try:
                 package_nums = str(so_data['Shipment Order Packages']).split(';')
                 i = 0
@@ -171,8 +173,8 @@ def json_to_yaml(json_data):
                     data[f"PackageContainsBatteries{so_detail_num}.{i}"] = sop_data['Contains batteries?']
                     i = i + 1
             except AttributeError as e:
-                error_msg = f"No packages. "
-                
+                error_msg = "No packages. "
+
         data[f"ClientReference{so_detail_num}"] = so_data['Client Reference (optional)']
         data[f"VendorReference{so_detail_num}"] = so_data['Vendor Reference (optional)']
 
@@ -180,7 +182,7 @@ def json_to_yaml(json_data):
             line_items_keys = list(json_data['SODetails']['1']['LineItems'].keys())
         except AttributeError as e:
             line_items_keys = None
-            
+
         if data[f"AddLineItems{so_detail_num}"]:
             try:
                 data[f"AddLineItems{so_detail_num}"] = ', '.join([str(elem) for elem in line_items_keys])
@@ -192,17 +194,19 @@ def json_to_yaml(json_data):
                         data[f"AddLineItems{so_detail_num}"] = ", ".join([data[f"AddLineItems{so_detail_num}"], str(li_data[li_key][li_num])])
             except TypeError as e:
                 print('No Line Items')
-        
+
     return data
 
+
 def run_bot(username, project_name, account_name):
-    """ Runs the selnium bot to generate the quote. 
+    """ Runs the selnium bot to generate the quote.
         Returns a result. """
     print(f"\n\n    Running bot for {username} ... \n\n\n")
     bot = QuoteBot(username)
     bot.execute(rabbitmq_pinging_task)
     result = bot.get_result(project_name, account_name)
     return result
+
 
 def clean_up(excel_doc_path, yaml_path):
     os.remove(excel_doc_path)

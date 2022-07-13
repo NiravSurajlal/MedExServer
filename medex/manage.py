@@ -19,18 +19,20 @@ from time import sleep
 from medex.celery import medex_Celery
 from medex.settings import __MY_DEBUGGER__
 
+
 def start_rabbitmq(medex_LOGGER):
     medex_LOGGER.info("Starting up Rabbitmq.")
-    rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server" )
+    rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server")
     rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
     rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
     # sleep(40)
+
 
 def start_celery(medex_LOGGER):
     medex_LOGGER.info("... Clearing Celery Queue ...")
 
     medex_Celery.control.purge()
-    
+
     medex_LOGGER.info("Starting up Celery 1. ")
     celery_cmd_1 = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-Q', 'medical_queue', '--concurrency', '1', '-E', '--without-heartbeat', '-P', 'eventlet', '-n', 'worker_medical@nirav']
     celery_process_1 = subprocess.Popen(celery_cmd_1, creationflags=subprocess.CREATE_NEW_CONSOLE)
@@ -39,6 +41,7 @@ def start_celery(medex_LOGGER):
     celery_cmd_2 = ['celery', '-A', 'medex', 'worker', '--loglevel=info', '-Q', 'pinger_queue', '--concurrency', '2', '-E', '--without-heartbeat', '-P', 'eventlet', '-n', 'worker_pinger@nirav']
     celery_process_2 = subprocess.Popen(celery_cmd_2, creationflags=subprocess.CREATE_NEW_CONSOLE)
     sleep(15)
+
 
 def main():
     """Run administrative tasks."""
@@ -60,7 +63,6 @@ if __name__ == '__main__':
         log_config_data = json.load(f)
         dictConfig(log_config_data)
         medex_log = logging.getLogger("MEDEX")
-        
 
     if __MY_DEBUGGER__['start_services'] and __MY_DEBUGGER__['asnyc_mode']:
         medex_log.info('Logger Started.')
@@ -68,10 +70,10 @@ if __name__ == '__main__':
         start_celery(medex_log)
     if not __MY_DEBUGGER__['start_services']:
         if __MY_DEBUGGER__['asnyc_mode']:
-            print(f"\t PLEASE MAKE SURE YOUR BACKGROUND SERVICES ARE RUNNING")
+            print("\t PLEASE MAKE SURE YOUR BACKGROUND SERVICES ARE RUNNING")
             medex_log.info('Logger Started.')
     if not __MY_DEBUGGER__['asnyc_mode']:
-        print(f"\t RUNNING IN SYNCHRONOUS MODE ")
+        print("\t RUNNING IN SYNCHRONOUS MODE ")
         medex_log.info('Logger Started.')
     print("\n")
 

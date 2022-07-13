@@ -1,14 +1,14 @@
-import imp
 import keyring
 import os
 import time
 import subprocess
-import re 
+import re
 import threading
 import logging
 from quote_creator.emails import send_error_mail
 from medex.settings import __CREDENTIALS__, __MY_DEBUGGER__
 from .salesforce import ComplexSF
+
 
 class QuoteBot():
     def __init__(self, username):
@@ -39,7 +39,7 @@ class QuoteBot():
         creds['password'] = keyring.get_password(temp_creds['service_name'], temp_creds['username'])
         assert creds['password'] is not None, 'Lambda_credentials unavailable. Check the Windows Credential manager'
         return creds
-    
+
     @property
     def get_bot_dir(self):
         if __MY_DEBUGGER__['mode']:
@@ -49,7 +49,7 @@ class QuoteBot():
 
     @property
     def command_list(self):
-        return ['mvn', 'test', f'-Dcucumber.options="--tags @uid1379562945"', '-DenvironmentType=staging', '-DbrowserName=Lambda']
+        return ['mvn', 'test', '-Dcucumber.options="--tags @uid1379562945"', '-DenvironmentType=staging', '-DbrowserName=Lambda']
 
     @property
     def bot_command(self):
@@ -77,7 +77,7 @@ class QuoteBot():
             self.trigger_bot(rabbitmq_pinging_task)
         except Exception as e:
             print(e)
-    
+
     def trigger_bot(self, rabbitmq_pinging_task):
         id_pattern = re.compile(r"SESSION ID => [a-z|A-Z|0-9]{32} <=")
         path_pattern = re.compile(r"PATH :[^\n]*Run_[0-9]{13}")
@@ -98,7 +98,7 @@ class QuoteBot():
         self.qc_logger.info("Started subprocess. ")
         uptime = 0
         with open(self.stdout_txt, 'a') as stdoutfile:
-            while subproc.poll() is None: # poll returns None when the process is still running -> https://stackoverflow.com/questions/2995983/using-subprocess-wait-and-poll
+            while subproc.poll() is None:  # poll returns None when the process is still running -> https://stackoverflow.com/questions/2995983/using-subprocess-wait-and-poll
                 line = subproc.stdout.readline()
                 line_dec = line.decode('utf-8')
                 time.sleep(10)
@@ -113,7 +113,7 @@ class QuoteBot():
                         self.session_id = line_dec[len("SESSION ID => "):-len(" <=")-1]
                 else:
                     time.sleep(0.1)
-        time.sleep(2) # to let mvn finish up and shut down safely
+        time.sleep(2)  # to let mvn finish up and shut down safely
         # for troubleshooting purposes the subproc is stored
         self.subproc = subproc
         # if self.mvn_output_loc is not None:
@@ -121,7 +121,7 @@ class QuoteBot():
         #         file_to_grab = os.path.join(self.mvn_output_loc, f)
         #         self.grab_diagnostic_file(file_to_grab)
         return subproc
-    
+
     def get_result(self, project_name, account_name, environment='production'):
         self.qc_logger.info(f"Querying for acc_name: {account_name} on env: {environment}, with proj_name: {project_name}.")
         sf = ComplexSF(environment='staging')
@@ -134,13 +134,13 @@ class QuoteBot():
             print("Standalone API")
             query_str = f"SELECT Id,Name FROM Shipment_Order__c WHERE CreatedDate >= TODAY AND RecordType.Name LIKE 'Medical%' AND CreatedBy.Name = 'AmDo Testing' AND Account__r.Name = '{account_name}' ORDER BY CreatedDate DESC LIMIT 1"
             query_result = sf.query_all(query_str)
-        
+
         try:
             result['Project Name'] = project_name
             result['Id'] = query_result['records'][0]['Id']
             result['Name'] = query_result['records'][0]['Name']
         except Exception as e:
-            return f'NO RESULT. Error: {e}'        
+            return f'NO RESULT. Error: {e}'
 
         if project_name:
             if environment.lower() != 'production':

@@ -1,10 +1,10 @@
 """
-Contains the forms to be used. 
+Contains the forms to be used.
 
 Has a CreateNewUser class for simple, sqlite databases.
 
 Has an UploadExcelFileForm to allow the user to upload an Excel (.xlsx) file
-from the /create_quote page. 
+from the /create_quote page.
 """
 
 from django import forms
@@ -14,7 +14,7 @@ import logging
 import openpyxl as opxyl
 import os
 from django.db import IntegrityError as IE
-from datetime import date, datetime
+from datetime import datetime
 
 from .emails import send_error_mail
 from medex.settings import __USERDATCACHEPATH__
@@ -22,12 +22,14 @@ from medex.settings import __USERDATCACHEPATH__
 
 __LOGGER = logging.getLogger("quote_creator")
 
+
 class CreateNewUser(UserCreationForm):
     email = forms.EmailField(required=True)
+
     class Meta:
         model = User
         fields = ("email", "password1", "password2")
-    
+
     def save(self, commit=True):
         error = None
         user = super(CreateNewUser, self).save(commit=False)
@@ -47,6 +49,7 @@ class CreateNewUser(UserCreationForm):
                     error = e
         return (user, error)
 
+
 class UploadExcelFileForm(forms.Form):
     """ Class to allow user to upload Excel file. """
     excel_file = forms.FileField(required=True)
@@ -55,8 +58,7 @@ class UploadExcelFileForm(forms.Form):
         """ Saves the data in a local location for use.
             Also limits the file to only .xlsx files.
             All the files saved should be nuked at the end of each process. """
-            
-        error = None
+
         now = datetime.now()
         ct = now.strftime("%H-%M")
         user = user.split('@')[0]
@@ -67,7 +69,7 @@ class UploadExcelFileForm(forms.Form):
             excel_doc = self.cleaned_data['excel_file']
         except Exception as e:
             error_msg = f"Unable to CLEAN data. Error: {e}"
-            send_error_mail(error_msg=error_msg) 
+            send_error_mail(error_msg=error_msg)
 
         excel_file = opxyl.load_workbook(excel_doc)
 
@@ -77,4 +79,4 @@ class UploadExcelFileForm(forms.Form):
             error_msg = f"Unable to SAVE data. Error: {e}"
             send_error_mail(error_msg=error_msg)
 
-        return path        
+        return path
