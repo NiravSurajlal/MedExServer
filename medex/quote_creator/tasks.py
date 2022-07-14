@@ -96,6 +96,7 @@ def add_task(email, excel_doc_path=None, users_name=None):
         send_feedback_email(email, username, result)
         __taskhandler_LOG.info(f"Email sent to {task_data['email']}")
         __taskhandler_LOG.info(f"Cleaning up and removing files for {task_data['email']}.")
+        __taskhandler_LOG.info(f"\tYML: {yaml_path}. \n\tEXL: {excel_doc_path}")
         clean_up(excel_doc_path, yaml_path)
         __taskhandler_LOG.info(f"Files deleted and process for {task_data['email']} complete.")
     else:
@@ -121,7 +122,7 @@ def json_to_yaml(json_data):
     data['Password1'] = 'Medex1234@!'
     data["Wait1"] = "15"
 
-    data['ShipmentOrdersSearch1'] = "Medical BOT SO's - IS THIS USED ?"
+    data['ShipmentOrdersSearch1'] = "Medical BOT SO's - IS THIS USED ?" # take out
     data['Account1'] = json_data['SOSetup']['Account']
     data['Contact1'] = json_data['SOSetup']['Contact']
     data['Project'] = json_data['SOSetup']['Project']
@@ -150,7 +151,7 @@ def json_to_yaml(json_data):
         data[f"NumofDeliverySites{so_detail_num}"] = so_data['# of Delivery Sites']
 
         # requires for loop?
-        data[f"AddDeliveryAddress{so_detail_num}"] = so_data['Add Delivery address (optional)']
+        data[f"AddDeliveryAddress{so_detail_num}"] = so_data['Add Delivery address (optional)'] # can be multiple, semi colon delimited 
 
         data[f"ShipmentValue{so_detail_num}"] = so_data['Shipment Value (USD)']
         data[f"EstChargeableWeight{so_detail_num}"] = so_data['Est. Chargeable Weight (KG)']

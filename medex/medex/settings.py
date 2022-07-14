@@ -38,11 +38,13 @@ SECRET_KEY = keyring.get_password(secret_user['service_name'],
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-__MY_DEBUGGER__ = {'mode': False,
-                   'asnyc_mode': False,
-                   'start_services': False,
-                   'quickly_load_queue': False,
-                   'remove_files': True}
+__MY_DEBUGGER__ = {'mode': True,                    # controls debug mode
+                   'asnyc_mode': True,              # first filter for asyn services
+                   'start_services': True,          # start asyn services? -> rabbitmq and celery
+                   'quickly_load_queue': False,     # get items from the Rabbitmq queue during the display queues results
+                   'start_rabbitmq': False,        
+                   'start_celery': True}
+                #    'remove_files': True,            # delete files?
 
 ALLOWED_HOSTS = []
 

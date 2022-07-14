@@ -5,6 +5,8 @@ import subprocess
 import re
 import threading
 import logging
+from datetime import datetime
+
 from quote_creator.emails import send_error_mail
 from medex.settings import __CREDENTIALS__, __MY_DEBUGGER__
 from .salesforce import ComplexSF
@@ -140,7 +142,7 @@ class QuoteBot():
             result['Id'] = query_result['records'][0]['Id']
             result['Name'] = query_result['records'][0]['Name']
         except Exception as e:
-            return f'NO RESULT. Error: {e}'
+            return f'NO RESULT from bot {datetime.now()}. \nError: {e}'
 
         if project_name:
             if environment.lower() != 'production':

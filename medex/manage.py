@@ -25,7 +25,7 @@ def start_rabbitmq(medex_LOGGER):
     rabbitmq_path = os.path.join("C:", os.sep, "Program Files", "RabbitMQ Server", "rabbitmq_server-3.10.5", "sbin", "rabbitmq-server")
     rabbitmq_cmd = ['cmd', '/c', f"{rabbitmq_path}"]
     rabbit_process = subprocess.Popen(rabbitmq_cmd, creationflags=subprocess.CREATE_NEW_CONSOLE)
-    # sleep(40)
+    sleep(40)
 
 
 def start_celery(medex_LOGGER):
@@ -64,17 +64,24 @@ if __name__ == '__main__':
         dictConfig(log_config_data)
         medex_log = logging.getLogger("MEDEX")
 
-    if __MY_DEBUGGER__['start_services'] and __MY_DEBUGGER__['asnyc_mode']:
-        medex_log.info('Logger Started.')
-        start_rabbitmq(medex_log)
-        start_celery(medex_log)
-    if not __MY_DEBUGGER__['start_services']:
-        if __MY_DEBUGGER__['asnyc_mode']:
-            print("\t PLEASE MAKE SURE YOUR BACKGROUND SERVICES ARE RUNNING")
+    if __MY_DEBUGGER__["mode"]:
+        if __MY_DEBUGGER__['start_services'] and __MY_DEBUGGER__['asnyc_mode']:
             medex_log.info('Logger Started.')
-    if not __MY_DEBUGGER__['asnyc_mode']:
-        print("\t RUNNING IN SYNCHRONOUS MODE ")
-        medex_log.info('Logger Started.')
+            if __MY_DEBUGGER__['start_rabbitmq']:
+                start_rabbitmq(medex_log)
+            if __MY_DEBUGGER__['start_celery']:
+                start_celery(medex_log)
+        elif not __MY_DEBUGGER__['start_services'] and __MY_DEBUGGER__['asnyc_mode']:
+            if __MY_DEBUGGER__['asnyc_mode']:
+                print("\t PLEASE MAKE SURE YOUR BACKGROUND SERVICES ARE RUNNING")
+                medex_log.info('Logger Started.')
+        elif not __MY_DEBUGGER__['asnyc_mode'] and not __MY_DEBUGGER__['start_services']:
+            print("\t RUNNING IN SYNCHRONOUS MODE ")
+            medex_log.info('Logger Started.')
+    else:
+        start_rabbitmq(medex_log)
+        start_celery(medex_log)        
+    
     print("\n")
 
     try:

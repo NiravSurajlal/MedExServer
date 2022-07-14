@@ -50,7 +50,7 @@ def create_quote(request):
 
             messages.success(request, "File uploaded.")
             __qc_LOGGER.info(f"Adding task for {str(users_name)}")
-            if not __MY_DEBUGGER__['asnyc_mode']:
+            if not __MY_DEBUGGER__['asnyc_mode'] and __MY_DEBUGGER__['mode']:
                 print('here')
                 add_task(email, excel_doc_path, users_name)
             else:
